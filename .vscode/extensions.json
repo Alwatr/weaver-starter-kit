@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "christian-kohler.path-intellisense",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "jgclark.vscode-todo-highlight",
+    "runem.lit-plugin",
+    "streetsidesoftware.code-spell-checker-persian",
+    "streetsidesoftware.code-spell-checker",
+    "stylelint.vscode-stylelint",
+    "csstools.postcss",
+    "bradlc.vscode-tailwindcss",
+    "arcanis.vscode-zipfs"
+  ]
+}

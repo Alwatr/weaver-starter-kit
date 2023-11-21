@@ -1,0 +1,51 @@
+{
+  "name": "@alwatr/pnpm-app",
+  "private": true,
+  "version": "2.0.1",
+  "description": "Alwatr Progressive Multi Page (Web) Application.",
+  "main": "main.js",
+  "type": "module",
+  "types": "main.d.ts",
+  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
+  "license": "MIT",
+  "files": [
+    "**/*.{d.ts.map,d.ts,js.map,js,html,md,svg,css}"
+  ],
+  "scripts": {
+    "b": "yarn run build",
+    "c": "yarn run clean",
+    "cb": "run-s clean build",
+    "s": "yarn run start",
+    "w": "yarn run watch",
+    "start": "NODE_OPTIONS=--enable-source-maps run-s clean build serve",
+    "build": "yarn run build:ts",
+    "build:ts": "tsc --build",
+    "build:11ty": "esbuild src/index.ts --platform=node --target=node19 --bundle --format=esm --minify --sourcemap --outdir=dist --out-extension:.js=.mjs",
+    "clean": "rm -rf dist build .tsbuildinfo",
+    "serve": "yarn node --enable-source-maps dist/index.mjs",
+    "serve:debug": "yarn node --inspect --enable-source-maps dist/index.mjs",
+    "watch": "run-s clean build && run-p watch:11ty watch:node",
+    "watch:node": "nodemon -w dist/ --enable-source-maps dist/index.mjs",
+    "watch:debug-node": "nodemon -w dist/ --inspect --enable-source-maps dist/index.mjs",
+    "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
+    "watch:es": "yarn run build:11ty --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alwatr/pnpm",
+    "directory": "packages/app"
+  },
+  "homepage": "https://github.com/Alwatr/pnpm/tree/next/packages/app#readme",
+  "bugs": {
+    "url": "https://github.com/Alwatr/pnpm/issues"
+  },
+  "dependencies": {
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "esbuild": "^0.19.7",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.3.2"
+  }
+}
