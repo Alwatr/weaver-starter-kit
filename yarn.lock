@@ -121,9 +121,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/pnpm-app@workspace:packages/app":
+"@alwatr/pmpa-app@workspace:packages/app":
   version: 0.0.0-use.local
-  resolution: "@alwatr/pnpm-app@workspace:packages/app"
+  resolution: "@alwatr/pmpa-app@workspace:packages/app"
   dependencies:
     "@11ty/eleventy": "npm:^2.0.1"
     esbuild: "npm:^0.19.7"
@@ -133,9 +133,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@alwatr/pnpm-monorepo@workspace:.":
+"@alwatr/pmpa-monorepo@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@alwatr/pnpm-monorepo@workspace:."
+  resolution: "@alwatr/pmpa-monorepo@workspace:."
   dependencies:
     "@alwatr/style": "npm:2.0.2"
     "@deanc/esbuild-plugin-postcss": "npm:^1.0.2"

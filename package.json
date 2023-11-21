@@ -1,7 +1,7 @@
 {
-  "name": "@alwatr/pnpm-monorepo",
+  "name": "@alwatr/pmpa-monorepo",
   "description": "Progressive Multi Page (Web) Application.",
-  "repository": "https://github.com/Alwatr/pnpm",
+  "repository": "https://github.com/Alwatr/pmpa",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
   "type": "module",

@@ -1,5 +1,5 @@
 {
-  "name": "@alwatr/pnpm-app",
+  "name": "@alwatr/pmpa-app",
   "private": true,
   "version": "2.0.1",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
@@ -32,12 +32,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alwatr/pnpm",
+    "url": "https://github.com/Alwatr/pmpa",
     "directory": "packages/app"
   },
-  "homepage": "https://github.com/Alwatr/pnpm/tree/next/packages/app#readme",
+  "homepage": "https://github.com/Alwatr/pmpa/tree/next/packages/app#readme",
   "bugs": {
-    "url": "https://github.com/Alwatr/pnpm/issues"
+    "url": "https://github.com/Alwatr/pmpa/issues"
   },
   "dependencies": {
     "tslib": "^2.6.2"
