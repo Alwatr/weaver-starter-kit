@@ -1,4 +1,4 @@
-const {env} = require('process')
+const {env} = require('process');
 
 module.exports = {
   siteUrl: env.siteUrl ?? '',
