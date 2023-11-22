@@ -1,13 +1,14 @@
-const {existsSync} = require('fs');
-const {readFile, writeFile, mkdir, readdir} = require('fs/promises');
+import {existsSync} from 'fs';
+import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
+import {logger} from './logger.js'
 
-const cssnano = require('cssnano');
-const postcss = require('postcss');
-const postcssImport = require('postcss-import');
-const postcssPresetEnv = require('postcss-preset-env');
-const postcssVariableCompress = require('postcss-variable-compress');
-const tailwindcss = require('tailwindcss');
-const postcssNesting = require('tailwindcss/nesting/index.js');
+import cssnano from 'cssnano';
+import postcss from 'postcss';
+import postcssImport from 'postcss-import';
+import postcssPresetEnv from 'postcss-preset-env';
+import postcssVariableCompress from 'postcss-variable-compress';
+import tailwindcss from 'tailwindcss';
+import postcssNesting from 'tailwindcss/nesting/index.js';
 
 const postCss = postcss([
   postcssImport({root: 'site/_css'}),
@@ -27,7 +28,8 @@ const postCss = postcss([
   postcssVariableCompress,
 ]);
 
-async function postcssBuild() {
+export async function postcssBuild() {
+  logger.logMethod?.('postcssBuild');
   const inputDir = 'site/_css/';
   const outputDir = 'dist/css/';
 
@@ -50,12 +52,6 @@ async function postcssBuild() {
     await writeFile(outputFilePath, output, {encoding: 'utf8'});
 
     const fileSize = new Blob([output]).size / 1024;
-    console.log(`⚡️ ${outputFilePath}\t${fileSize.toFixed(1)}kb`);
+    logger.logOther?.(`${outputFilePath}\t${fileSize.toFixed(1)}kb`)
   }
 }
-
-async function postcssFilter(code) {
-  return (await postCss.process(code)).css;
-}
-
-module.exports = {postcssFilter, postcssBuild};
