@@ -40,6 +40,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@alwatr/logger": "^2.2.0",
     "@alwatr/style": "^2.0.2",
+    "@swc/html": "^0.0.28",
     "cssnano": "^6.0.1",
     "esbuild": "^0.19.7",
     "eslint": "^8.54.0",

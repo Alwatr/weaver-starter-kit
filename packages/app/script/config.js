@@ -1,4 +1,7 @@
+import TemplateConfig from '@11ty/eleventy/src/TemplateConfig.js';
+import {postcssBuild} from './postcss.js';
 import {esbuildBuild} from './esbuild.js';
+import {minifyHtml} from './minify-html.js';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -65,6 +68,7 @@ function _eleventyConfig(config) {
   eleventyConfig.on('eleventy.before', esbuildBuild);
   eleventyConfig.on('eleventy.after', postcssBuild);
 
+  eleventyConfig.addTransform('minifyHtml', minifyHtml);
 
   return {
     templateFormats: [
