@@ -1,1 +1,3 @@
-console.log('true');
+import { logger } from "./lib/logger.js";
+
+logger.banner('@alwatr/pmpa')

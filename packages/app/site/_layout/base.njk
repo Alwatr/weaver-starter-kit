@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ locale }}" dir="{{ dir }}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }}</title>
-</head>
-<body>
-  {{ content | safe }}
-</body>
+<!doctype html>
+<html lang="{{ locale }}" dir="{{ dir }}" class="h-full w-full">
+  <head>
+    <link rel="preload" as="style" href="/css/main.css?v={{ git.shortSha }}" fetchpriority="high" />
+    <link rel="preload" href="/font/vazirmatn/vazirmatn[wght].woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="script" href="/es/main.js?v={{ git.shortSha }}" crossorigin />
+
+    {% include "meta.njk" %}
+    <link rel="stylesheet" href="/css/main.css?v={{ git.shortSha }}" />
+    <script type="module" src="/es/main.js?v={{ git.shortSha }}" defer async></script>
+  </head>
+
+  <body
+    class="m-0 h-full max-h-full w-full max-w-full transform-gpu touch-pan-x touch-pan-y touch-pinch-zoom overflow-clip break-words bg-background p-0 font-vazirmatn text-bodyMedium text-onBackground antialiased hide-scrollbar-in-mobile color-scheme-light"
+  >
+    {{ content | safe }}
+  </body>
 </html>
