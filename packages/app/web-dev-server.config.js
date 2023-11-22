@@ -2,7 +2,7 @@
 /** @type {import('@web/dev-server').DevServerConfig} */
 export default {
   hostname: '0.0.0.0',
-  port: 8070,
+  port: 8080,
   open: true,
   watch: true,
   // appIndex: 'index.html',
@@ -11,9 +11,8 @@ export default {
   },
   // esbuildTarget: 'auto',
   // in a monorepo you need to set set the root dir to resolve modules
-  rootDir: '.',
+  rootDir: 'dist',
   // debug: false,
   plugins: [],
   middleware: [],
-  debug: true,
 };
