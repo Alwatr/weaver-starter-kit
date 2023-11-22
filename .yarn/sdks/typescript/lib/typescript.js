@@ -11,10 +11,10 @@ const absRequire = createRequire(absPnpApiPath);
 
 if (existsSync(absPnpApiPath)) {
   if (!process.versions.pnp) {
-    // Setup the environment to be able to require typescript/bin/tsserver
+    // Setup the environment to be able to require typescript
     require(absPnpApiPath).setup();
   }
 }
 
-// Defer to the real typescript/bin/tsserver your application uses
-module.exports = absRequire(`typescript/bin/tsserver`);
+// Defer to the real typescript your application uses
+module.exports = absRequire(`typescript`);

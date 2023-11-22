@@ -1,3 +1,5 @@
+const {postcssFilter, postcssBuild} = require('../config/postcss.cjs');
+
 /**
  * 11ty configuration.
  * @param {import("@11ty/eleventy").UserConfig} eleventyConfig
@@ -7,8 +9,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     assets: '/',
   });
-
-  eleventyConfig.setQuietMode(true);
 
   eleventyConfig.setServerOptions({
     liveReload: true,
@@ -22,6 +22,11 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addWatchTarget('./site/');
+  eleventyConfig.addWatchTarget('./shortcode/');
+
+  eleventyConfig.addAsyncFilter('postcss', postcssFilter);
+
+  eleventyConfig.on('eleventy.after', postcssBuild);
 
   return {
     markdownTemplateEngine: 'njk',
