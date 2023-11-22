@@ -1,3 +1,3 @@
-import { logger } from "./lib/logger.js";
+import {logger} from './lib/logger.js';
 
-logger.banner('@alwatr/pmpa')
+logger.banner('@alwatr/pmpa');

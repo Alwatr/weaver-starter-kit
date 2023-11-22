@@ -1,6 +1,6 @@
 import {existsSync} from 'fs';
 import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
-import {logger} from './logger.js'
+import {logger} from './logger.js';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -52,6 +52,6 @@ export async function postcssBuild() {
     await writeFile(outputFilePath, output, {encoding: 'utf8'});
 
     const fileSize = new Blob([output]).size / 1024;
-    logger.logOther?.(`${outputFilePath}\t${fileSize.toFixed(1)}kb`)
+    logger.logOther?.(`${outputFilePath}\t${fileSize.toFixed(1)}kb`);
   }
 }
