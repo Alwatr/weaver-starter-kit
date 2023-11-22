@@ -52,6 +52,6 @@ export async function postcssBuild() {
     await writeFile(outputFilePath, output, {encoding: 'utf8'});
 
     const fileSize = new Blob([output]).size / 1024;
-    logger.logOther?.(`⚡️ ${outputFilePath}\t${fileSize.toFixed(1)}kb`)
+    logger.logOther?.(`${outputFilePath}\t${fileSize.toFixed(1)}kb`)
   }
 }
