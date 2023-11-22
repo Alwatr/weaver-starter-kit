@@ -17,15 +17,12 @@
     "cb": "run-s clean build",
     "cw": "run-s clean watch",
     "l": "yarn run lint",
-    "s": "yarn run start",
     "w": "yarn run watch",
     "clean": "rm -rf dist .tsbuildinfo",
     "lint": "run-s 'lint:*'",
     "lint:ts": "tsc --build",
     "build": "yarn node script/build.js",
-    "watch": "yarn watch:11ty",
-    "watch:ts": "yarn run lint:ts --watch --preserveWatchOutput",
-    "watch:11ty": "yarn run build --watch"
+    "watch": "yarn run build --watch"
   },
   "repository": {
     "type": "git",
