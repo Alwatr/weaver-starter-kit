@@ -34,7 +34,6 @@
     "format:eslint": "yarn run lint:ts --fix",
     "format:prettier": "prettier . --ignore-path .gitignore --write",
     "clean": "git clean -d -x -f --exclude=node_modules --exclude='*.env' --exclude=_data --exclude='.pnp*' --exclude=.yarn",
-    "serve": "wds",
     "watch": "run-p 'watch:*' serve",
     "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
     "pull": "git pull",
@@ -42,8 +41,6 @@
     "publish": "lerna publish from-package"
   },
   "devDependencies": {
-    "@alwatr/style": "2.0.2",
-    "@deanc/esbuild-plugin-postcss": "^1.0.2",
     "@lerna-lite/changed": "^2.7.2",
     "@lerna-lite/cli": "^2.7.2",
     "@lerna-lite/diff": "^2.7.2",
@@ -51,27 +48,7 @@
     "@lerna-lite/publish": "^2.7.2",
     "@lerna-lite/run": "^2.7.2",
     "@lerna-lite/version": "^2.7.2",
-    "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "@typescript-eslint/parser": "^6.12.0",
-    "@web/dev-server": "^0.4.1",
-    "autoprefixer": "^10.4.16",
-    "esbuild": "^0.19.7",
-    "eslint": "^8.54.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-lit": "^1.10.1",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.31",
-    "postcss-cli": "^10.1.0",
-    "postcss-import": "^15.1.0",
-    "postcss-preset-env": "^9.3.0",
-    "prettier": "^3.1.0",
-    "prettier-plugin-tailwindcss": "^0.5.7",
-    "tailwindcss": "^3.3.5",
-    "ts-lit-plugin": "^2.0.1",
-    "tslib": "^2.6.2",
-    "typescript": "^5.3.2",
-    "workbox-build": "^7.0.0"
+    "npm-run-all": "^4.1.5"
   },
   "packageManager": "yarn@4.0.2"
 }

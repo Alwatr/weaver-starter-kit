@@ -15,19 +15,17 @@
     "b": "yarn run build",
     "c": "yarn run clean",
     "cb": "run-s clean build",
+    "cw": "run-s clean watch",
+    "l": "yarn run lint",
     "s": "yarn run start",
     "w": "yarn run watch",
-    "start": "NODE_OPTIONS=--enable-source-maps run-s clean build serve",
-    "build": "yarn node build.js",
+    "clean": "rm -rf dist .tsbuildinfo",
+    "lint": "run-s 'lint:*'",
     "lint:ts": "tsc --build",
-    "clean": "rm -rf dist build .tsbuildinfo",
-    "serve": "yarn node --enable-source-maps dist/index.mjs",
-    "serve:debug": "yarn node --inspect --enable-source-maps dist/index.mjs",
-    "watch": "run-s clean build && run-p watch:11ty watch:node",
-    "watch:node": "nodemon -w dist/ --enable-source-maps dist/index.mjs",
-    "watch:debug-node": "nodemon -w dist/ --inspect --enable-source-maps dist/index.mjs",
-    "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
-    "watch:es": "yarn run build:11ty --watch"
+    "build": "yarn node script/build.js",
+    "watch": "yarn watch:11ty",
+    "watch:ts": "yarn run lint:ts --watch --preserveWatchOutput",
+    "watch:11ty": "yarn run build --watch"
   },
   "repository": {
     "type": "git",
@@ -38,14 +36,14 @@
   "bugs": {
     "url": "https://github.com/Alwatr/pmpa/issues"
   },
-  "dependencies": {
-    "tslib": "^2.6.2"
-  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@alwatr/logger": "^2.2.0",
     "esbuild": "^0.19.7",
+    "eslint": "^8.54.0",
     "npm-run-all": "^4.1.5",
+    "prettier": "^3.1.0",
+    "tslib": "^2.6.2",
     "typescript": "^5.3.2"
   }
 }
