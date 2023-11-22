@@ -1,7 +1,9 @@
-// https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
-
 import TemplateConfig from '@11ty/eleventy/src/TemplateConfig.js';
+import {postcssBuild} from './postcss.js';
+import {esbuildBuild} from './esbuild.js';
+import {minifyHtml} from './minify-html.js';
 
+// https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
  * 11ty configuration.
  * @param {import("@11ty/eleventy").UserConfig} config
@@ -62,6 +64,11 @@ function _eleventyConfig(config) {
 
   // config.addWatchTarget('./site/');
   config.addWatchTarget('./shortcode/');
+
+  config.on('eleventy.before', esbuildBuild);
+  config.on('eleventy.after', postcssBuild);
+
+  config.addTransform('minifyHtml', minifyHtml);
 
   return {
     templateFormats: [

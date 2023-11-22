@@ -1,7 +1,7 @@
 import {build} from 'esbuild';
-import {logger} from './logger.js';
+import {logger, debugMode} from './logger.js';
 
-export async function esbuildBuild(debugMode = false) {
+export async function esbuildBuild() {
   logger.logMethodArgs?.('esbuildBuild', {debugMode});
   try {
     await build({
