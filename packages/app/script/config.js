@@ -65,10 +65,10 @@ function _eleventyConfig(config) {
   // config.addWatchTarget('./site/');
   config.addWatchTarget('./shortcode/');
 
-  eleventyConfig.on('eleventy.before', esbuildBuild);
-  eleventyConfig.on('eleventy.after', postcssBuild);
+  config.on('eleventy.before', esbuildBuild);
+  config.on('eleventy.after', postcssBuild);
 
-  eleventyConfig.addTransform('minifyHtml', minifyHtml);
+  config.addTransform('minifyHtml', minifyHtml);
 
   return {
     templateFormats: [
