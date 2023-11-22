@@ -121,11 +121,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/logger@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@alwatr/logger@npm:2.2.0"
+  dependencies:
+    tslib: "npm:^2.6.2"
+  checksum: a3e95d67fcc09b54b38a967f15dc297128d8e6749b2123092f3f70343cb57bd7bb65dbb6434e8605f8f88dbe751d4c7be446042ffb4db9c70167bb87af0f0e43
+  languageName: node
+  linkType: hard
+
 "@alwatr/pmpa-app@workspace:packages/app":
   version: 0.0.0-use.local
   resolution: "@alwatr/pmpa-app@workspace:packages/app"
   dependencies:
     "@11ty/eleventy": "npm:^2.0.1"
+    "@alwatr/logger": "npm:^2.2.0"
     esbuild: "npm:^0.19.7"
     npm-run-all: "npm:^4.1.5"
     tslib: "npm:^2.6.2"
