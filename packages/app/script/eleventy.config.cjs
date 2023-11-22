@@ -8,8 +8,6 @@ module.exports = function (eleventyConfig) {
     assets: '/',
   });
 
-  eleventyConfig.setQuietMode(true);
-
   eleventyConfig.setServerOptions({
     liveReload: true,
     port: 8080,
@@ -22,6 +20,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addWatchTarget('./site/');
+  eleventyConfig.addWatchTarget('./shortcode/');
 
   return {
     markdownTemplateEngine: 'njk',

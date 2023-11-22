@@ -31,9 +31,6 @@ build
 .tsbuildinfo
 *.map
 *.d.ts
-*.js
-!*.config.js
-!**/res/*.js
 
 # Output of 'npm pack'
 *.tgz
@@ -41,4 +38,3 @@ build
 # dotenv environment variables file
 .env
 
-!packages/app/build.js
