@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Build & Publish Containers
+
+on:
+  workflow_dispatch:
+
+  push:
+    tags:
+      - 'v*.*.*'
+    branches:
+      - next
+
+  pull_request:
+    paths:
+      - 'cloud/container/*.dockerfile'
+      - '.github/workflows/publish-container.yml'
+
+env:
+  USER: alwatr
+
+jobs:
+  build:
+    if: github.repository_owner == 'Alwatr'
+
+    name: Build & Publish Containers
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: pmpa-app
+            path: packages/app
+            dockerfile: cloud/app.dockerfile
+
+          - name: pmpa-api
+            path: packages/api
+            dockerfile: cloud/service.dockerfile
+
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
+
+    steps:
+      - name: ⤵️ Checkout repository
+        uses: actions/checkout@v4.1.1
+
+      # - name: ❔ Check Container files changed
+      #   id: file_change
+      #   uses: dorny/paths-filter@v2.11.1
+      #   with:
+      #     filters: |
+      #       container_folder:
+      #         ./${{ matrix.path }}/*
+
+      - name: 🏗 Install cosign
+        if: ${{ github.event_name != 'pull_request' && steps.file_change.outputs.container_folder != 'false' }}
+        uses: sigstore/cosign-installer@v3.2.0
+
+      - name: 🏗 Setup Docker Buildx
+        if: ${{ steps.file_change.outputs.container_folder != 'false' }}
+        uses: docker/setup-buildx-action@v3.0.0
+
+      - name: 🏗 Cache Docker Layers
+        if: ${{ steps.file_change.outputs.container_folder != 'false' }}
+        uses: actions/cache@v3
+        with:
+          path: /tmp/.buildx-cache
+          key: container-${{ matrix.name }}
+
+      - name: 🏗 Log into ghcr.io registry
+        if: ${{ github.event_name != 'pull_request' && steps.file_change.outputs.container_folder != 'false' }}
+        uses: docker/login-action@v3.0.0
+        with:
+          registry: ghcr.io
+          username: ${{env.USER}}
+          password: ${{secrets.GITHUB_TOKEN}}
+
+      - name: 🏗 Extract metadata
+        if: ${{ github.event_name != 'pull_request' && steps.file_change.outputs.container_folder != 'false' }}
+        id: meta
+        uses: docker/metadata-action@v5.0.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          images: name=ghcr.io/${{ env.USER }}/${{ matrix.name }},enable=true
+
+          labels: |
+            org.opencontainers.image.authors=Ali.Mihandoost@gmail.com
+            org.opencontainers.image.title=@alwatr/${{ matrix.name }}
+
+          tags: |
+            type=semver,enable=true,pattern={{major}}
+            type=semver,enable=true,pattern={{major}}.{{minor}}
+            type=semver,enable=true,pattern={{version}}
+            type=ref,enable=true,event=branch
+            type=raw,enable=true,value=next
+
+      - name: 🚀 Build and push container image
+        if: ${{ steps.file_change.outputs.container_folder != 'false' }}
+        id: build_and_push
+        uses: docker/build-push-action@v5.0.0
+        with:
+          context: .
+          file: "${{ matrix.dockerfile }}"
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            packageSource=${{ matrix.path }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache
+
+
+      - name: 🏗 Sign the image with GitHub OIDC Token
+        if: ${{ github.event_name != 'pull_request' && steps.file_change.outputs.container_folder != 'false' }}
+        env:
+          COSIGN_EXPERIMENTAL: 'true'
+        run: echo "${{steps.meta.outputs.tags}}" | xargs -I {} cosign sign --yes {}@${{steps.build_and_push.outputs.digest}}
