@@ -3,6 +3,7 @@ import {devMode} from './logger.js';
 import {esbuildBuild} from './esbuild.js';
 import {minifyHtml} from './minify-html.js';
 import {postcssBuild} from './postcss.js';
+import {dateString, timeString, trim} from './util.js'
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -64,6 +65,11 @@ function _eleventyConfig(config) {
   });
 
   config.addWatchTarget('./shortcode/');
+
+  config.addFilter('dateString', dateString);
+  config.addFilter('timeString', timeString);
+  config.addFilter('trim', trim);
+
 
   if (devMode !== true) {
     config.addTransform('minifyHtml', minifyHtml);
