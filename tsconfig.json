@@ -14,5 +14,5 @@
   },
   "files": [],
   "exclude": [],
-  "references": [{"path": "./packages/app"}]
+  "references": [{"path": "./packages/app"}, {"path": "./packages/api"}]
 }
