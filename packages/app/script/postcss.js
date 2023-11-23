@@ -1,6 +1,6 @@
 import {existsSync} from 'fs';
 import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
-import {logger} from './logger.js';
+import {devMode, logger} from './logger.js';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -10,23 +10,19 @@ import postcssVariableCompress from 'postcss-variable-compress';
 import tailwindcss from 'tailwindcss';
 import postcssNesting from 'tailwindcss/nesting/index.js';
 
-const postCss = postcss([
-  postcssImport({root: 'site/_css'}),
-  postcssNesting,
-  tailwindcss,
-  postcssPresetEnv,
-  cssnano({
-    preset: [
-      'default',
-      {
-        discardComments: {
-          removeAll: true,
-        },
-      },
-    ],
-  }),
-  postcssVariableCompress,
-]);
+let postCss;
+if (devMode) {
+  postCss = postcss([postcssImport({root: 'site/_css'}), postcssNesting, tailwindcss]);
+} else {
+  postCss = postcss([
+    postcssImport({root: 'site/_css'}),
+    postcssNesting,
+    tailwindcss,
+    postcssPresetEnv,
+    cssnano({preset: ['default', {discardComments: {removeAll: true}}]}),
+    postcssVariableCompress,
+  ]);
+}
 
 export async function postcssBuild() {
   logger.logMethod?.('postcssBuild');
