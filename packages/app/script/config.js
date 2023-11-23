@@ -6,7 +6,6 @@ import {dateString, timeString, trim} from './util.js';
 import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import {alwatrIcon} from '../shortcode/alwatr-icon.js';
-
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
  * 11ty configuration.
