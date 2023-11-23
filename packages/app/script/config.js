@@ -4,10 +4,10 @@ import urlFilter from '@11ty/eleventy/src/Filters/Url.js';
 import {esbuildBuild} from './esbuild.js';
 import {minifyHtml} from './minify-html.js';
 import {postcssBuild} from './postcss.js';
-import {dateString, timeString, trim} from './util.js'
+import {dateString, timeString, trim} from './util.js';
 import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
 import pluginRss from '@11ty/eleventy-plugin-rss';
-import {alwatrIcon} from '../shortcode/alwatr-icon.js'
+import {alwatrIcon} from '../shortcode/alwatr-icon.js';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -17,6 +17,24 @@ import {alwatrIcon} from '../shortcode/alwatr-icon.js'
  */
 function _eleventyConfig(config) {
   let templateConfig = this;
+
+  config.addPassthroughCopy({
+    assets: '/',
+    'assets/img/meta/favicon.ico': '/favicon.ico',
+  });
+
+  config.setServerOptions({
+    liveReload: true,
+    port: 8080,
+    showAllHosts: true,
+
+    /**
+     * Whether DOM diffing updates are applied where possible instead of page reloads
+     */
+    domDiff: false,
+  });
+
+  config.additionalWatchTargets = ['./site/', './shortcode/'];
 
   // config.addFilter("slug", slugFilter);
   // config.addFilter("slugify", slugifyFilter);
@@ -53,23 +71,6 @@ function _eleventyConfig(config) {
   //   return getLocaleCollectionItem.call(this, config, collection, pageOverride, langCode, 1);
   // });
 
-  config.addPassthroughCopy({
-    assets: '/',
-  });
-
-  config.setServerOptions({
-    liveReload: true,
-    port: 8080,
-    showAllHosts: true,
-
-    /**
-     * Whether DOM diffing updates are applied where possible instead of page reloads
-     */
-    domDiff: false,
-  });
-
-  config.additionalWatchTargets = ['./site/', './shortcode/'];
-
   config.addFilter('dateString', dateString);
   config.addFilter('timeString', timeString);
   config.addFilter('trim', trim);
@@ -87,7 +88,7 @@ function _eleventyConfig(config) {
 
   if (productionMode === true) {
     config.addTransform('minifyHtml', minifyHtml);
-    config.addTransform('trim', trim)
+    config.addTransform('trim', trim);
   }
 
   config.on('eleventy.before', esbuildBuild);

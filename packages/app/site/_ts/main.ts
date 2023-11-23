@@ -8,4 +8,4 @@ import './lib/type.js';
 
 logger.banner('@alwatr/pmpa');
 
-alpine.start();
+alpine.default.start();
