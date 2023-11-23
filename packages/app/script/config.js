@@ -1,10 +1,12 @@
 import TemplateConfig from '@11ty/eleventy/src/TemplateConfig.js';
 import {productionMode} from './logger.js';
+import urlFilter from '@11ty/eleventy/src/Filters/Url.js';
 import {esbuildBuild} from './esbuild.js';
 import {minifyHtml} from './minify-html.js';
 import {postcssBuild} from './postcss.js';
 import {dateString, timeString, trim} from './util.js'
 import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
+import pluginRss from '@11ty/eleventy-plugin-rss';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -13,7 +15,7 @@ import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
  * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
 function _eleventyConfig(config) {
-  // let templateConfig = this;
+  let templateConfig = this;
 
   // config.addFilter("slug", slugFilter);
   // config.addFilter("slugify", slugifyFilter);
@@ -71,6 +73,7 @@ function _eleventyConfig(config) {
   config.addFilter('timeString', timeString);
   config.addFilter('trim', trim);
 
+  config.addPlugin(pluginRss);
   config.addPlugin(directoryOutputPlugin, {
     columns: {
       filesize: true,
@@ -81,6 +84,7 @@ function _eleventyConfig(config) {
 
   if (productionMode === true) {
     config.addTransform('minifyHtml', minifyHtml);
+    config.addTransform('trim', trim)
   }
 
   config.on('eleventy.before', esbuildBuild);

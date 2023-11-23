@@ -55,6 +55,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@11ty/eleventy-plugin-rss@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@11ty/eleventy-plugin-rss@npm:1.2.0"
+  dependencies:
+    debug: "npm:^4.3.4"
+    posthtml: "npm:^0.16.6"
+    posthtml-urls: "npm:1.0.0"
+  checksum: 16beaf07e3b0380220f52deaad572d6378e2df1dce5c3dcf647003f20f02328642aa21443a745dfd9f9877dfc36b098a21a20d273f277e804e1c12b2d39df607
+  languageName: node
+  linkType: hard
+
 "@11ty/eleventy-utils@npm:^1.0.1":
   version: 1.0.2
   resolution: "@11ty/eleventy-utils@npm:1.0.2"
@@ -201,6 +212,7 @@ __metadata:
     "@11ty/eleventy": "npm:^2.0.1"
     "@11ty/eleventy-fetch": "npm:^4.0.0"
     "@11ty/eleventy-plugin-directory-output": "npm:^1.0.1"
+    "@11ty/eleventy-plugin-rss": "npm:^1.2.0"
     "@alwatr/logger": "npm:^2.3.0"
     "@alwatr/server-context": "npm:^1.2.4"
     "@alwatr/style": "npm:^2.0.2"
@@ -9347,7 +9359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"posthtml-urls@npm:^1.0.0":
+"posthtml-urls@npm:1.0.0, posthtml-urls@npm:^1.0.0":
   version: 1.0.0
   resolution: "posthtml-urls@npm:1.0.0"
   dependencies:
