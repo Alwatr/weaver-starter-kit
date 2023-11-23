@@ -1,8 +1,8 @@
 import {build} from 'esbuild';
-import {logger, debugMode} from './logger.js';
+import {logger, devMode} from './logger.js';
 
 export async function esbuildBuild() {
-  logger.logMethodArgs?.('esbuildBuild', {debugMode});
+  logger.logMethod?.('esbuildBuild');
   try {
     await build({
       entryPoints: ['site/_ts/*.ts'],
@@ -11,9 +11,9 @@ export async function esbuildBuild() {
       platform: 'browser',
       target: 'es2018',
       format: 'esm',
-      minify: true,
+      minify: !devMode,
       treeShaking: true,
-      sourcemap: debugMode,
+      sourcemap: devMode,
       bundle: true,
       charset: 'utf8',
       legalComments: 'none',
