@@ -45,6 +45,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@11ty/eleventy-plugin-directory-output@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@11ty/eleventy-plugin-directory-output@npm:1.0.1"
+  dependencies:
+    kleur: "npm:^4.1.4"
+    strip-color: "npm:^0.1.0"
+  checksum: 2ec0308cf42fd56d6fb0438193288eaf0bc46a33170f99ddd44f710cf2bb6f3ef53d5bfb2c7fc7f86ba7d6a2f2e2288b87bf6d5375ee795f653641dda2508a66
+  languageName: node
+  linkType: hard
+
 "@11ty/eleventy-utils@npm:^1.0.1":
   version: 1.0.2
   resolution: "@11ty/eleventy-utils@npm:1.0.2"
@@ -190,6 +200,7 @@ __metadata:
   dependencies:
     "@11ty/eleventy": "npm:^2.0.1"
     "@11ty/eleventy-fetch": "npm:^4.0.0"
+    "@11ty/eleventy-plugin-directory-output": "npm:^1.0.1"
     "@alwatr/logger": "npm:^2.3.0"
     "@alwatr/server-context": "npm:^1.2.4"
     "@alwatr/style": "npm:^2.0.2"
@@ -6761,7 +6772,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kleur@npm:^4.1.5":
+"kleur@npm:^4.1.4, kleur@npm:^4.1.5":
   version: 4.1.5
   resolution: "kleur@npm:4.1.5"
   checksum: e9de6cb49657b6fa70ba2d1448fd3d691a5c4370d8f7bbf1c2f64c24d461270f2117e1b0afe8cb3114f13bbd8e51de158c2a224953960331904e636a5e4c0f2a
@@ -10544,6 +10555,13 @@ __metadata:
   version: 3.0.0
   resolution: "strip-bom@npm:3.0.0"
   checksum: 51201f50e021ef16672593d7434ca239441b7b760e905d9f33df6e4f3954ff54ec0e0a06f100d028af0982d6f25c35cd5cda2ce34eaebccd0250b8befb90d8f1
+  languageName: node
+  linkType: hard
+
+"strip-color@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "strip-color@npm:0.1.0"
+  checksum: 24df29b62eefc57a1d7f35c36f3b0c070289a0742aa54af2ff9ee39eadb19e372588a6faa2fa6a98870d97cb70c5d77826de69fff5e383fc2c2bdbf24cf1bcc8
   languageName: node
   linkType: hard
 

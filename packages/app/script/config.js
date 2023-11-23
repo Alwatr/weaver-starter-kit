@@ -4,6 +4,7 @@ import {esbuildBuild} from './esbuild.js';
 import {minifyHtml} from './minify-html.js';
 import {postcssBuild} from './postcss.js';
 import {dateString, timeString, trim} from './util.js'
+import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -70,6 +71,13 @@ function _eleventyConfig(config) {
   config.addFilter('timeString', timeString);
   config.addFilter('trim', trim);
 
+  config.addPlugin(directoryOutputPlugin, {
+    columns: {
+      filesize: true,
+      benchmark: true,
+    },
+    warningFileSize: 400 * 1000,
+  });
 
   if (productionMode === true) {
     config.addTransform('minifyHtml', minifyHtml);
