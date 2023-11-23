@@ -1,16 +1,12 @@
 {
   "name": "@alwatr/pmpa-app",
-  "private": true,
   "version": "0.1.0",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
+  "private": true,
   "main": "main.js",
   "type": "module",
-  "types": "main.d.ts",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
-  "files": [
-    "**/*.{d.ts.map,d.ts,js.map,js,html,md,svg,css}"
-  ],
   "scripts": {
     "b": "yarn run build",
     "c": "yarn run clean",
