@@ -1,0 +1,55 @@
+{
+  "name": "@alwatr/pmpa-api",
+  "version": "0.1.0",
+  "description": "Alwatr Progressive Multi Page (Web) Application.",
+  "private": true,
+  "type": "module",
+  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.16.0",
+    "yarn": ">=4.0.0"
+  },
+  "scripts": {
+    "b": "yarn run build",
+    "c": "yarn run clean",
+    "cb": "run-s clean build",
+    "cw": "run-s clean watch",
+    "s": "yarn run start",
+    "w": "yarn run watch",
+    "lint": "run-s 'lint:*'",
+    "lint:ts": "tsc --build",
+    "clean": "rm -rf dist .tsbuildinfo",
+    "start": "NODE_OPTIONS=--enable-source-maps run-s clean build serve",
+    "build": "yarn run build:es",
+    "build:es": "node ./script/build.js",
+    "serve": "yarn node --enable-source-maps dist/index.mjs",
+    "serve:debug": "yarn node --inspect --enable-source-maps dist/index.mjs",
+    "watch": "run-s clean build && run-p watch:es watch:node",
+    "watch:node": "nodemon -w dist/ --enable-source-maps dist/index.mjs",
+    "watch:debug-node": "nodemon -w dist/ --inspect --enable-source-maps dist/index.mjs",
+    "watch:es": "yarn run build:es --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alwatr/pmpa",
+    "directory": "packages/api"
+  },
+  "homepage": "https://github.com/Alwatr/pmpa/tree/next/packages/api#readme",
+  "bugs": {
+    "url": "https://github.com/Alwatr/pmpa/issues"
+  },
+  "devDependencies": {
+    "@alwatr/crypto": "^1.2.0",
+    "@alwatr/logger": "^2.2.0",
+    "@alwatr/nano-server": "^1.2.0",
+    "@alwatr/storage-client": "^4.0.0-rc.0",
+    "@alwatr/type": "^1.2.0",
+    "@types/node": "^20.9.1",
+    "esbuild": "^0.19.6",
+    "nodemon": "^3.0.1",
+    "npm-run-all": "^4.1.5",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
+  }
+}
