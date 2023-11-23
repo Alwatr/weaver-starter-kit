@@ -28,6 +28,7 @@ export async function postcssBuild() {
   logger.logMethod?.('postcssBuild');
   const inputDir = 'site/_css/';
   const outputDir = 'dist/css/';
+  const startTime = Date.now();
 
   if (!existsSync(outputDir)) {
     await mkdir(outputDir, {recursive: true});
@@ -35,6 +36,8 @@ export async function postcssBuild() {
 
   const dirFileList = await readdir(inputDir);
 
+
+  console.log('');
   for (const fileName of dirFileList) {
     if (!fileName.endsWith('.css')) {
       continue;
@@ -48,6 +51,10 @@ export async function postcssBuild() {
     await writeFile(outputFilePath, output, {encoding: 'utf8'});
 
     const fileSize = new Blob([output]).size / 1024;
-    logger.logOther?.(`${outputFilePath}\t${fileSize.toFixed(1)}kb`);
+    console.log(`  ${outputFilePath}\t\u001b[36m${fileSize.toFixed(1)}kb\u001b[0m`);
   }
+  console.log('');
+
+  const endTime = Date.now();
+  console.log(`⚡\u001b[32m Done in ${endTime - startTime}ms\u001b[0m`);
 }
