@@ -177,6 +177,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/icon-set-extra@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@alwatr/icon-set-extra@npm:0.4.0"
+  checksum: e70872ed826e826de9e77bd62464a5476367ea64b1c737a2bcca2ec56492fa5d14c8022fbb3cf5b5b2cde4ba061a7d11f69793e355bf66c258194c333419d1d9
+  languageName: node
+  linkType: hard
+
+"@alwatr/icon-set-material@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@alwatr/icon-set-material@npm:2.0.1"
+  checksum: 6bf2462885a05ea28819fa2483108a49ec6d7d10e063dcc7e4c6f92d7625a47d216b284f158033673a4389edb718cfc9a459ccbf1e27a011aaba37309e58cd45
+  languageName: node
+  linkType: hard
+
 "@alwatr/logger@npm:^2.1.3, @alwatr/logger@npm:^2.2.0":
   version: 2.2.0
   resolution: "@alwatr/logger@npm:2.2.0"
@@ -213,6 +227,8 @@ __metadata:
     "@11ty/eleventy-fetch": "npm:^4.0.0"
     "@11ty/eleventy-plugin-directory-output": "npm:^1.0.1"
     "@11ty/eleventy-plugin-rss": "npm:^1.2.0"
+    "@alwatr/icon-set-extra": "npm:^0.4.0"
+    "@alwatr/icon-set-material": "npm:^2.0.1"
     "@alwatr/logger": "npm:^2.3.0"
     "@alwatr/server-context": "npm:^1.2.4"
     "@alwatr/style": "npm:^2.0.2"
