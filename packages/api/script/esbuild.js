@@ -13,7 +13,7 @@ export async function esbuildBuild() {
       format: 'esm',
       minify: !devMode,
       treeShaking: true,
-      sourcemap: devMode,
+      sourcemap: true,
       bundle: true,
       charset: 'utf8',
       legalComments: 'none'
