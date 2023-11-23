@@ -39,7 +39,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@alwatr/logger": "^2.2.0",
+    "@alwatr/server-context": "^1.2.4",
     "@alwatr/style": "^2.0.2",
+    "@alwatr/util": "^1.3.0",
     "@swc/html": "^0.0.28",
     "@web/dev-server": "^0.4.1",
     "cssnano": "^6.0.1",
