@@ -1,12 +1,9 @@
 module.exports = (data) => {
-  data.excludeFromCollections = true;
-  data.layout = null;
-
   const urls = data.collections.all.map((page) => {
     if (page.data.prerender === 'none') {
       return;
     }
-    return page.url
+    return page.url;
   });
 
   const prerender = {
