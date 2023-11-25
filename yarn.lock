@@ -182,7 +182,9 @@ __metadata:
     "@alwatr/style": "npm:^2.0.2"
     "@alwatr/util": "npm:^1.3.0"
     "@swc/html": "npm:^0.0.28"
+    "@types/alpinejs": "npm:^3"
     "@web/dev-server": "npm:^0.4.1"
+    alpinejs: "npm:^3.13.3"
     cssnano: "npm:^6.0.1"
     esbuild: "npm:^0.19.7"
     eslint: "npm:^8.54.0"
@@ -2102,6 +2104,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/alpinejs@npm:^3":
+  version: 3.13.5
+  resolution: "@types/alpinejs@npm:3.13.5"
+  checksum: 94307248a89c0d35ff4396fc7c9d9285ccec85714f9c1c2d6c71edbcfee3210d1487824681b1ec75f340b3a8a69c3cdf2ce13dddc662a093c84a34226917cdf7
+  languageName: node
+  linkType: hard
+
 "@types/body-parser@npm:*":
   version: 1.19.5
   resolution: "@types/body-parser@npm:1.19.5"
@@ -2483,6 +2492,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/reactivity@npm:~3.1.1":
+  version: 3.1.5
+  resolution: "@vue/reactivity@npm:3.1.5"
+  dependencies:
+    "@vue/shared": "npm:3.1.5"
+  checksum: 1c38aeb73725b3825bea793194334b232388236f0b06b04471508a77cb55d71841e3eb2f345ab6812c76569918aa8f019e4cdf59ec9cefbab7625bb2bc26eb58
+  languageName: node
+  linkType: hard
+
+"@vue/shared@npm:3.1.5":
+  version: 3.1.5
+  resolution: "@vue/shared@npm:3.1.5"
+  checksum: 197aa5bdd370177d26ca7a178bb3d3d2332cee2c8e67000bd2bb91b1ffc571d5489fab3a65f38a32e941dc8182d1cd6c6af6e294bb9ea13e01eafdde475319ea
+  languageName: node
+  linkType: hard
+
 "@web/config-loader@npm:^0.3.0":
   version: 0.3.1
   resolution: "@web/config-loader@npm:0.3.1"
@@ -2697,6 +2722,15 @@ __metadata:
     json-schema-traverse: "npm:^0.4.1"
     uri-js: "npm:^4.2.2"
   checksum: 41e23642cbe545889245b9d2a45854ebba51cda6c778ebced9649420d9205f2efb39cb43dbc41e358409223b1ea43303ae4839db682c848b891e4811da1a5a71
+  languageName: node
+  linkType: hard
+
+"alpinejs@npm:^3.13.3":
+  version: 3.13.3
+  resolution: "alpinejs@npm:3.13.3"
+  dependencies:
+    "@vue/reactivity": "npm:~3.1.1"
+  checksum: f8fde1b47fc4a697ba688d4510c52a91502ed79aea8e0a7c84b8b01c4008e30328f99cb1aefd2608b8ee9d8380e9714804e0e319c5353ab4e34be91fab37eb55
   languageName: node
   linkType: hard
 
