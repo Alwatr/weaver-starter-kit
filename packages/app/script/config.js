@@ -72,7 +72,7 @@ function _eleventyConfig(config) {
   config.on('eleventy.before', esbuildBuild);
   config.on('eleventy.after', postcssBuild);
 
-  eleventyConfig.addExtension("11ty.cjs", {key: "11ty.js"});
+  config.addExtension("11ty.cjs", {key: "11ty.js"});
 
   return {
     templateFormats: [
