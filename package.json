@@ -36,6 +36,9 @@
     "clean": "git clean -d -x -f --exclude=node_modules --exclude='*.env' --exclude=_data --exclude='.pnp*' --exclude=.yarn",
     "watch": "run-p 'watch:*'",
     "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
+    "update": "run-s 'update:*'",
+    "update:yarn": "yarn set version stable",
+    "update:sdk": "yarn dlx @yarnpkg/sdks",
     "pull": "git pull",
     "release": "lerna version",
     "publish": "lerna publish from-package"
