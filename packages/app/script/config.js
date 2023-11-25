@@ -63,7 +63,7 @@ function _eleventyConfig(config) {
     domDiff: false,
   });
 
-  config.addWatchTarget('./shortcode/');
+  config.additionalWatchTargets = ['./site/', './shortcode/']
 
   if (devMode !== true) {
     config.addTransform('minifyHtml', minifyHtml);
