@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-fetch": "^4.0.0",
     "@alwatr/logger": "^2.3.0",
     "@alwatr/server-context": "^1.2.4",
     "@alwatr/style": "^2.0.2",
