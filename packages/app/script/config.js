@@ -63,7 +63,7 @@ function _eleventyConfig(config) {
     domDiff: false,
   });
 
-  config.additionalWatchTargets = ['./site/', './shortcode/']
+  config.additionalWatchTargets = ['./site/', './shortcode/'];
 
   if (productionMode === true) {
     config.addTransform('minifyHtml', minifyHtml);
@@ -72,7 +72,7 @@ function _eleventyConfig(config) {
   config.on('eleventy.before', esbuildBuild);
   config.on('eleventy.after', postcssBuild);
 
-  config.addExtension("11ty.cjs", {key: "11ty.js"});
+  config.addExtension('11ty.cjs', {key: '11ty.js'});
 
   return {
     templateFormats: [
