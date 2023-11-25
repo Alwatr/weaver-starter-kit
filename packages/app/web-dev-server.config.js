@@ -15,4 +15,5 @@ export default {
   // debug: false,
   plugins: [],
   middleware: [],
+  clearTerminalOnReload: false,
 };
