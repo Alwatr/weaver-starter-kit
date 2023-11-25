@@ -34,7 +34,7 @@
     "format:eslint": "yarn run lint:ts --fix",
     "format:prettier": "prettier . --ignore-path .gitignore --write",
     "clean": "git clean -d -x -f --exclude=node_modules --exclude='*.env' --exclude=_data --exclude='.pnp*' --exclude=.yarn",
-    "watch": "run-p 'watch:*' serve",
+    "watch": "run-p 'watch:*'",
     "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
     "pull": "git pull",
     "release": "lerna version",
