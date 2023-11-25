@@ -1,4 +1,4 @@
-import {rmdir} from 'fs/promises';
+import {rm} from 'fs/promises';
 import eleventy from '@11ty/eleventy';
 import {productionMode, logger} from './logger.js';
 import {eleventyConfig} from './config.js';
@@ -9,7 +9,7 @@ async function build(productionMode, watchMode) {
 
   if (productionMode) {
     logger.logOther?.('cleaning output directory...');
-    await rmdir('dist', {recursive: true});
+    await rm('dist', {recursive: true, force: true});
   }
 
   const output = new eleventy('site', 'dist', {}, eleventyConfig);
@@ -24,4 +24,4 @@ async function build(productionMode, watchMode) {
 }
 
 const watchMode = argv.includes('--watch');
-build(!productionMode, watchMode);
+build(productionMode, watchMode);
