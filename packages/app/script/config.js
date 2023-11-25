@@ -1,8 +1,13 @@
 import TemplateConfig from '@11ty/eleventy/src/TemplateConfig.js';
 import {productionMode} from './logger.js';
+import urlFilter from '@11ty/eleventy/src/Filters/Url.js';
 import {esbuildBuild} from './esbuild.js';
 import {minifyHtml} from './minify-html.js';
 import {postcssBuild} from './postcss.js';
+import {dateString, timeString, trim} from './util.js';
+import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import {alwatrIcon} from '../shortcode/alwatr-icon.js';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -11,7 +16,25 @@ import {postcssBuild} from './postcss.js';
  * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
 function _eleventyConfig(config) {
-  // let templateConfig = this;
+  let templateConfig = this;
+
+  config.addPassthroughCopy({
+    assets: '/',
+    'assets/img/meta/favicon.ico': '/favicon.ico',
+  });
+
+  config.setServerOptions({
+    liveReload: true,
+    port: 8080,
+    showAllHosts: true,
+
+    /**
+     * Whether DOM diffing updates are applied where possible instead of page reloads
+     */
+    domDiff: false,
+  });
+
+  config.additionalWatchTargets = ['./site/', './shortcode/'];
 
   // config.addFilter("slug", slugFilter);
   // config.addFilter("slugify", slugifyFilter);
@@ -48,25 +71,24 @@ function _eleventyConfig(config) {
   //   return getLocaleCollectionItem.call(this, config, collection, pageOverride, langCode, 1);
   // });
 
-  config.addPassthroughCopy({
-    assets: '/',
+  config.addFilter('dateString', dateString);
+  config.addFilter('timeString', timeString);
+  config.addFilter('trim', trim);
+
+  config.addShortcode('alwatrIcon', alwatrIcon);
+
+  config.addPlugin(pluginRss);
+  config.addPlugin(directoryOutputPlugin, {
+    columns: {
+      filesize: true,
+      benchmark: true,
+    },
+    warningFileSize: 400 * 1000,
   });
-
-  config.setServerOptions({
-    liveReload: true,
-    port: 8080,
-    showAllHosts: true,
-
-    /**
-     * Whether DOM diffing updates are applied where possible instead of page reloads
-     */
-    domDiff: false,
-  });
-
-  config.additionalWatchTargets = ['./site/', './shortcode/'];
 
   if (productionMode === true) {
     config.addTransform('minifyHtml', minifyHtml);
+    config.addTransform('trim', trim);
   }
 
   config.on('eleventy.before', esbuildBuild);
