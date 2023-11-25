@@ -1,5 +1,5 @@
 import TemplateConfig from '@11ty/eleventy/src/TemplateConfig.js';
-import {devMode} from './logger.js';
+import {productionMode} from './logger.js';
 import {esbuildBuild} from './esbuild.js';
 import {minifyHtml} from './minify-html.js';
 import {postcssBuild} from './postcss.js';
@@ -65,7 +65,7 @@ function _eleventyConfig(config) {
 
   config.additionalWatchTargets = ['./site/', './shortcode/']
 
-  if (devMode !== true) {
+  if (productionMode === true) {
     config.addTransform('minifyHtml', minifyHtml);
   }
 

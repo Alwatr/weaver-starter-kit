@@ -3,5 +3,5 @@ import {env} from 'process';
 
 export const logger = createLogger('pmpa', true);
 
-export const devMode = env.NODE_ENV !== 'production';
-logger.logProperty?.('devMode', devMode)
+export const productionMode = env.NODE_ENV === 'production';
+logger.logProperty?.('productionMode', productionMode)

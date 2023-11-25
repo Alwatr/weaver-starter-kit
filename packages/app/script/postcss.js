@@ -1,6 +1,6 @@
 import {existsSync} from 'fs';
 import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
-import {devMode, logger} from './logger.js';
+import {productionMode, logger} from './logger.js';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -10,19 +10,17 @@ import postcssVariableCompress from 'postcss-variable-compress';
 import tailwindcss from 'tailwindcss';
 import postcssNesting from 'tailwindcss/nesting/index.js';
 
-let postCss;
-if (devMode) {
-  postCss = postcss([postcssImport({root: 'site/_css'}), postcssNesting, tailwindcss]);
-} else {
-  postCss = postcss([
-    postcssImport({root: 'site/_css'}),
-    postcssNesting,
-    tailwindcss,
+const postCssPlugins = [postcssImport({root: 'site/_css'}), postcssNesting, tailwindcss];
+
+if (productionMode) {
+  postCssPlugins.push(
     postcssPresetEnv,
-    cssnano({preset: ['default', {discardComments: {removeAll: true}}]}),
     postcssVariableCompress,
-  ]);
+    cssnano({preset: ['default', {discardComments: {removeAll: true}}]}),
+  );
 }
+
+const postCss = postcss(postCssPlugins);
 
 export async function postcssBuild() {
   logger.logMethod?.('postcssBuild');
@@ -35,7 +33,6 @@ export async function postcssBuild() {
   }
 
   const dirFileList = await readdir(inputDir);
-
 
   console.log('');
   for (const fileName of dirFileList) {
