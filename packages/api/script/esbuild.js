@@ -16,7 +16,7 @@ export async function esbuildBuild() {
       sourcemap: devMode,
       bundle: true,
       charset: 'utf8',
-      legalComments: 'none'
+      legalComments: 'none',
     });
   } catch (err) {
     logger.error('esbuildBuild', err);
