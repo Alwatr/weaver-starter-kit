@@ -164,6 +164,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/font@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@alwatr/font@npm:1.2.0"
+  checksum: c35e86db254d16a5945dde7bacac27f620efc82845d4c21677401baebf46412456a5f0d8eeab07a4dca191ec6b3dcc10c11aa0d7c187046f40161ae398ac3031
+  languageName: node
+  linkType: hard
+
 "@alwatr/fsm@npm:^2.0.3":
   version: 2.0.3
   resolution: "@alwatr/fsm@npm:2.0.3"
@@ -236,6 +243,7 @@ __metadata:
     "@11ty/eleventy-plugin-directory-output": "npm:^1.0.1"
     "@11ty/eleventy-plugin-rss": "npm:^1.2.0"
     "@alwatr/fetch": "npm:^2.1.1"
+    "@alwatr/font": "npm:^1.2.0"
     "@alwatr/icon-set-extra": "npm:^0.4.0"
     "@alwatr/icon-set-material": "npm:^2.0.1"
     "@alwatr/logger": "npm:^2.3.0"

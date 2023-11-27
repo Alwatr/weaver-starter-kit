@@ -1,9 +1,11 @@
 import {rm} from 'fs/promises';
+import {join} from 'path';
 import eleventy from '@11ty/eleventy';
 import {logger} from './logger.js';
 import {eleventyConfig} from './config.js';
 import {argv} from 'process';
-import {generateEsbuildContext} from './esbuild.js'
+import {generateEsbuildContext} from './esbuild.js';
+import {copyFont} from './assets.js';
 
 const rootDir = 'site';
 const outDir = 'dist';
@@ -11,12 +13,16 @@ const outDir = 'dist';
 async function build({watchMode, debugMode, cleanMode}) {
   logger.logMethodArgs?.('build', {watchMode, debugMode, cleanMode});
 
-  const esbuildContext = await generateEsbuildContext({debugMode: debugMode})
-
   if (cleanMode) {
     logger.logOther?.('🧹 Cleaning...');
     await rm(outDir, {recursive: true, force: true});
   }
+
+  logger.logOther?.('📋 Copying assets...');
+  const fontName = 'vazirmatn';
+  await copyFont(fontName, join(outDir, 'font', fontName));
+
+  const esbuildContext = await generateEsbuildContext({debugMode: debugMode});
 
   const output = new eleventy(rootDir, outDir, {}, eleventyConfig);
 
