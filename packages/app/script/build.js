@@ -1,27 +1,53 @@
 import {rm} from 'fs/promises';
 import eleventy from '@11ty/eleventy';
-import {productionMode, logger} from './logger.js';
+import {logger} from './logger.js';
 import {eleventyConfig} from './config.js';
 import {argv} from 'process';
+import {generateEsbuildContext} from './esbuild.js'
 
-async function build(productionMode, watchMode) {
-  logger.logMethodArgs?.('build', {productionMode});
+const rootDir = 'site';
+const outDir = 'dist';
 
-  if (productionMode) {
-    logger.logOther?.('cleaning output directory...');
-    await rm('dist', {recursive: true, force: true});
+async function build({watchMode, debugMode, cleanMode}) {
+  logger.logMethodArgs?.('build', {watchMode, debugMode, cleanMode});
+
+  const esbuildContext = await generateEsbuildContext({debugMode: debugMode})
+
+  if (cleanMode) {
+    logger.logOther?.('🧹 Cleaning...');
+    await rm(outDir, {recursive: true, force: true});
   }
 
-  const output = new eleventy('site', 'dist', {}, eleventyConfig);
+  const output = new eleventy(rootDir, outDir, {}, eleventyConfig);
 
   if (watchMode) {
-    logger.logOther?.('🕵️‍♂️ Watch mode');
-    await output.watch();
+    logger.logOther?.('👀 Watching...');
+    esbuildContext.watch();
+    output.watch();
   } else {
+    logger.logOther?.('🚀 Building...');
+
+    const buildInfo = await esbuildContext.rebuild();
+    await esbuildContext.dispose();
+
+    logger.logOther?.('✅ Building ES Done...');
+
+    for (const [outFile, outInfo] of Object.entries(buildInfo.metafile?.outputs ?? {})) {
+      const size = (outInfo.bytes / 1024).toFixed(1);
+      logger.logOther?.(`📦 ${outFile} ${size}kb`);
+    }
+
     await output.write();
-    logger.logOther?.('👍🏻 build complete');
+    logger.logOther?.('✅ Done.');
   }
 }
 
 const watchMode = argv.includes('--watch');
-build(productionMode, watchMode);
+const debugMode = argv.includes('--debug');
+const cleanMode = argv.includes('--clean');
+
+build({
+  watchMode,
+  debugMode,
+  cleanMode,
+});

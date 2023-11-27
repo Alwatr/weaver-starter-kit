@@ -1,7 +1,5 @@
 import TemplateConfig from '@11ty/eleventy/src/TemplateConfig.js';
-import {productionMode} from './logger.js';
 import urlFilter from '@11ty/eleventy/src/Filters/Url.js';
-import {esbuildBuild} from './esbuild.js';
 import {minifyHtml} from './minify-html.js';
 import {postcssBuild} from './postcss.js';
 import {dateString, timeString, trim} from './util.js';
@@ -35,6 +33,7 @@ function _eleventyConfig(config) {
   });
 
   config.additionalWatchTargets = ['./site/', './shortcode/'];
+  config.watchIgnores = ['site/_ts/']
 
   // config.addFilter("slug", slugFilter);
   // config.addFilter("slugify", slugifyFilter);
@@ -86,15 +85,12 @@ function _eleventyConfig(config) {
     warningFileSize: 400 * 1000,
   });
 
-  if (productionMode === true) {
-    config.addTransform('minifyHtml', minifyHtml);
-    config.addTransform('trim', trim);
-  }
+  config.addTransform('minifyHtml', minifyHtml);
+  config.addTransform('trim', trim);
 
-  config.on('eleventy.before', esbuildBuild);
   config.on('eleventy.after', postcssBuild);
 
-  config.addExtension('11ty.cjs', {key: '11ty.js'});
+  config.addExtension('data.cjs', {key: '11ty.js'});
 
   return {
     templateFormats: [
