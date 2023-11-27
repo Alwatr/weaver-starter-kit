@@ -1,18 +1,59 @@
+import {rm} from 'fs/promises';
+import {join} from 'path';
 import eleventy from '@11ty/eleventy';
 import {logger} from './logger.js';
 import {eleventyConfig} from './config.js';
+import {argv} from 'process';
+import {generateEsbuildContext} from './esbuild.js';
+import {copyFont} from './assets.js';
 
-async function build() {
-  logger.logMethod?.('build');
-  const output = new eleventy('site', 'dist', {}, eleventyConfig);
+const rootDir = 'site';
+const outDir = 'dist';
 
-  const watchMode = process.argv.includes('--watch');
+async function build({watchMode, debugMode, cleanMode}) {
+  logger.logMethodArgs?.('build', {watchMode, debugMode, cleanMode});
+
+  if (cleanMode) {
+    logger.logOther?.('🧹 Cleaning...');
+    await rm(outDir, {recursive: true, force: true});
+  }
+
+  logger.logOther?.('📋 Copying assets...');
+  const fontName = 'vazirmatn';
+  await copyFont(fontName, join(outDir, 'font', fontName));
+
+  const esbuildContext = await generateEsbuildContext({debugMode: debugMode});
+
+  const output = new eleventy(rootDir, outDir, {}, eleventyConfig);
+
   if (watchMode) {
-    await output.watch()
+    logger.logOther?.('👀 Watching...');
+    esbuildContext.watch();
+    output.watch();
   } else {
+    logger.logOther?.('🚀 Building...');
+
+    const buildInfo = await esbuildContext.rebuild();
+    await esbuildContext.dispose();
+
+    logger.logOther?.('✅ Building ES Done...');
+
+    for (const [outFile, outInfo] of Object.entries(buildInfo.metafile?.outputs ?? {})) {
+      const size = (outInfo.bytes / 1024).toFixed(1);
+      logger.logOther?.(`📦 ${outFile} ${size}kb`);
+    }
+
     await output.write();
-    logger.logOther?.('build-success ✅');
+    logger.logOther?.('✅ Done.');
   }
 }
 
-build();
+const watchMode = argv.includes('--watch');
+const debugMode = argv.includes('--debug');
+const cleanMode = argv.includes('--clean');
+
+build({
+  watchMode,
+  debugMode,
+  cleanMode,
+});

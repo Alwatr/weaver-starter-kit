@@ -1,6 +1,6 @@
 import {existsSync} from 'fs';
 import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
-import {logger} from './logger.js'
+import {devMode, logger} from './logger.js';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';
@@ -10,28 +10,19 @@ import postcssVariableCompress from 'postcss-variable-compress';
 import tailwindcss from 'tailwindcss';
 import postcssNesting from 'tailwindcss/nesting/index.js';
 
-const postCss = postcss([
-  postcssImport({root: 'site/_css'}),
-  postcssNesting,
-  tailwindcss,
-  postcssPresetEnv,
-  cssnano({
-    preset: [
-      'default',
-      {
-        discardComments: {
-          removeAll: true,
-        },
-      },
-    ],
-  }),
-  postcssVariableCompress,
-]);
+const postCssPlugins = [postcssImport({root: 'site/_css'}), postcssNesting, tailwindcss, postcssPresetEnv];
+
+if (!devMode) {
+  postCssPlugins.push(postcssVariableCompress, cssnano({preset: ['default', {discardComments: {removeAll: true}}]}));
+}
+
+const postCss = postcss(postCssPlugins);
 
 export async function postcssBuild() {
   logger.logMethod?.('postcssBuild');
   const inputDir = 'site/_css/';
   const outputDir = 'dist/css/';
+  const startTime = Date.now();
 
   if (!existsSync(outputDir)) {
     await mkdir(outputDir, {recursive: true});
@@ -48,10 +39,13 @@ export async function postcssBuild() {
     const outputFilePath = outputDir + fileName;
 
     const fileContent = await readFile(inputFilePath, 'utf8');
-    const output = (await postCss.process(fileContent, {from: inputFilePath, to: outputFilePath})).css;
-    await writeFile(outputFilePath, output, {encoding: 'utf8'});
+    const outputContent = (await postCss.process(fileContent, {from: inputFilePath, to: outputFilePath})).css;
+    await writeFile(outputFilePath, outputContent, {encoding: 'utf8'});
 
-    const fileSize = new Blob([output]).size / 1024;
-    logger.logOther?.(`${outputFilePath}\t${fileSize.toFixed(1)}kb`)
+    const size = (new Blob([outputContent]).size / 1024).toFixed(1);
+    logger.logOther?.(`📦 ${outputFilePath} ${size}kb`);
   }
+
+  const endTime = Date.now();
+  console.log(`⚡\u001b[32m Done in ${endTime - startTime}ms\u001b[0m`);
 }
