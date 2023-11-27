@@ -13,10 +13,7 @@ import postcssNesting from 'tailwindcss/nesting/index.js';
 const postCssPlugins = [postcssImport({root: 'site/_css'}), postcssNesting, tailwindcss, postcssPresetEnv];
 
 if (!devMode) {
-  postCssPlugins.push(
-    postcssVariableCompress,
-    cssnano({preset: ['default', {discardComments: {removeAll: true}}]}),
-  );
+  postCssPlugins.push(postcssVariableCompress, cssnano({preset: ['default', {discardComments: {removeAll: true}}]}));
 }
 
 const postCss = postcss(postCssPlugins);

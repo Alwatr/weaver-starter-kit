@@ -33,7 +33,7 @@ function _eleventyConfig(config) {
   });
 
   config.additionalWatchTargets = ['./site/', './shortcode/'];
-  config.watchIgnores = ['site/_ts/']
+  config.watchIgnores = ['site/_ts/'];
 
   // config.addFilter("slug", slugFilter);
   // config.addFilter("slugify", slugifyFilter);
