@@ -11,18 +11,10 @@ RUN set -eux; \
 
 # ---
 
-FROM ghcr.io/alwatr/node:20.10.0
+FROM ghcr.io/alwatr/nginx-ws:2.0.1
 
-COPY --from=builder /app/packages/api/dist/ .
+COPY --from=builder /app/packages/app/dist/ .
 RUN set -eux; ls -RlahF /app;
 
-ENV NODE_ENV production
-ENV NODE_OPTIONS --enable-source-maps
-ENV HOST 0.0.0.0
-ENV PORT 80
-EXPOSE 80
-
-CMD ["node", "main.mjs"]
-
-LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/node:20.10.0" \
-      org.opencontainers.image.documentation="https://github.com/Alwatr/storage"
+LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-ws:2.0.1" \
+      org.opencontainers.image.documentation="https://github.com/Alwatr/pmpa"
