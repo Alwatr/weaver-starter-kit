@@ -15,7 +15,7 @@ export async function esbuild(watchMode) {
    */
   const esbuildOptions = {
     logLevel: 'info',
-    platform: 'node',
+    platform: 'browser',
     target: 'es2020',
     format: 'esm',
     minify: true,
