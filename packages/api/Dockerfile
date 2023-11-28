@@ -1,6 +1,6 @@
 FROM ghcr.io/alwatr/node:20.10.0 as builder
 
-LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/node:20.10.0"
+RUN apk add --no-cache git
 
 RUN set -ex; corepack enable;
 
@@ -25,3 +25,5 @@ ENV PORT 80
 EXPOSE 80
 
 CMD ["node", "main.mjs"]
+
+LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/node:20.10.0"
