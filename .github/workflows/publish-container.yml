@@ -32,6 +32,9 @@ jobs:
           - name: pmpa-app
             path: ./packages/app
             context: .
+          - name: pmpa-api
+            path: ./packages/api
+            context: .
 
     permissions:
       contents: read

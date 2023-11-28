@@ -24,4 +24,3 @@ export const config = {
     retryDelay: 2_000,
   } as Partial<ServerRequestConfig>,
 } as const;
-

@@ -1,8 +1,8 @@
 {
   "name": "@alwatr/pmpa-app",
-  "private": true,
   "version": "0.1.0",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
+  "private": true,
   "main": "main.js",
   "type": "module",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
