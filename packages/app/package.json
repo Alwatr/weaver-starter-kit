@@ -11,6 +11,14 @@
   "files": [
     "**/*.{d.ts.map,d.ts,js.map,js,html,md,svg,css}"
   ],
+  "esbuild": {
+    "entryPoints": [
+      "site/_ts/*.ts"
+    ],
+    "outdir": "dist/es",
+    "sourcemap": false,
+    "sourcesContent": false
+  },
   "scripts": {
     "b": "yarn run build",
     "c": "yarn run clean",
