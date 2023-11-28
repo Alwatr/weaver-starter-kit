@@ -1,5 +1,7 @@
 FROM ghcr.io/alwatr/node:20.10.0 as builder
 
+RUN apk add git --no-cache
+
 RUN set -ex; corepack enable;
 
 COPY . .
