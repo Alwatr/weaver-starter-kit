@@ -70,7 +70,7 @@ services:
       traefik.frontend.redirect.entryPoint: https
 
   storage-server:
-    image: $STORAGE_SERVER_IMAGE
+    image: ghcr.io/alwatr/storage-api:4.0.2
 
     cpu_count: 1
     cpu_shares: 1024
@@ -104,7 +104,7 @@ services:
         max-file: '2'
 
   nginx-storage:
-    image: $NGINX_STORAGE_IMAGE
+    image: ghcr.io/alwatr/nginx-storage:4.0.2
 
     cpu_count: 1
     cpu_shares: 1024
@@ -139,7 +139,7 @@ services:
       traefik.frontend.redirect.entryPoint: https
 
   cdn:
-    image: $NGINX_CDN_IMAGE
+    image: ghcr.io/alwatr/nginx-cdn:2.0.1
 
     cpu_count: 1
     cpu_shares: 1024
