@@ -1,29 +1,41 @@
-import {context} from 'esbuild';
-import {logger} from './logger.js';
+import {readJsonFileSync} from '@alwatr/util/node.js';
+import {context, build} from 'esbuild';
 
-const srcDir = 'site/_ts';
-const outDir = 'dist/es';
+import {logger, devMode} from './logger.js';
 
-export async function generateEsbuildContext({debugMode}) {
-  logger.logMethod?.('esbuildContext');
+const packageJson = readJsonFileSync('./package.json');
 
-  return context({
-    entryPoints: [`${srcDir}/*.ts`],
+export async function esbuild(watchMode) {
+  logger.logProperty?.('packageJson.esbuild', packageJson.esbuild);
+
+  /**
+   * @type {import('esbuild').BuildOptions}
+   */
+  const esbuildOptions = {
     logLevel: 'info',
     platform: 'browser',
-    target: 'es2018',
-    format: 'esm',
-    conditions: debugMode ? ['development'] : undefined,
-    minify: !debugMode,
-    treeShaking: true,
-    sourcemap: debugMode,
-    sourcesContent: debugMode,
+    target: 'es2015',
+    format: 'iife',
     bundle: true,
-    splitting: true,
+    minify: true,
+    treeShaking: true,
+    sourcemap: devMode,
+    sourcesContent: devMode,
+    // splitting: true,
     charset: 'utf8',
     legalComments: 'none',
-    metafile: true,
-    outbase: srcDir,
-    outdir: outDir,
-  });
+    ...packageJson.esbuild,
+  };
+
+  if (watchMode) {
+    logger.logOther?.('👀 Watching...');
+    const esbuildContext = await context(esbuildOptions);
+    esbuildContext.watch();
+    return;
+  }
+
+  // else
+  logger.logOther?.('🚀 Building...');
+  await build(esbuildOptions);
+  return;
 }

@@ -2,16 +2,6 @@
 
 {
   "extends": "./tsconfig.base",
-  "compilerOptions": {
-    "composite": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
-    "plugins": [
-      {
-        "name": "ts-lit-plugin",
-        "strict": true
-      }
-    ]
-  },
   "files": [],
   "exclude": [],
   "references": [{"path": "./packages/app"}]
