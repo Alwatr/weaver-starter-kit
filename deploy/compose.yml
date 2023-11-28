@@ -18,7 +18,7 @@ services:
       alwatr-public-network:
 
     environment:
-      - NGINX_ACCESS_LOG=${appAccessLog:-}
+      # - NGINX_ACCESS_LOG=${appAccessLog:-}
       - NGINX_FORCE_DOMAIN=${nginxForceDomain:-}
 
     logging:
@@ -115,8 +115,8 @@ services:
     networks:
       alwatr-public-network:
 
-    environment:
-      - NGINX_ACCESS_LOG=${storageAccessLog:-off}
+    # environment:
+      # - NGINX_ACCESS_LOG=${storageAccessLog:-off}
 
     volumes:
       - type: bind
