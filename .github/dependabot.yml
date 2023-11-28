@@ -49,22 +49,22 @@ updates:
           - 'fract'
 
   - package-ecosystem: docker
-    directory: /cloud/service.dockerfile
+    directory: /packages/app
     reviewers:
       - AliMD
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - ci
       - priority-low
       - maintenance
 
   - package-ecosystem: docker
-    directory: /cloud/app.dockerfile
+    directory: /packages/api
     reviewers:
       - AliMD
     schedule:
-      interval: daily
+      interval: weekly
     labels:
       - ci
       - priority-low
