@@ -103,8 +103,8 @@ services:
         max-size: '10m'
         max-file: '2'
 
-  nginx-storage:
-    image: ghcr.io/alwatr/nginx-storage:4.0.2
+  storage-nginx:
+    image: ghcr.io/alwatr/storage-nginx:4.0.2
 
     cpu_count: 1
     cpu_shares: 1024
