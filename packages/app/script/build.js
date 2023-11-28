@@ -1,4 +1,3 @@
-import {rm} from 'fs/promises';
 import {join} from 'path';
 import eleventy from '@11ty/eleventy';
 import {logger} from './logger.js';
