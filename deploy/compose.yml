@@ -6,7 +6,7 @@ networks:
 
 services:
   app:
-    image: $APP_IMAGE
+    image: $appImage
 
     cpu_count: 1
     cpu_shares: 1024
@@ -18,8 +18,8 @@ services:
       alwatr-public-network:
 
     environment:
-      - NGINX_ACCESS_LOG=${WEBSITE_ACCESS_LOG:-off}
-      - NGINX_FORCE_DOMAIN=${NGINX_FORCE_DOMAIN:-}
+      - NGINX_ACCESS_LOG=${appAccessLog:-}
+      - NGINX_FORCE_DOMAIN=${nginxForceDomain:-}
 
     logging:
       driver: json-file
@@ -30,12 +30,12 @@ services:
     labels:
       traefik.enable: true
       traefik.port: 80
-      traefik.frontend.rule: Host:${DOMAIN}; PathPrefix:/;
+      traefik.frontend.rule: Host:${domain}; PathPrefix:/;
       traefik.frontend.entryPoints: http, https
       traefik.frontend.redirect.entryPoint: https
 
   api:
-    image: $API_IMAGE
+    image: $apiImage
 
     cpu_count: 1
     cpu_shares: 1024
@@ -53,8 +53,8 @@ services:
     environment:
       - STORAGE_HOST=${appId}-storage-api
       - STORAGE_PORT=80
-      - STORAGE_TOKEN=${STORAGE_ACCESS_TOKEN}
-      - ALWATR_DEBUG=${API_DEBUG:-}
+      - STORAGE_TOKEN=${storageAccessToken}
+      - ALWATR_DEBUG=${apiDebug:-}
 
     logging:
       driver: json-file
@@ -65,7 +65,7 @@ services:
     labels:
       traefik.enable: true
       traefik.port: 80
-      traefik.frontend.rule: Host:${DOMAIN}; PathPrefix:/api/v1/;
+      traefik.frontend.rule: Host:${domain}; PathPrefix:/api/v1/;
       traefik.frontend.entryPoints: http, https
       traefik.frontend.redirect.entryPoint: https
 
@@ -87,8 +87,8 @@ services:
 
     environment:
       - STORAGE_PATH=/data
-      - ACCESS_TOKEN=${STORAGE_ACCESS_TOKEN}
-      - ALWATR_DEBUG=${STORAGE_API_DEBUG:-}
+      - ACCESS_TOKEN=${storageAccessToken}
+      - ALWATR_DEBUG=${storageApiDebug:-}
 
     volumes:
       - type: bind
@@ -116,7 +116,7 @@ services:
       alwatr-public-network:
 
     environment:
-      - NGINX_ACCESS_LOG=${NGINX_STORAGE_ACCESS_LOG:-off}
+      - NGINX_ACCESS_LOG=${storageAccessLog:-off}
 
     volumes:
       - type: bind
@@ -134,6 +134,6 @@ services:
     labels:
       traefik.enable: true
       traefik.port: 80
-      traefik.frontend.rule: Host:${DOMAIN}; PathPrefixStrip:/api/v0/publistore/
+      traefik.frontend.rule: Host:${domain}; PathPrefixStrip:/api/v1/publistore/
       traefik.frontend.entryPoints: http, https
       traefik.frontend.redirect.entryPoint: https
