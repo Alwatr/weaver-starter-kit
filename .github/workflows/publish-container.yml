@@ -66,12 +66,12 @@ jobs:
           path: /tmp/.buildx-cache
           key: container/${{ matrix.name }}
 
-      - name: 🏗 Log into docker hub registry
-        if: ${{ github.event_name != 'pull_request' && steps.file_change.outputs.container_folder != 'false' }}
-        uses: docker/login-action@v3.0.0
-        with:
-          username: ${{env.USER}}
-          password: ${{secrets.DOCKER_HUB_TOKEN}}
+      # - name: 🏗 Log into docker hub registry
+      #   if: ${{ github.event_name != 'pull_request' && steps.file_change.outputs.container_folder != 'false' }}
+      #   uses: docker/login-action@v3.0.0
+      #   with:
+      #     username: ${{env.USER}}
+      #     password: ${{secrets.DOCKER_HUB_TOKEN}}
 
       - name: 🏗 Log into ghcr.io registry
         if: ${{ github.event_name != 'pull_request' && steps.file_change.outputs.container_folder != 'false' }}
@@ -89,7 +89,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
           images: |
             name=ghcr.io/${{env.USER}}/${{matrix.name}},enable=true
-            name=docker.io/${{env.USER}}/${{matrix.name}},enable=true
+            name=docker.io/${{env.USER}}/${{matrix.name}},enable=false
           tags: |
             type=semver,enable=true,pattern={{major}}
             type=semver,enable=true,pattern={{major}}.{{minor}}
@@ -98,8 +98,8 @@ jobs:
           labels: |
             org.opencontainers.image.title="alwatr/${{matrix.name}}"
             org.opencontainers.image.vendor="Alwatr"
-            org.opencontainers.image.documentation="https://github.com/Alwatr/storage"
-            org.opencontainers.image.authors="S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)"
+            org.opencontainers.image.documentation="https://github.com/Alwatr/pmpa"
+            org.opencontainers.image.authors="S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com), S. Amir Mohammad Najafi <njfamirm@gmail.com> (https://www.njfamirm.ir)"
 
       - name: 🚀 Build and push container image
         if: ${{ steps.file_change.outputs.container_folder != 'false' }}
