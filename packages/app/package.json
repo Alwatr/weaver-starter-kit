@@ -5,35 +5,32 @@
   "description": "Alwatr Progressive Multi Page (Web) Application.",
   "main": "main.js",
   "type": "module",
-  "types": "main.d.ts",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
-  "files": [
-    "**/*.{d.ts.map,d.ts,js.map,js,html,md,svg,css}"
-  ],
+  "engines": {
+    "node": ">=18.16.0",
+    "yarn": ">=4.0.0"
+  },
   "esbuild": {
     "entryPoints": [
       "site/_ts/*.ts"
     ],
     "outdir": "dist/es",
     "sourcemap": false,
-    "sourcesContent": false
+    "sourcesContent": false,
+    "splitting": true
   },
   "scripts": {
     "b": "yarn run build",
+    "s": "yarn run start",
+    "w": "yarn run watch",
     "c": "yarn run clean",
     "cb": "run-s clean build",
-    "cw": "run-s clean watch",
-    "l": "yarn run lint",
-    "s": "yarn run serve",
-    "w": "yarn run watch",
-    "clean": "rm -rf dist .tsbuildinfo",
-    "lint": "run-s 'lint:*'",
-    "lint:ts": "tsc --build",
+    "start": "run-s clean build serve",
     "serve": "wds",
     "build": "yarn node script/build.js",
-    "watch": "run-p watch:11ty serve",
-    "watch:11ty": "yarn run build --watch"
+    "clean": "rm -rfv dist .tsbuildinfo",
+    "watch": "yarn run build --watch"
   },
   "repository": {
     "type": "git",
@@ -62,15 +59,12 @@
     "alpinejs": "^3.13.3",
     "cssnano": "^6.0.1",
     "esbuild": "^0.19.8",
-    "eslint": "^8.54.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "postcss-preset-env": "^9.3.0",
     "postcss-variable-compress": "^3.0.0",
-    "prettier": "^3.1.0",
     "tailwindcss": "^3.3.5",
-    "tslib": "^2.6.2",
     "typescript": "^5.3.2"
   }
 }
