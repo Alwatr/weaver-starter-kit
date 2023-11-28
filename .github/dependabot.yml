@@ -47,3 +47,26 @@ updates:
         patterns:
           - '@alwatr/*'
           - 'fract'
+
+  - package-ecosystem: docker
+    directory: /packages/app
+    reviewers:
+      - AliMD
+    schedule:
+      interval: weekly
+    labels:
+      - ci
+      - priority-low
+      - maintenance
+
+  - package-ecosystem: docker
+    directory: /packages/api
+    reviewers:
+      - AliMD
+    schedule:
+      interval: weekly
+    labels:
+      - ci
+      - priority-low
+      - maintenance
+

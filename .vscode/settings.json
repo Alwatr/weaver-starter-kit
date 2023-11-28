@@ -23,7 +23,7 @@
   },
   "markdownlint.ignore": ["**/CHANGELOG.md"],
   "cSpell.language": "en,fa,fa-IR",
-  "cSpell.words": ["alpinejs", "alwatr", "cssnano", "fract", "pmpa", "shortcode", "tailwindcss"],
+  "cSpell.words": ["alwatr", "cssnano", "fract", "pmpa", "shortcode", "stringifyable", "tailwindcss"],
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "git.autoStash": true,
   "git.branchProtection": ["main", "next"],
