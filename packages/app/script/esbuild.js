@@ -1,11 +1,9 @@
-import {createLogger} from '@alwatr/logger';
 import {readJsonFileSync} from '@alwatr/util/node.js';
-
 import {context, build} from 'esbuild';
-// import packageJson from './package.json' assert { type: 'json' };
+
+import {logger, devMode} from './logger.js';
 
 const packageJson = readJsonFileSync('./package.json');
-const logger = createLogger('esbuild', true);
 
 export async function esbuild(watchMode) {
   logger.logProperty?.('packageJson.esbuild', packageJson.esbuild);
@@ -16,14 +14,14 @@ export async function esbuild(watchMode) {
   const esbuildOptions = {
     logLevel: 'info',
     platform: 'browser',
-    target: 'es2020',
-    format: 'esm',
+    target: 'es2015',
+    format: 'iife',
+    bundle: true,
     minify: true,
     treeShaking: true,
-    sourcemap: false,
-    sourcesContent: false,
-    bundle: true,
-    splitting: false,
+    sourcemap: devMode,
+    sourcesContent: devMode,
+    // splitting: true,
     charset: 'utf8',
     legalComments: 'none',
     ...packageJson.esbuild,

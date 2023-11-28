@@ -15,10 +15,7 @@
     "entryPoints": [
       "site/_ts/*.ts"
     ],
-    "outdir": "dist/es",
-    "sourcemap": false,
-    "sourcesContent": false,
-    "splitting": true
+    "outdir": "dist/es"
   },
   "scripts": {
     "b": "yarn run build",
