@@ -45,6 +45,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@alwatr/fetch": "^2.1.1",
     "@alwatr/font": "^1.2.0",
+    "@alwatr/i18n": "^2.0.1",
     "@alwatr/icon-set-extra": "^0.4.0",
     "@alwatr/icon-set-material": "^2.0.1",
     "@alwatr/logger": "^2.3.0",

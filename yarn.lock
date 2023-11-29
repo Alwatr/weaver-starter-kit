@@ -195,6 +195,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/i18n@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@alwatr/i18n@npm:2.0.1"
+  dependencies:
+    "@alwatr/logger": "npm:^2.2.0"
+    "@alwatr/math": "npm:^1.2.0"
+    "@alwatr/signal": "npm:^2.0.3"
+    tslib: "npm:^2.6.2"
+  checksum: 863259edf6b753766515a465e3efa8081f839183b686615df3db95798587876273e1212457cb4343ee8ac83406ca2c0216622d29d23540f31f4711a09acef690
+  languageName: node
+  linkType: hard
+
 "@alwatr/icon-set-extra@npm:^0.4.0":
   version: 0.4.0
   resolution: "@alwatr/icon-set-extra@npm:0.4.0"
@@ -286,6 +298,7 @@ __metadata:
     "@11ty/eleventy-plugin-rss": "npm:^1.2.0"
     "@alwatr/fetch": "npm:^2.1.1"
     "@alwatr/font": "npm:^1.2.0"
+    "@alwatr/i18n": "npm:^2.0.1"
     "@alwatr/icon-set-extra": "npm:^0.4.0"
     "@alwatr/icon-set-material": "npm:^2.0.1"
     "@alwatr/logger": "npm:^2.3.0"
