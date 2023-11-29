@@ -6,7 +6,7 @@ import {logger, devMode} from './logger.js';
 const packageJson = readJsonFileSync('./package.json');
 
 export async function esbuild(watchMode) {
-  logger.logProperty?.('packageJson.esbuild', packageJson.esbuild);
+  logger.logMethodArgs?.('esbuild', packageJson.esbuild);
 
   /**
    * @type {import('esbuild').BuildOptions}
@@ -28,14 +28,14 @@ export async function esbuild(watchMode) {
   };
 
   if (watchMode) {
-    logger.logOther?.('👀 Watching...');
+    logger.logOther?.('👀 esbuild: watching...');
     const esbuildContext = await context(esbuildOptions);
     esbuildContext.watch();
     return;
   }
 
   // else
-  logger.logOther?.('🚀 Building...');
+  logger.logOther?.('🚀 esbuild: building...');
   await build(esbuildOptions);
   return;
 }
