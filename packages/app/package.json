@@ -27,7 +27,8 @@
     "serve": "wds",
     "build": "yarn node script/build.js",
     "clean": "rm -rfv dist .tsbuildinfo",
-    "watch": "yarn run build --watch"
+    "watch": "run-p watch:build serve",
+    "watch:build": "yarn run build --watch"
   },
   "repository": {
     "type": "git",
