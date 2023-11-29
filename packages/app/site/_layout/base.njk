@@ -14,5 +14,7 @@
     class="m-0 h-full max-h-full w-full max-w-full transform-gpu touch-pan-x touch-pan-y touch-pinch-zoom overflow-clip break-words bg-background p-0 font-vazirmatn text-bodyMedium text-onBackground antialiased hide-scrollbar-in-mobile color-scheme-auto"
   >
     {{ content | safe }}
+
+    {% include "prerender.njk" %}
   </body>
 </html>
