@@ -14,7 +14,7 @@ export async function esbuild(watchMode) {
   const esbuildOptions = {
     logLevel: 'info',
     platform: 'browser',
-    target: 'es2015',
+    target: 'es2017',
     format: 'iife',
     bundle: true,
     minify: true,
