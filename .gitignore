@@ -38,3 +38,5 @@ build
 # dotenv environment variables file
 .env
 
+# deploy data backup
+deploy/_data
