@@ -13,7 +13,7 @@ RUN set -eux; \
 
 # ---
 
-FROM ghcr.io/alwatr/nginx-ws:2.0.1
+FROM ghcr.io/alwatr/nginx-ws:2.0.2
 
 COPY --from=builder /app/packages/app/dist/ .
 RUN set -eux; ls -RlahF /data;
