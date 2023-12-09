@@ -116,7 +116,7 @@ services:
       alwatr-public-network:
 
     # environment:
-      # - NGINX_ACCESS_LOG=${storageAccessLog:-off}
+    #   - NGINX_ACCESS_LOG=${storageAccessLog:-off}
 
     volumes:
       - type: bind
