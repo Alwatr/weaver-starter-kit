@@ -7,6 +7,7 @@
   "type": "module",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
+  "browserslist": "> 1.5%, not dead",
   "engines": {
     "node": ">=18.16.0",
     "yarn": ">=4.0.0"
