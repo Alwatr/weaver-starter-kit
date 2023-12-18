@@ -1,4 +1,6 @@
-import {createLogger} from '@alwatr/logger';
+import {createLogger, definePackage} from '@alwatr/logger';
+
+definePackage('pmpa-api', '0.x');
 
 export const logger = createLogger('@alwatr/pmpa-api');
 
