@@ -10,8 +10,7 @@ updates:
       - AliMD
     schedule:
       interval: weekly
-      time: "04:00"
-      timezone: "Asia/Tehran"
+      time: "00:30"
       day: "thursday"
     labels:
       - ci
@@ -30,8 +29,7 @@ updates:
       - AliMD
     schedule:
       interval: weekly
-      time: "04:00"
-      timezone: "Asia/Tehran"
+      time: "00:30"
       day: "thursday"
     labels:
       - dependencies
@@ -60,8 +58,7 @@ updates:
       - AliMD
     schedule:
       interval: weekly
-      time: "04:00"
-      timezone: "Asia/Tehran"
+      time: "00:30"
       day: "thursday"
     labels:
       - ci
@@ -74,8 +71,7 @@ updates:
       - AliMD
     schedule:
       interval: weekly
-      time: "04:00"
-      timezone: "Asia/Tehran"
+      time: "00:30"
       day: "thursday"
     labels:
       - ci
