@@ -10,8 +10,8 @@ updates:
       - AliMD
     schedule:
       interval: weekly
-      time: "00:30"
-      day: "thursday"
+      time: '10:30'
+      day: thursday
     labels:
       - ci
       - priority-low
@@ -29,8 +29,8 @@ updates:
       - AliMD
     schedule:
       interval: weekly
-      time: "00:30"
-      day: "thursday"
+      time: '10:30'
+      day: thursday
     labels:
       - dependencies
       - ci
@@ -58,8 +58,8 @@ updates:
       - AliMD
     schedule:
       interval: weekly
-      time: "00:30"
-      day: "thursday"
+      time: '10:30'
+      day: thursday
     labels:
       - ci
       - priority-low
@@ -71,8 +71,8 @@ updates:
       - AliMD
     schedule:
       interval: weekly
-      time: "00:30"
-      day: "thursday"
+      time: '10:30'
+      day: thursday
     labels:
       - ci
       - priority-low
