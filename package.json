@@ -20,7 +20,7 @@
     "l": "yarn run lint",
     "f": "yarn run format",
     "rl": "run-s pull clean build release",
-    "upd": "yarn set version latest; yarn up '*'; yarn up '*' -R; yarn dlx @yarnpkg/sdks vscode;",
+    "upd": "yarn set version latest; yarn up '*' -i; yarn up '*' -R; yarn dlx @yarnpkg/sdks vscode;",
     "lint": "run-s lint:ts lint:es",
     "lint:es": "eslint . --config .eslintrc.json --ext .ts",
     "lint:ts": "tsc --build",
