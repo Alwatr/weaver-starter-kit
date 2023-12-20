@@ -1,5 +1,5 @@
-import {AlwatrStorageClient} from '@alwatr/storage-client';
+import {AlwatrStorage} from '@alwatr/storage-sdk';
 
 import {config} from './config.js';
 
-export const storageClient = new AlwatrStorageClient(config.storageClient);
+export const storageClient = new AlwatrStorage(config.storageClient);
