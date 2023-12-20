@@ -45,7 +45,7 @@
     "@alwatr/crypto": "^3.0.4",
     "@alwatr/logger": "^2.4.1",
     "@alwatr/nano-server": "^1.2.7",
-    "@alwatr/storage-client": "^4.0.0-rc.0",
+    "@alwatr/storage-sdk": "^4.0.4",
     "@alwatr/type": "^1.2.4",
     "@alwatr/util": "^1.4.1",
     "@types/node": "^20.10.5",

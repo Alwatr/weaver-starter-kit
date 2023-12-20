@@ -273,6 +273,7 @@ __metadata:
     "@alwatr/logger": "npm:^2.4.1"
     "@alwatr/nano-server": "npm:^1.2.7"
     "@alwatr/storage-client": "npm:^4.0.0-rc.0"
+    "@alwatr/storage-sdk": "npm:^4.0.4"
     "@alwatr/type": "npm:^1.2.4"
     "@alwatr/util": "npm:^1.4.1"
     "@types/node": "npm:^20.10.5"
@@ -372,6 +373,17 @@ __metadata:
     "@alwatr/logger": "npm:^2.1.3"
     tslib: "npm:^2.6.2"
   checksum: 2dcb85ef1b368772602819772355b4420d19c1f06ea48c5b13403fbbe4419f907934a7bb80e3cc7962c62ebfd779703ab9acaf4ac567a2f7b21e1a78af62492e
+  languageName: node
+  linkType: hard
+
+"@alwatr/storage-sdk@npm:^4.0.4":
+  version: 4.0.4
+  resolution: "@alwatr/storage-sdk@npm:4.0.4"
+  dependencies:
+    "@alwatr/fetch": "npm:^2.2.1"
+    "@alwatr/logger": "npm:^2.4.1"
+    tslib: "npm:^2.6.2"
+  checksum: 778322c71e91dc5f8ebe2280868b38cd416510b899db0927cf3ebc0896769320b206e50e37785e7c91845166d68aa933e962c33b79783fc8bc437f1485592d71
   languageName: node
   linkType: hard
 
