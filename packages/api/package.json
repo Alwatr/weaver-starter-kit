@@ -19,14 +19,15 @@
   "bugs": {
     "url": "https://github.com/Alwatr/storage/issues"
   },
-  "esbuild": {
-    "entryPoints": [
-      "src/main.ts"
-    ],
+  "nano-build": {
     "outbase": "src",
-    "outfile": "dist/main.mjs",
-    "sourcemap": true,
-    "sourcesContent": true
+    "outfile": "dist/main.mjs"
+  },
+  "nano-build-development": {
+    "minify": false
+  },
+  "nano-build-production": {
+    "packages": null
   },
   "scripts": {
     "s": "yarn run start",
@@ -35,15 +36,16 @@
     "c": "yarn run clean",
     "cb": "run-s clean build",
     "start": "run-s clean build serve",
-    "build": "yarn node ./esbuild.js",
+    "build": "nano-build",
+    "watch:es": "nano-build --watch",
     "clean": "rm -rfv dist .tsbuildinfo",
     "serve": "yarn node --enable-source-maps dist/main.mjs",
-    "serve:debug": "yarn node --inspect --enable-source-maps dist/index.js",
-    "watch:es": "yarn run build --watch"
+    "serve:debug": "yarn node --inspect --enable-source-maps dist/index.js"
   },
   "devDependencies": {
     "@alwatr/crypto": "^3.0.4",
     "@alwatr/logger": "^2.4.1",
+    "@alwatr/nano-build": "^1.0.0",
     "@alwatr/nano-server": "^1.2.7",
     "@alwatr/storage-sdk": "^4.0.4",
     "@alwatr/type": "^1.2.4",
