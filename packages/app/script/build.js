@@ -3,7 +3,6 @@ import eleventy from '@11ty/eleventy';
 import {logger} from './logger.js';
 import {eleventyConfig} from './config.js';
 import {argv} from 'process';
-import {esbuild} from './esbuild.js';
 import {copyFont} from './assets.js';
 
 const rootDir = 'site';
@@ -20,12 +19,9 @@ async function build({watchMode, debugMode}) {
 
   if (watchMode) {
     logger.logOther?.('👀 Watching...');
-    esbuild(true);
     output.watch();
   } else {
     logger.logOther?.('🚀 Building...');
-
-    await esbuild(false);
     await output.write();
     logger.logOther?.('✅ Done.');
   }

@@ -12,11 +12,18 @@
     "node": ">=18.16.0",
     "yarn": ">=4.0.0"
   },
-  "esbuild": {
+  "nano-build": {
     "entryPoints": [
       "site/_ts/*.ts"
     ],
+    "platform": "browser",
+    "target": "es2017",
+    "format": "iife",
     "outdir": "dist/es"
+  },
+  "nano-build-production": {
+    "sourcemap": false,
+    "sourcesContent": false
   },
   "scripts": {
     "b": "yarn run build",
@@ -24,12 +31,16 @@
     "w": "yarn run watch",
     "c": "yarn run clean",
     "cb": "run-s clean build",
+    "cw": "run-s clean watch",
     "start": "run-s clean build serve",
     "serve": "wds",
-    "build": "yarn node script/build.js",
+    "build": "run-s build:es build:11ty",
+    "build:11ty": "yarn node script/build.js",
+    "build:es": "nano-build",
     "clean": "rm -rfv dist .tsbuildinfo",
-    "watch": "run-p watch:build serve",
-    "watch:build": "yarn run build --watch"
+    "watch": "run-p watch:es watch:11ty serve",
+    "watch:11ty": "yarn run build --watch",
+    "watch:es": "yarn run build --watch"
   },
   "repository": {
     "type": "git",
@@ -50,6 +61,7 @@
     "@alwatr/icon-set-extra": "^0.4.0",
     "@alwatr/icon-set-material": "^2.0.1",
     "@alwatr/logger": "^2.4.1",
+    "@alwatr/nano-build": "^1.0.0",
     "@alwatr/server-context": "^1.2.6",
     "@alwatr/style": "^2.0.3",
     "@alwatr/util": "^1.4.1",

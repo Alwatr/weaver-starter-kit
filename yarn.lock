@@ -224,6 +224,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/nano-build@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@alwatr/nano-build@npm:1.0.0"
+  dependencies:
+    esbuild: "npm:^0.19.10"
+  bin:
+    nano-build: nano-build.cjs
+  checksum: bd918b4ded7fdd588dd6820bddc8ff216218f881658bfdfe389c78a14de52a32b305b754a9d4dddbc3d01966409256e1347381161c9ff75d4579acd59b1a1e46
+  languageName: node
+  linkType: hard
+
 "@alwatr/nano-server@npm:^1.2.7":
   version: 1.2.7
   resolution: "@alwatr/nano-server@npm:1.2.7"
@@ -241,6 +252,7 @@ __metadata:
   dependencies:
     "@alwatr/crypto": "npm:^3.0.4"
     "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/nano-build": "npm:^1.0.0"
     "@alwatr/nano-server": "npm:^1.2.7"
     "@alwatr/storage-sdk": "npm:^4.0.4"
     "@alwatr/type": "npm:^1.2.4"
@@ -266,6 +278,7 @@ __metadata:
     "@alwatr/icon-set-extra": "npm:^0.4.0"
     "@alwatr/icon-set-material": "npm:^2.0.1"
     "@alwatr/logger": "npm:^2.4.1"
+    "@alwatr/nano-build": "npm:^1.0.0"
     "@alwatr/server-context": "npm:^1.2.6"
     "@alwatr/style": "npm:^2.0.3"
     "@alwatr/util": "npm:^1.4.1"
