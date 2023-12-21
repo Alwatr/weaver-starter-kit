@@ -255,6 +255,7 @@ __metadata:
     "@alwatr/nano-build": "npm:^1.0.0"
     "@alwatr/nano-server": "npm:^1.2.7"
     "@alwatr/storage-sdk": "npm:^4.0.4"
+    "@alwatr/tsconfig-base": "npm:^1.0.0"
     "@alwatr/type": "npm:^1.2.4"
     "@alwatr/util": "npm:^1.4.1"
     "@types/node": "npm:^20.10.5"
@@ -281,6 +282,7 @@ __metadata:
     "@alwatr/nano-build": "npm:^1.0.0"
     "@alwatr/server-context": "npm:^1.2.6"
     "@alwatr/style": "npm:^2.0.3"
+    "@alwatr/tsconfig-base": "npm:^1.0.0"
     "@alwatr/util": "npm:^1.4.1"
     "@swc/html": "npm:^0.0.28"
     "@types/alpinejs": "npm:^3.13.5"
@@ -302,6 +304,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/pmpa-monorepo@workspace:."
   dependencies:
+    "@alwatr/tsconfig-base": "npm:^1.0.0"
     "@lerna-lite/changed": "npm:^3.1.0"
     "@lerna-lite/cli": "npm:^3.1.0"
     "@lerna-lite/diff": "npm:^3.1.0"
@@ -365,6 +368,13 @@ __metadata:
     tailwindcss: "npm:^3.3.7"
     tslib: "npm:^2.6.2"
   checksum: 62393db6b811e3cca05d39256ab34cb83c1cab34e4a1470bf4e9b1aeeb49057a4be3d5d791adee3d7175bdea26c89f811c0a9283c96efa9866045cb0ca643dc8
+  languageName: node
+  linkType: hard
+
+"@alwatr/tsconfig-base@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@alwatr/tsconfig-base@npm:1.0.0"
+  checksum: e75c62551df6b8a775894b00ed28989fa650e900be0a55695500d75e32802d87c7460eead2b0de91e37debd5d886f1aaf27d72b91aaa905f360887a9c704d24c
   languageName: node
   linkType: hard
 

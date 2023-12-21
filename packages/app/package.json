@@ -64,6 +64,7 @@
     "@alwatr/nano-build": "^1.0.0",
     "@alwatr/server-context": "^1.2.6",
     "@alwatr/style": "^2.0.3",
+    "@alwatr/tsconfig-base": "^1.0.0",
     "@alwatr/util": "^1.4.1",
     "@swc/html": "^0.0.28",
     "@types/alpinejs": "^3.13.5",

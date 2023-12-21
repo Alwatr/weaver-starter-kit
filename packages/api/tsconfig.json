@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base",
+  "extends": "@alwatr/tsconfig-base/tsconfig.json",
   "compilerOptions": {
     "target": "ESNext",
     "composite": true,
