@@ -1,6 +1,6 @@
 {
   "name": "@alwatr/pmpa-api",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "private": true,
