@@ -1,15 +1,8 @@
 {
-  "extends": "../../tsconfig.base",
+  "extends": "@alwatr/tsconfig-base",
   "compilerOptions": {
-    "target": "ESNext",
-    "composite": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
     "rootDir": "src",
-    // "outDir": ".",
-    "noEmit": true
+    "noEmit": true,
   },
-
-  "include": ["src/**/*.ts"],
-  "exclude": [],
-  "references": []
+  "include": ["src/**/*.ts"]
 }

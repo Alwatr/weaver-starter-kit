@@ -1,8 +1,12 @@
-// https://www.typescriptlang.org/tsconfig
-
 {
-  "extends": "./tsconfig.base",
+  "extends": "@alwatr/tsconfig-base",
+  "compilerOptions": {
+    "noEmit": true,
+  },
   "files": [],
   "exclude": [],
-  "references": [{"path": "./packages/app"}, {"path": "./packages/api"}]
+  "references": [
+    {"path": "./packages/api"},
+    {"path": "./packages/app"},
+  ]
 }

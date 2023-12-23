@@ -6,10 +6,11 @@ RUN set -ex; corepack enable;
 
 COPY . .
 
-ENV NODE_ENV production
 RUN set -eux; \
   yarn install --immutable; \
-  yarn build;
+  yarn build; \
+  ls -lahF .; \
+  ls -RlahF /app/packages/app;
 
 # ---
 
@@ -17,4 +18,4 @@ FROM ghcr.io/alwatr/nginx-ws:2.2.1
 LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-ws:2.2.1"
 
 COPY --from=builder /app/packages/app/dist/ .
-RUN set -eux; ls -RlahF /data;
+# RUN set -eux; ls -RlahF /data;

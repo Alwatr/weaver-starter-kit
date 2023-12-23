@@ -2,4 +2,3 @@
 *.d.ts
 node_modules
 _data
-/deprecated

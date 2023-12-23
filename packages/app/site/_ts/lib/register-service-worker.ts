@@ -1,8 +1,8 @@
-import {logger} from './config.js';
+import {logger} from './config';
 
 logger.logModule?.('register-service-worker');
 
-const serviceWorkerPath = '/es/service-worker.js';
+const serviceWorkerPath = '/es/service-worker';
 
 function registerServiceWorker(serviceWorkerPath: string) {
   logger.logMethod?.('registerServiceWorker');
