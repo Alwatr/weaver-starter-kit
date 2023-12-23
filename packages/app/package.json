@@ -22,6 +22,10 @@
     "url": "https://github.com/Alwatr/pmpa/issues"
   },
   "prettier": "@alwatr/prettier-config",
+  "nano-build-development": {
+    "sourcemap": true,
+    "sourcesContent": true
+  },
   "scripts": {
     "s": "yarn run start",
     "b": "yarn run build",
@@ -30,15 +34,13 @@
     "cb": "yarn run clean && yarn run build",
     "cw": "yarn run clean && yarn run watch",
     "serve": "wds",
-    "build": "yarn run build:ts & yarn run build:es & yarn run build:11ty",
+    "build": "yarn run build:11ty & yarn run build:es",
     "build:es": "nano-build --preset=pmpa",
     "build:11ty": "yarn node script/build.js",
-    "build:ts": "tsc --build",
-    "watch": "yarn run watch:ts & yarn run watch:es & yarn run watch:11ty & yarn serve",
+    "watch": "yarn run watch:11ty & yarn run watch:es & yarn serve",
     "watch:es": "yarn run build:es --watch",
     "watch:11ty": "yarn run build:11ty --watch",
-    "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
-    "clean": "rm -rfv dist .tsbuildinfo"
+    "clean": "rm -rfv dist *.tsbuildinfo"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -50,11 +52,11 @@
     "@alwatr/icon-set-extra": "^0.4.0",
     "@alwatr/icon-set-material": "^2.0.1",
     "@alwatr/logger": "^2.4.1",
-    "@alwatr/nano-build": "^1.2.0",
+    "@alwatr/nano-build": "^1.2.1",
     "@alwatr/prettier-config": "^1.0.4",
     "@alwatr/server-context": "^1.2.6",
     "@alwatr/style": "^2.0.3",
-    "@alwatr/tsconfig-base": "^1.0.4",
+    "@alwatr/tsconfig-base": "^1.0.5",
     "@alwatr/util": "^1.4.1",
     "@swc/html": "^0.0.28",
     "@types/alpinejs": "^3.13.5",

@@ -20,6 +20,10 @@
     "url": "https://github.com/Alwatr/pmpa/issues"
   },
   "prettier": "@alwatr/prettier-config",
+  "nano-build-development": {
+    "sourcemap": true,
+    "sourcesContent": true
+  },
   "scripts": {
     "s": "yarn run start",
     "b": "yarn run build",
@@ -29,24 +33,20 @@
     "cw": "yarn run clean && yarn run watch",
     "d": "yarn run build:es && ALWATR_DEBUG=1 yarn node",
     "start": "yarn build && yarn serve",
-    "build": "yarn run build:ts & yarn run build:es",
-    "build:es": "nano-build --preset=microservice",
-    "build:ts": "tsc --build",
-    "watch": "yarn run watch:ts & yarn run watch:es",
-    "watch:es": "yarn run build:es --watch",
-    "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
-    "clean": "rm -rfv dist .tsbuildinfo",
+    "build": "nano-build --preset=microservice",
+    "watch": "yarn run build:es --watch",
+    "clean": "rm -rfv dist *.tsbuildinfo",
     "serve": "yarn node --enable-source-maps dist/main.mjs",
     "serve:debug": "yarn node --inspect --enable-source-maps dist/index.js"
   },
   "devDependencies": {
     "@alwatr/crypto": "^3.0.4",
     "@alwatr/logger": "^2.4.1",
-    "@alwatr/nano-build": "^1.2.0",
+    "@alwatr/nano-build": "^1.2.1",
     "@alwatr/nano-server": "^1.2.7",
     "@alwatr/prettier-config": "^1.0.4",
     "@alwatr/storage-sdk": "^4.0.4",
-    "@alwatr/tsconfig-base": "^1.0.4",
+    "@alwatr/tsconfig-base": "^1.0.5",
     "@alwatr/type": "^1.2.4",
     "@alwatr/util": "^1.4.1",
     "@types/node": "^20.10.5",

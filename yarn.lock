@@ -153,9 +153,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/eslint-config@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@alwatr/eslint-config@npm:1.0.4"
+"@alwatr/eslint-config@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@alwatr/eslint-config@npm:1.0.5"
   dependencies:
     esbuild: "npm:^0.19.10"
   peerDependencies:
@@ -164,7 +164,7 @@ __metadata:
     eslint: ">8.0.0"
     eslint-import-resolver-typescript: ">3.0.0"
     eslint-plugin-import: ">2.0.0"
-  checksum: af70923176ec3c1c43d84cbee9404251d47025fe1efd1a75eb6bbda8ac3db757170ef1c609753fe2ca5b245cf11e58dd7d3fcc3c672412b896913b860b731d17
+  checksum: 4e2564261f7fd4230bc2188e80d0705e1215a1c1fc53a378182dee5ad7395ff81989169a51f89a7af3211e314646fcffbac5cbe6f6966539586f698f61200acd
   languageName: node
   linkType: hard
 
@@ -239,14 +239,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/nano-build@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@alwatr/nano-build@npm:1.2.0"
+"@alwatr/nano-build@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@alwatr/nano-build@npm:1.2.1"
   dependencies:
     esbuild: "npm:^0.19.10"
   bin:
     nano-build: nano-build.cjs
-  checksum: 839abd3d67446b8c5d63bdd936f1765a8431d58c415a26df8c25c3660a678fbf1bdded61f148900985d4bcfe9522156580d32629dfb52b49684c33974ec64e57
+  checksum: dd683718601b1cc240ef2da0d343cfceb9c058be25da786b2288bedd18f63a3634a2586d2af4d6c5b69399f1445e725e9c755d5a30bef755ffa6d0930b75c66f
   languageName: node
   linkType: hard
 
@@ -267,11 +267,11 @@ __metadata:
   dependencies:
     "@alwatr/crypto": "npm:^3.0.4"
     "@alwatr/logger": "npm:^2.4.1"
-    "@alwatr/nano-build": "npm:^1.2.0"
+    "@alwatr/nano-build": "npm:^1.2.1"
     "@alwatr/nano-server": "npm:^1.2.7"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/storage-sdk": "npm:^4.0.4"
-    "@alwatr/tsconfig-base": "npm:^1.0.4"
+    "@alwatr/tsconfig-base": "npm:^1.0.5"
     "@alwatr/type": "npm:^1.2.4"
     "@alwatr/util": "npm:^1.4.1"
     "@types/node": "npm:^20.10.5"
@@ -294,11 +294,11 @@ __metadata:
     "@alwatr/icon-set-extra": "npm:^0.4.0"
     "@alwatr/icon-set-material": "npm:^2.0.1"
     "@alwatr/logger": "npm:^2.4.1"
-    "@alwatr/nano-build": "npm:^1.2.0"
+    "@alwatr/nano-build": "npm:^1.2.1"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/server-context": "npm:^1.2.6"
     "@alwatr/style": "npm:^2.0.3"
-    "@alwatr/tsconfig-base": "npm:^1.0.4"
+    "@alwatr/tsconfig-base": "npm:^1.0.5"
     "@alwatr/util": "npm:^1.4.1"
     "@swc/html": "npm:^0.0.28"
     "@types/alpinejs": "npm:^3.13.5"
@@ -320,8 +320,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/pmpa-monorepo@workspace:."
   dependencies:
-    "@alwatr/eslint-config": "npm:^1.0.4"
+    "@alwatr/eslint-config": "npm:^1.0.5"
     "@alwatr/prettier-config": "npm:^1.0.4"
+    "@alwatr/tsconfig-base": "npm:^1.0.5"
     "@lerna-lite/changed": "npm:^3.1.0"
     "@lerna-lite/cli": "npm:^3.1.0"
     "@lerna-lite/diff": "npm:^3.1.0"
@@ -394,10 +395,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/tsconfig-base@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "@alwatr/tsconfig-base@npm:1.0.4"
-  checksum: c568a260067af0bdc70a2cefd704b4c43ca5af6651ac1480d1626aec05d7afdcdf5c1e5d644e8a502d2394e792995a88e8403d2922e1d5b78a3e5197384ee643
+"@alwatr/tsconfig-base@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "@alwatr/tsconfig-base@npm:1.0.5"
+  checksum: 5ef9c8bc91fd24dac416ac3599cd471dc7025fa4044aee6fe97910b83e84f11dbcea9251a03e7d142c4fd9e2cca92bbbc894433310fcbbe4405f402be3c1c56a
   languageName: node
   linkType: hard
 
