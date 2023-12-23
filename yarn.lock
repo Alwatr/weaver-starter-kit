@@ -239,7 +239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/nano-build@npm:^1.0.0":
+"@alwatr/nano-build@npm:^1.0.4":
   version: 1.0.4
   resolution: "@alwatr/nano-build@npm:1.0.4"
   dependencies:
@@ -267,10 +267,10 @@ __metadata:
   dependencies:
     "@alwatr/crypto": "npm:^3.0.4"
     "@alwatr/logger": "npm:^2.4.1"
-    "@alwatr/nano-build": "npm:^1.0.0"
+    "@alwatr/nano-build": "npm:^1.0.4"
     "@alwatr/nano-server": "npm:^1.2.7"
     "@alwatr/storage-sdk": "npm:^4.0.4"
-    "@alwatr/tsconfig-base": "npm:^1.0.0"
+    "@alwatr/tsconfig-base": "npm:^1.0.4"
     "@alwatr/type": "npm:^1.2.4"
     "@alwatr/util": "npm:^1.4.1"
     "@types/node": "npm:^20.10.5"
@@ -293,7 +293,7 @@ __metadata:
     "@alwatr/icon-set-extra": "npm:^0.4.0"
     "@alwatr/icon-set-material": "npm:^2.0.1"
     "@alwatr/logger": "npm:^2.4.1"
-    "@alwatr/nano-build": "npm:^1.0.0"
+    "@alwatr/nano-build": "npm:^1.0.4"
     "@alwatr/server-context": "npm:^1.2.6"
     "@alwatr/style": "npm:^2.0.3"
     "@alwatr/tsconfig-base": "npm:^1.0.4"
@@ -391,7 +391,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/tsconfig-base@npm:^1.0.0, @alwatr/tsconfig-base@npm:^1.0.4":
+"@alwatr/tsconfig-base@npm:^1.0.4":
   version: 1.0.4
   resolution: "@alwatr/tsconfig-base@npm:1.0.4"
   checksum: c568a260067af0bdc70a2cefd704b4c43ca5af6651ac1480d1626aec05d7afdcdf5c1e5d644e8a502d2394e792995a88e8403d2922e1d5b78a3e5197384ee643
@@ -416,17 +416,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.21.4":
-  version: 7.22.13
-  resolution: "@babel/code-frame@npm:7.22.13"
-  dependencies:
-    "@babel/highlight": "npm:^7.22.13"
-    chalk: "npm:^2.4.2"
-  checksum: f4cc8ae1000265677daf4845083b72f88d00d311adb1a93c94eb4b07bf0ed6828a81ae4ac43ee7d476775000b93a28a9cddec18fbdc5796212d8dcccd5de72bd
-  languageName: node
-  linkType: hard
-
-"@babel/code-frame@npm:^7.12.11":
+"@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.12.11, @babel/code-frame@npm:^7.21.4":
   version: 7.23.5
   resolution: "@babel/code-frame@npm:7.23.5"
   dependencies:
@@ -447,17 +437,6 @@ __metadata:
   version: 7.22.20
   resolution: "@babel/helper-validator-identifier@npm:7.22.20"
   checksum: dcad63db345fb110e032de46c3688384b0008a42a4845180ce7cd62b1a9c0507a1bed727c4d1060ed1a03ae57b4d918570259f81724aaac1a5b776056f37504e
-  languageName: node
-  linkType: hard
-
-"@babel/highlight@npm:^7.22.13":
-  version: 7.22.20
-  resolution: "@babel/highlight@npm:7.22.20"
-  dependencies:
-    "@babel/helper-validator-identifier": "npm:^7.22.20"
-    chalk: "npm:^2.4.2"
-    js-tokens: "npm:^4.0.0"
-  checksum: f3c3a193afad23434297d88e81d1d6c0c2cf02423de2139ada7ce0a7fc62d8559abf4cc996533c1a9beca7fc990010eb8d544097f75e818ac113bf39ed810aa2
   languageName: node
   linkType: hard
 
