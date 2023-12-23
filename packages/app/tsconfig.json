@@ -1,8 +1,8 @@
 {
   "extends": "@alwatr/tsconfig-base/tsconfig.json",
   "compilerOptions": {
-    "rootDir": ".",
-    "outDir": ".",
+    "rootDir": "site/_ts",
+    "outDir": "dist/es",
     "emitDeclarationOnly": true,
     "composite": true,
     "tsBuildInfoFile": ".tsbuildinfo"
