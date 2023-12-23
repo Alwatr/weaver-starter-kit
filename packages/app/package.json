@@ -22,21 +22,6 @@
     "url": "https://github.com/Alwatr/pmpa/issues"
   },
   "prettier": "@alwatr/prettier-config",
-  "nano-build": {
-    "entryPoints": [
-      "site/_ts/*.ts"
-    ],
-    "outdir": "dist/es",
-    "platform": "browser",
-    "target": "es2017",
-    "format": "iife",
-    "packages": null,
-    "cjs": false
-  },
-  "nano-build-production": {
-    "sourcemap": false,
-    "sourcesContent": false
-  },
   "scripts": {
     "s": "yarn run start",
     "b": "yarn run build",
@@ -46,7 +31,7 @@
     "cw": "yarn run clean && yarn run watch",
     "serve": "wds",
     "build": "yarn run build:ts & yarn run build:es & yarn run build:11ty",
-    "build:es": "nano-build",
+    "build:es": "nano-build --preset=pmpa",
     "build:11ty": "yarn node script/build.js",
     "build:ts": "tsc --build",
     "watch": "yarn run watch:ts & yarn run watch:es & yarn run watch:11ty",
