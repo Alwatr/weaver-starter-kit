@@ -2,54 +2,58 @@
   "name": "@alwatr/pmpa-app",
   "version": "0.1.0",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
+  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "private": true,
   "main": "main.js",
   "type": "module",
-  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
   "browserslist": "> 1.5%, not dead",
   "engines": {
     "node": ">=18.16.0",
     "yarn": ">=4.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alwatr/pmpa",
+    "directory": "packages/app"
+  },
+  "homepage": "https://github.com/Alwatr/pmpa#readme",
+  "bugs": {
+    "url": "https://github.com/Alwatr/pmpa/issues"
+  },
+  "prettier": "@alwatr/prettier-config",
   "nano-build": {
     "entryPoints": [
       "site/_ts/*.ts"
     ],
+    "outdir": "dist/es",
     "platform": "browser",
     "target": "es2017",
     "format": "iife",
-    "outdir": "dist/es"
+    "packages": null,
+    "cjs": false
   },
   "nano-build-production": {
     "sourcemap": false,
     "sourcesContent": false
   },
   "scripts": {
-    "b": "yarn run build",
     "s": "yarn run start",
+    "b": "yarn run build",
     "w": "yarn run watch",
     "c": "yarn run clean",
-    "cb": "run-s clean build",
-    "cw": "run-s clean watch",
-    "start": "run-s clean build serve",
+    "cb": "yarn run clean && yarn run build",
+    "cw": "yarn run clean && yarn run watch",
     "serve": "wds",
-    "build": "run-s build:es build:11ty",
-    "build:11ty": "yarn node script/build.js",
+    "build": "yarn run build:ts & yarn run build:es & yarn run build:11ty",
     "build:es": "nano-build",
-    "clean": "rm -rfv dist .tsbuildinfo",
-    "watch": "run-p watch:es watch:11ty serve",
-    "watch:11ty": "yarn run build --watch",
-    "watch:es": "yarn run build --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Alwatr/pmpa",
-    "directory": "packages/app"
-  },
-  "homepage": "https://github.com/Alwatr/pmpa/tree/next/packages/app#readme",
-  "bugs": {
-    "url": "https://github.com/Alwatr/pmpa/issues"
+    "build:11ty": "yarn node script/build.js",
+    "build:ts": "tsc --build",
+    "watch": "yarn run watch:ts & yarn run watch:es & yarn run watch:11ty",
+    "watch:es": "yarn run build:es --watch",
+    "watch:11ty": "yarn run build:11ty --watch",
+    "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
+    "clean": "rm -rfv dist .tsbuildinfo"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -64,7 +68,7 @@
     "@alwatr/nano-build": "^1.0.0",
     "@alwatr/server-context": "^1.2.6",
     "@alwatr/style": "^2.0.3",
-    "@alwatr/tsconfig-base": "^1.0.0",
+    "@alwatr/tsconfig-base": "^1.0.4",
     "@alwatr/util": "^1.4.1",
     "@swc/html": "^0.0.28",
     "@types/alpinejs": "^3.13.5",

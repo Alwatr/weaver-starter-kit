@@ -2,9 +2,9 @@
   "name": "@alwatr/pmpa-api",
   "version": "0.1.0",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
+  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "private": true,
   "type": "module",
-  "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com> (https://ali.mihandoost.com)",
   "license": "MIT",
   "engines": {
     "node": ">=18.16.0",
@@ -12,32 +12,32 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alwatr/storage",
+    "url": "https://github.com/Alwatr/pmpa",
     "directory": "packages/api"
   },
-  "homepage": "https://github.com/Alwatr/storage#readme",
+  "homepage": "https://github.com/Alwatr/pmpa#readme",
   "bugs": {
-    "url": "https://github.com/Alwatr/storage/issues"
+    "url": "https://github.com/Alwatr/pmpa/issues"
   },
+  "prettier": "@alwatr/prettier-config",
   "nano-build": {
-    "outbase": "src",
-    "outfile": "dist/main.mjs"
-  },
-  "nano-build-development": {
-    "minify": false
-  },
-  "nano-build-production": {
+    "outfile": "dist/main.mjs",
     "packages": null
   },
   "scripts": {
     "s": "yarn run start",
     "b": "yarn run build",
-    "w": "yarn run watch:es",
+    "w": "yarn run watch",
     "c": "yarn run clean",
-    "cb": "run-s clean build",
-    "start": "run-s clean build serve",
-    "build": "nano-build",
-    "watch:es": "nano-build --watch",
+    "cb": "yarn run clean && yarn run build",
+    "cw": "yarn run clean && yarn run watch",
+    "d": "yarn run build:es && ALWATR_DEBUG=1 yarn node",
+    "build": "yarn run build:ts & yarn run build:es",
+    "build:es": "nano-build",
+    "build:ts": "tsc --build",
+    "watch": "yarn run watch:ts & yarn run watch:es",
+    "watch:es": "yarn run build:es --watch",
+    "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
     "clean": "rm -rfv dist .tsbuildinfo",
     "serve": "yarn node --enable-source-maps dist/main.mjs",
     "serve:debug": "yarn node --inspect --enable-source-maps dist/index.js"
@@ -54,7 +54,6 @@
     "@types/node": "^20.10.5",
     "esbuild": "^0.19.10",
     "npm-run-all": "^4.1.5",
-    "tslib": "^2.6.2",
     "typescript": "^5.3.3"
   }
 }
