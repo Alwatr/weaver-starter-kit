@@ -29,7 +29,7 @@
     "cw": "yarn run clean && yarn run watch",
     "d": "yarn run build:es && ALWATR_DEBUG=1 yarn node",
     "build": "yarn run build:ts & yarn run build:es",
-    "build:es": "nano-build --preset=default",
+    "build:es": "nano-build --preset=microservice",
     "build:ts": "tsc --build",
     "watch": "yarn run watch:ts & yarn run watch:es",
     "watch:es": "yarn run build:es --watch",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@alwatr/crypto": "^3.0.4",
     "@alwatr/logger": "^2.4.1",
-    "@alwatr/nano-build": "^1.1.1",
+    "@alwatr/nano-build": "^1.2.0",
     "@alwatr/nano-server": "^1.2.7",
     "@alwatr/prettier-config": "^1.0.4",
     "@alwatr/storage-sdk": "^4.0.4",

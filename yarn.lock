@@ -239,14 +239,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/nano-build@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "@alwatr/nano-build@npm:1.1.1"
+"@alwatr/nano-build@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@alwatr/nano-build@npm:1.2.0"
   dependencies:
     esbuild: "npm:^0.19.10"
   bin:
     nano-build: nano-build.cjs
-  checksum: 96a59e01d0bf337c261297770ab1c8b0b37c6ef3b32c44dd6133936d23561887c5380c35d9a59d4b8d0110d2d26b948d72c424742cc46c823c9ad92fce3e4056
+  checksum: 839abd3d67446b8c5d63bdd936f1765a8431d58c415a26df8c25c3660a678fbf1bdded61f148900985d4bcfe9522156580d32629dfb52b49684c33974ec64e57
   languageName: node
   linkType: hard
 
@@ -267,7 +267,7 @@ __metadata:
   dependencies:
     "@alwatr/crypto": "npm:^3.0.4"
     "@alwatr/logger": "npm:^2.4.1"
-    "@alwatr/nano-build": "npm:^1.1.1"
+    "@alwatr/nano-build": "npm:^1.2.0"
     "@alwatr/nano-server": "npm:^1.2.7"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/storage-sdk": "npm:^4.0.4"
@@ -294,7 +294,7 @@ __metadata:
     "@alwatr/icon-set-extra": "npm:^0.4.0"
     "@alwatr/icon-set-material": "npm:^2.0.1"
     "@alwatr/logger": "npm:^2.4.1"
-    "@alwatr/nano-build": "npm:^1.1.1"
+    "@alwatr/nano-build": "npm:^1.2.0"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/server-context": "npm:^1.2.6"
     "@alwatr/style": "npm:^2.0.3"
