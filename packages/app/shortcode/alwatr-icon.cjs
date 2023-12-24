@@ -1,9 +1,8 @@
-import {readFile} from 'fs/promises';
-import {fileURLToPath} from 'url';
+const {readFile} = require('fs/promises');
 
 // const resolve = createRequire(import.meta.resolve).resolve;
 
-export async function alwatrIcon(icon, customClass = '') {
+async function alwatrIcon(icon, customClass = '') {
   if (icon.indexOf('/') === -1) {
     icon = 'material/' + icon;
   }
@@ -16,7 +15,7 @@ export async function alwatrIcon(icon, customClass = '') {
   const [iconPack, iconExtra] = icon.split('/');
   const [iconName, iconType] = iconExtra.replaceAll('_', '-').split(':');
 
-  const path = fileURLToPath(import.meta.resolve(`@alwatr/icon-set-${iconPack}/svg/${iconType}/${iconName}.svg`));
+  const path = require.resolve(`@alwatr/icon-set-${iconPack}/svg/${iconType}/${iconName}.svg`);
 
   try {
     icon = await readFile(path, 'utf8');
@@ -34,3 +33,5 @@ export async function alwatrIcon(icon, customClass = '') {
   // eslint-disable-next-line max-len
   return `<div class="h-[1em] w-[1em] box-content align-middle self-center grow-0 shrink-0 [contain:size_layout_paint_style] [&>svg]:block [&>svg]:h-full [&>svg]:w-full [&>svg]:fill-current ${customClass}">${icon}</div>`;
 }
+
+module.exports = {alwatrIcon};
