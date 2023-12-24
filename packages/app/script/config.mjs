@@ -1,5 +1,6 @@
 import TemplateConfig from '@11ty/eleventy/src/TemplateConfig.js';
 import urlFilter from '@11ty/eleventy/src/Filters/Url.js';
+import slugifyFilter from '@11ty/eleventy/src/Filters/Slugify.js';
 import {minifyHtml} from './minify-html.mjs';
 import {postcssBuild} from './postcss.mjs';
 import {dateString, timeString, trim} from './util.mjs';
@@ -36,7 +37,7 @@ function _eleventyConfig(config) {
   config.watchIgnores = ['site/_ts/'];
 
   // config.addFilter("slug", slugFilter);
-  // config.addFilter("slugify", slugifyFilter);
+  config.addFilter("slugify", slugifyFilter);
 
   // Add pathPrefix manually to a URL
   config.addFilter('url', function addPathPrefix(url, pathPrefixOverride) {
