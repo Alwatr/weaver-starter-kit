@@ -37,7 +37,7 @@
     "watch": "yarn run build:es --watch",
     "clean": "rm -rfv dist *.tsbuildinfo",
     "serve": "yarn node --enable-source-maps dist/main.mjs",
-    "serve:debug": "yarn node --inspect --enable-source-maps dist/index.js"
+    "serve:debug": "yarn node --inspect --enable-source-maps dist/main.mjs"
   },
   "devDependencies": {
     "@alwatr/crypto": "^3.0.4",
