@@ -1,6 +1,6 @@
 import {existsSync} from 'fs';
 import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
-import {devMode, logger} from './logger.js';
+import {devMode, logger} from './logger.mjs';
 
 import cssnano from 'cssnano';
 import postcss from 'postcss';

@@ -1,9 +1,9 @@
 import {join} from 'path';
 import eleventy from '@11ty/eleventy';
-import {logger} from './logger.js';
-import {eleventyConfig} from './config.js';
+import {logger} from './logger.mjs';
+import {eleventyConfig} from './config.mjs';
 import {argv} from 'process';
-import {copyFont} from './assets.js';
+import {copyFont} from './assets.cjs';
 
 const rootDir = 'site';
 const outDir = 'dist';
