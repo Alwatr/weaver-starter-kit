@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/Alwatr/pmpa/compare/v1.0.0...v1.1.0) (2023-12-24)
+
+### Features
+
+* **app/11ty:** slugify filter ([8af2631](https://github.com/Alwatr/pmpa/commit/8af26310b687e518d9d42c01187fef2438e15707)) by @njfamirm
+* **app/script:** dynamic font copy ([e34f3e4](https://github.com/Alwatr/pmpa/commit/e34f3e49149497053b4874e3eef5cb1b1b47e052)) by @njfamirm
+
 # 1.0.0 (2023-12-23)
 
 ### Bug Fixes
