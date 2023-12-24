@@ -18,4 +18,4 @@ const config = {
   clearTerminalOnReload: false,
 };
 
-export default config;
+module.exports = config;
