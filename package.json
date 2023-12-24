@@ -27,7 +27,7 @@
     "lint:ts": "tsc --build",
     "build": "lerna run build",
     "format": "yarn run format:prettier && yarn run format:eslint",
-    "format:eslint": "yarn run lint --fix",
+    "format:eslint": "yarn run lint:es --fix",
     "format:prettier": "prettier . --ignore-path .gitignore --write",
     "clean": "git add -v . && git clean -d -x -f --exclude=node_modules --exclude='*.env' --exclude=_data --exclude='.pnp*' --exclude=.yarn",
     "pull": "git pull",
