@@ -2,7 +2,7 @@
   "extends": "@alwatr/tsconfig-base/tsconfig.json",
   "compilerOptions": {
     "rootDir": "src",
-    "outDir": "dist",
+    // "outDir": "dist",
     "noEmit": true,
   },
   "include": ["src/**/*.ts"]
