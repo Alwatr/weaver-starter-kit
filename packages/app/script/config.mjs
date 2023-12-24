@@ -1,11 +1,11 @@
 import TemplateConfig from '@11ty/eleventy/src/TemplateConfig.js';
 import urlFilter from '@11ty/eleventy/src/Filters/Url.js';
-import {minifyHtml} from './minify-html.js';
-import {postcssBuild} from './postcss.js';
-import {dateString, timeString, trim} from './util.js';
+import {minifyHtml} from './minify-html.mjs';
+import {postcssBuild} from './postcss.mjs';
+import {dateString, timeString, trim} from './util.mjs';
 import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
 import pluginRss from '@11ty/eleventy-plugin-rss';
-import {alwatrIcon} from '../shortcode/alwatr-icon.js';
+import {alwatrIcon} from '../shortcode/alwatr-icon.cjs';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
