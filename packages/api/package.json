@@ -42,10 +42,10 @@
   "devDependencies": {
     "@alwatr/crypto": "^3.0.4",
     "@alwatr/logger": "^2.4.1",
-    "@alwatr/nano-build": "^1.2.1",
+    "@alwatr/nano-build": "^1.2.2",
     "@alwatr/nano-server": "^1.2.7",
     "@alwatr/prettier-config": "^1.0.4",
-    "@alwatr/storage-sdk": "^4.0.4",
+    "@alwatr/storage-sdk": "^4.1.0",
     "@alwatr/tsconfig-base": "^1.0.5",
     "@alwatr/type": "^1.2.4",
     "@alwatr/util": "^1.4.1",
