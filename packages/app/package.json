@@ -33,6 +33,7 @@
     "c": "yarn run clean",
     "cb": "yarn run clean && yarn run build",
     "cw": "yarn run clean && yarn run watch",
+    "start": "yarn run build && yarn run serve",
     "serve": "wds",
     "build": "yarn run build:11ty & yarn run build:es",
     "build:es": "nano-build --preset=pmpa",
