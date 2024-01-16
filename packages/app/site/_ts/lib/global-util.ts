@@ -29,13 +29,13 @@ export function clearLocalStorage() {
   logger.logMethod?.('clearLocalStorage');
   localStorage.clear();
   if (logger.debugMode) {
-    localStorage.setItem('alwatrDebug', '1');
+    localStorage.setItem('debug', '1');
   }
 }
 
 export function devMode() {
   logger.logMethod?.('devMode');
-  localStorage.setItem('alwatrDebug', '1');
+  localStorage.setItem('debug', '1');
   location.reload();
 }
 

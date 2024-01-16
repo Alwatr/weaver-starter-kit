@@ -31,7 +31,7 @@
     "c": "yarn run clean",
     "cb": "yarn run clean && yarn run build",
     "cw": "yarn run clean && yarn run watch",
-    "d": "yarn run build:es && ALWATR_DEBUG=1 yarn node",
+    "d": "yarn run build:es && DEBUG=1 yarn node",
     "start": "yarn build && yarn serve",
     "build": "nano-build --preset=microservice",
     "watch": "yarn run build:es --watch",

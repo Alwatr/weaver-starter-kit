@@ -54,7 +54,7 @@ services:
       - STORAGE_HOST=${appId}-storage-api
       - STORAGE_PORT=80
       - STORAGE_TOKEN=${storageAccessToken}
-      - ALWATR_DEBUG=${apiDebug:-}
+      - DEBUG=${apiDebug:-}
 
     logging:
       driver: json-file
@@ -88,7 +88,7 @@ services:
     environment:
       - STORAGE_PATH=/data
       - ACCESS_TOKEN=${storageAccessToken}
-      - ALWATR_DEBUG=${storageApiDebug:-}
+      - DEBUG=${storageApiDebug:-}
 
     volumes:
       - type: bind
