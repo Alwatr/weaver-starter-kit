@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/Alwatr/pmpa/compare/v1.1.0...v1.1.1) (2024-01-16)
+
+### Code Refactoring
+
+* update env name for logger enable mode ([d317dce](https://github.com/Alwatr/pmpa/commit/d317dce979a3b5cb311a44c787f5ff077e9f6c80)) by @njfamirm
+* use definePackage logger ([cc0d017](https://github.com/Alwatr/pmpa/commit/cc0d017b11644c501080f708785ab80fcc476f23)) by @njfamirm
+
+### Miscellaneous Chores
+
+* **deps:** update all deps using upd command ([ebb6d7a](https://github.com/Alwatr/pmpa/commit/ebb6d7aa0115706d42009f770c76f9a40d31db09)) by @njfamirm
+* remove tsconfig outDir ([e713b0a](https://github.com/Alwatr/pmpa/commit/e713b0a48ace5b1ea9185e7fff42f240af40c0f4)) by @njfamirm
+
 # [1.1.0](https://github.com/Alwatr/pmpa/compare/v1.0.0...v1.1.0) (2023-12-24)
 
 **Note:** Version bump only for package @alwatr/pmpa-api

@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/Alwatr/pmpa/compare/v1.1.0...v1.1.1) (2024-01-16)
+
+### Bug Fixes
+
+* **app:** debugMode in logger ([a86cf76](https://github.com/Alwatr/pmpa/commit/a86cf76bbbbe9b669b64703f66342876dcb7a7d7)) by @njfamirm
+* **app:** start script ([d577af7](https://github.com/Alwatr/pmpa/commit/d577af7fd4064e76ccac82afd9a0242952015a38)) by @MM25Zamanian
+* define package scope ([335bfa2](https://github.com/Alwatr/pmpa/commit/335bfa29f9330bbbaebeffa17fbe038336e13ae6)) by @njfamirm
+
+### Code Refactoring
+
+* **app/keep-scroll:** ensure deployment mode from platform info package ([d83a60d](https://github.com/Alwatr/pmpa/commit/d83a60d4bd81a887a7e0ad3d9c56f92215087378)) by @njfamirm
+* update env name for logger enable mode ([d317dce](https://github.com/Alwatr/pmpa/commit/d317dce979a3b5cb311a44c787f5ff077e9f6c80)) by @njfamirm
+* use definePackage logger ([cc0d017](https://github.com/Alwatr/pmpa/commit/cc0d017b11644c501080f708785ab80fcc476f23)) by @njfamirm
+
+### Miscellaneous Chores
+
+* **app:** build logger name ([731b13a](https://github.com/Alwatr/pmpa/commit/731b13ad5ec5598f9396344af190ca043c8e0872)) by @njfamirm
+* **deps:** update all deps using upd command ([ebb6d7a](https://github.com/Alwatr/pmpa/commit/ebb6d7aa0115706d42009f770c76f9a40d31db09)) by @njfamirm
+* remove tsconfig outDir ([e713b0a](https://github.com/Alwatr/pmpa/commit/e713b0a48ace5b1ea9185e7fff42f240af40c0f4)) by @njfamirm
+
 # [1.1.0](https://github.com/Alwatr/pmpa/compare/v1.0.0...v1.1.0) (2023-12-24)
 
 ### Features
