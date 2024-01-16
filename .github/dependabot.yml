@@ -59,9 +59,6 @@ updates:
 
   - package-ecosystem: docker
     directory: /packages/app
-    commit-message:
-      prefix: deps
-      include: scope
     reviewers:
       - AliMD
     schedule:
@@ -75,9 +72,6 @@ updates:
 
   - package-ecosystem: docker
     directory: /packages/api
-    commit-message:
-      prefix: deps
-      include: scope
     reviewers:
       - AliMD
     schedule:
