@@ -1,7 +1,6 @@
-import {createLogger, definePackage} from '@alwatr/logger';
-definePackage('pmpa-app/11ty', '0.x');
+import {definePackage} from '@alwatr/logger';
 
-export const logger = createLogger('pmpa-app', true);
+export const logger = definePackage('pmpa-app/11ty', '1.x', true);
 
 export const devMode = process.env.NODE_ENV !== 'production';
 logger.logProperty?.('devMode', devMode);

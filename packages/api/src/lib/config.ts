@@ -1,8 +1,8 @@
-import {createLogger, definePackage} from '@alwatr/logger';
+import {definePackage} from '@alwatr/logger';
 
-definePackage('pmpa-api', '0.x');
+import type {} from '@alwatr/nano-build'
 
-export const logger = createLogger('@alwatr/pmpa-api');
+export const logger = definePackage('@alwatr/pmpa-api', __package_version__);
 
 if (process.env.NODE_ENV === 'production') {
   if (process.env.STORAGE_TOKEN == null) {
