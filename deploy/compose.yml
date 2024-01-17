@@ -19,6 +19,7 @@ services:
       - botAdminChatId=${botAdminChatId}
       - botToken=${botToken}
       - botUsername=${botUsername}
+      - initialMode=0
 
     logging:
       driver: json-file
