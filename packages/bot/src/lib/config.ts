@@ -1,3 +1,4 @@
+import {isNumber} from '@alwatr/is-number'
 import {definePackage} from '@alwatr/logger';
 import {Region, StoreFileExtension, StoreFileType} from '@alwatr/store-engine';
 
@@ -9,8 +10,10 @@ export const logger = definePackage('@moqis/dcd-bot', __package_version__);
 if (process.env.botToken == null) {
   throw new Error('`botToken` is required');
 }
-if (process.env.botAdminChatId == null) {
-  throw new Error('`botAdminChatId` is required');
+
+const botAdminChatId = process.env.botAdminChatId;
+if (botAdminChatId == null || isNumber(botAdminChatId) === false) {
+  throw new Error('`botAdminChatId` is required as number');
 }
 
 export const config = {
@@ -21,7 +24,7 @@ export const config = {
 
   bot: {
     token: process.env.botToken as string,
-    adminChatId: process.env.botAdminChatId as string,
+    adminChatId: +botAdminChatId as number,
 
     info: {
       username: process.env.botUsername,
@@ -38,13 +41,13 @@ export const config = {
     users: {
       extension: StoreFileExtension.Json,
       name: 'users',
-      region: Region.SuperAdmin,
+      region: Region.Managers,
       type: StoreFileType.Collection,
     },
     content: {
       extension: StoreFileExtension.Json,
       name: 'content',
-      region: Region.SuperAdmin,
+      region: Region.Managers,
       type: StoreFileType.Collection,
     },
   },
