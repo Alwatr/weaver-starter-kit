@@ -1,8 +1,10 @@
-export interface User {
+/* eslint-disable @typescript-eslint/consistent-type-definitions */
+
+export type User = {
   isSubscribed: boolean;
 }
 
-export interface Content {
+export type Content = {
   messageId: number;
-  chatId: number;
+  chatId: string | number;
 }
