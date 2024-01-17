@@ -7,14 +7,32 @@ definePackage('pmpa-api', '0.x');
 
 export const logger = createLogger('@alwatr/pmpa-api');
 
-if (process.env.BOT_TOKEN == null) {
-  throw new Error('`BOT_TOKEN` is required');
+if (process.env.botToken == null) {
+  throw new Error('`botToken` is required');
+}
+if (process.env.botAdminChatId == null) {
+  throw new Error('`botAdminChatId` is required');
 }
 
 export const config = {
   store: {
     rootPath: './data',
     defaultChangeDebounce: 50,
+  },
+
+  bot: {
+    token: process.env.botToken as string,
+    adminChatId: process.env.botAdminChatId as string,
+
+    info: {
+      username: process.env.botUsername,
+      can_join_groups: true,
+      can_read_all_group_messages: false,
+      first_name: process.env.BOT_FIRST_NAME,
+      is_bot: true,
+      supports_inline_queries: false,
+      language_code: 'fa',
+    } as UserFromGetMe,
   },
 
   storeStat: {
@@ -30,20 +48,6 @@ export const config = {
       region: Region.SuperAdmin,
       type: StoreFileType.Collection,
     },
-  },
-
-  bot: {
-    adminChatId: 716375794,
-    token: process.env.BOT_TOKEN as string,
-    info: {
-      username: process.env.BOT_USERNAME,
-      can_join_groups: true,
-      can_read_all_group_messages: false,
-      first_name: process.env.BOT_FIRST_NAME,
-      is_bot: true,
-      supports_inline_queries: false,
-      language_code: 'fa',
-    } as UserFromGetMe,
   },
 } as const;
 
