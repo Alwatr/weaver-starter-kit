@@ -6,7 +6,6 @@
   "files": [],
   "exclude": [],
   "references": [
-    {"path": "./packages/api"},
-    {"path": "./packages/app"},
+    {"path": "./packages/bot"}
   ]
 }
