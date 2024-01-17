@@ -6,5 +6,5 @@ export type User = {
 
 export type Content = {
   messageId: number;
-  chatId: string | number;
+  chatId: number;
 }
