@@ -1,11 +1,10 @@
-import {createLogger, definePackage} from '@alwatr/logger';
+import {definePackage} from '@alwatr/logger';
 import {Region, StoreFileExtension, StoreFileType} from '@alwatr/store-engine';
 
+import type {} from '@alwatr/nano-build'
 import type {UserFromGetMe} from 'grammy/types';
 
-definePackage('pmpa-api', '0.x');
-
-export const logger = createLogger('@alwatr/pmpa-api');
+export const logger = definePackage('@moqis/dcd-bot', __package_version__);
 
 if (process.env.botToken == null) {
   throw new Error('`botToken` is required');
@@ -15,7 +14,7 @@ if (process.env.botAdminChatId == null) {
 }
 
 export const config = {
-  store: {
+  storeEngine: {
     rootPath: './data',
     defaultChangeDebounce: 50,
   },
