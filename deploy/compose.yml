@@ -18,8 +18,9 @@ services:
       alwatr-public-network:
 
     environment:
-      # - NGINX_ACCESS_LOG=${appAccessLog:-}
       - NGINX_FORCE_DOMAIN=${nginxForceDomain:-}
+      - NGINX_ACCESS_LOG=${appAccessLog:-off}
+      - NGINX_DISALLOW_ROBOTS=${appNginxDisallowRobots:-}
 
     logging:
       driver: json-file
@@ -115,8 +116,8 @@ services:
     networks:
       alwatr-public-network:
 
-    # environment:
-    #   - NGINX_ACCESS_LOG=${storageAccessLog:-off}
+    environment:
+      - NGINX_ACCESS_LOG=${storageAccessLog:-off}
 
     volumes:
       - type: bind
