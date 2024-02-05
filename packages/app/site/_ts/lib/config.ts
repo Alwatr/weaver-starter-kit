@@ -1,7 +1,7 @@
 import {definePackage} from '@alwatr/logger';
 import {getLocalStorageItem} from '@alwatr/util';
 
-import type {} from '@alwatr/nano-build'
+import type {} from '@alwatr/nano-build';
 import type {ServerRequestConfig} from '@alwatr/server-context';
 
 export const logger = definePackage('@alwatr/pmpa-app', __package_version__);

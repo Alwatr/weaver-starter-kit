@@ -1,4 +1,4 @@
-import {logger} from './lib/config';
-import './route/home';
+import {logger} from './lib/config.js';
+import './route/home.js';
 
 logger.banner('alwatr-pnpm-api');
