@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/Alwatr/pmpa/compare/v1.1.1...v1.1.2) (2024-02-05)
+
+### Features
+
+* **deploy:** add canary and beta ([ef6c649](https://github.com/Alwatr/pmpa/commit/ef6c6498fa357e521eb90d07887b90a15f359c79)) by @njfamirm
+
+### Bug Fixes
+
+* **app:** site url for production ([794a9c6](https://github.com/Alwatr/pmpa/commit/794a9c6663632cf5607104c1e7015c49e8bf8496)) by @njfamirm
+* **deps:** install required for lint ([bec9932](https://github.com/Alwatr/pmpa/commit/bec9932a7bf38fc5741dcaf880e859c9e6d5a5aa)) by @njfamirm
+* **deps:** remove extra ([e931175](https://github.com/Alwatr/pmpa/commit/e931175a758a9c51f7e2c0a1607afc3fefe1b53c)) by @njfamirm
+
+### Code Refactoring
+
+* **app:** remove no index ([937ae38](https://github.com/Alwatr/pmpa/commit/937ae38f02440150bfc13f3d6e63de9e7015580d)) by @njfamirm
+
+### Miscellaneous Chores
+
+* **deps:** update ([e829e7e](https://github.com/Alwatr/pmpa/commit/e829e7ec56dd8d38de9a6fbd3618efa8cb655465)) by @AliMD
+* update yarn.lock ([2656479](https://github.com/Alwatr/pmpa/commit/2656479a0a34c9056915fa62fd6de390b59e4a0b)) by @njfamirm
+
 ## [1.1.1](https://github.com/Alwatr/pmpa/compare/v1.1.0...v1.1.1) (2024-01-16)
 
 ### Bug Fixes
