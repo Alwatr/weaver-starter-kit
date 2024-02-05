@@ -1,4 +1,4 @@
-import {platformInfo} from '@alwatr/platform-info'
+import {platformInfo} from '@alwatr/platform-info';
 import {untilNextFrame} from '@alwatr/util';
 
 import {logger} from './config.js';

@@ -1,6 +1,6 @@
 import {definePackage} from '@alwatr/logger';
 
-import type {} from '@alwatr/nano-build'
+import type {} from '@alwatr/nano-build';
 
 export const logger = definePackage('@alwatr/pmpa-api', __package_version__);
 
