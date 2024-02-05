@@ -116,6 +116,8 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
+          build-args: |
+            siteUrl='https://pmpa.alwatr.ir'
 
       # - name: 🏗 Sign the image with GitHub OIDC Token
       #   if: ${{ github.event_name != 'pull_request' && steps.file_change.outputs.container_folder != 'false' }}
