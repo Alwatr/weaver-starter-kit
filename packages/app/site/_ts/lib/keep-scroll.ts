@@ -1,7 +1,7 @@
 import {platformInfo} from '@alwatr/platform-info'
 import {untilNextFrame} from '@alwatr/util';
 
-import {logger} from './config';
+import {logger} from './config.js';
 
 async function keepScroll() {
   const container = document.querySelector('main.overflow-y-scroll');
