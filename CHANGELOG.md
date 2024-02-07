@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/Alwatr/pmpa/compare/v1.2.0...v1.2.1) (2024-2-7)
+
+### Bug Fixes
+
+* **types:** add to root tsconfig ([d66f095](https://github.com/Alwatr/pmpa/commit/d66f095d44da3f988aad6b41c490e8a7a5fec3c6)) by @njfamirm
+
 ## [1.2.0](https://github.com/Alwatr/pmpa/compare/v1.1.2...v1.2.0) (2024-2-7)
 
 ### Features
