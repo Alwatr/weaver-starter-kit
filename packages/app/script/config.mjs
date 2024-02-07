@@ -34,7 +34,7 @@ function _eleventyConfig(config) {
   });
 
   config.additionalWatchTargets = ['./site/', './shortcode/'];
-  config.watchIgnores = ['site/_ts/'];
+  config.watchIgnores = new Set(['site/_ts/']);
 
   // config.addFilter("slug", slugFilter);
   config.addFilter('slugify', slugifyFilter);
@@ -111,6 +111,9 @@ function _eleventyConfig(config) {
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
     htmlOutputSuffix: '-o',
+
+    handlebarsHelpers: {},
+    nunjucksFilters: {},
 
     // Renamed from `jsDataFileSuffix` in 2.0 (and swapped to an Array)
     // If you remove "" we won’t look for dir/dir.json or file.json
