@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/Alwatr/pmpa/compare/v1.1.2...v1.2.0) (2024-2-7)
+
+### Features
+
+* **types:** new package ([fe09ba6](https://github.com/Alwatr/pmpa/commit/fe09ba61bc554eb5f595297fcd2bb9e313f6d646)) by @njfamirm
+
+### Bug Fixes
+
+* **app:** image version name ([454c35f](https://github.com/Alwatr/pmpa/commit/454c35fb338041b486d8158736d5c587dc525e4a)) by @njfamirm
+
 ## [1.1.2](https://github.com/Alwatr/pmpa/compare/v1.1.1...v1.1.2) (2024-02-05)
 
 ### Bug Fixes

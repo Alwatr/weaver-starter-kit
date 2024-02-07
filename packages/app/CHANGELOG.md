@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.0](https://github.com/Alwatr/pmpa/compare/v1.1.2...v1.2.0) (2024-2-7)
+
+### Features
+
+* **app/layout:** base structure ([8b783bd](https://github.com/Alwatr/pmpa/commit/8b783bd350220eadbc738ec6cd460e5a5328943f)) by @njfamirm
+* **app:** 404 page ([5b051d5](https://github.com/Alwatr/pmpa/commit/5b051d5bd63d8973860adc54b80395899bef701e)) by @njfamirm
+* **app:** naked layout ([f839f12](https://github.com/Alwatr/pmpa/commit/f839f12a8590ed960f92a13f07c0c93c1a401061)) by @njfamirm
+* **types:** new package ([fe09ba6](https://github.com/Alwatr/pmpa/commit/fe09ba61bc554eb5f595297fcd2bb9e313f6d646)) by @njfamirm
+
+### Bug Fixes
+
+* **app/11ty:** config type issue ([25b564e](https://github.com/Alwatr/pmpa/commit/25b564ef0be48cbeef7c77c02ead2ff22a44396c)) by @njfamirm
+* **app:** change path ([89e3505](https://github.com/Alwatr/pmpa/commit/89e35052284e8d081807fa6c5e0a54d19499b02e)) by @njfamirm
+* **app:** image version name ([454c35f](https://github.com/Alwatr/pmpa/commit/454c35fb338041b486d8158736d5c587dc525e4a)) by @njfamirm
+
+### Miscellaneous Chores
+
+* **app:** remove no index ([aa856b0](https://github.com/Alwatr/pmpa/commit/aa856b0a47c78c567b107b9d59785de895dbd0fe)) by @njfamirm
+
 ## [1.1.2](https://github.com/Alwatr/pmpa/compare/v1.1.1...v1.1.2) (2024-02-05)
 
 ### Bug Fixes
