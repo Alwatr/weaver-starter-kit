@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ locale }}" dir="{{ dir }}">
+  <head>
+    <link rel="preload" as="style" href="/css/main.css?v={{ git.shortSha }}" fetchpriority="high" />
+    <link rel="preload" href="/font/vazirmatn/vazirmatn[wght].woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" as="script" href="/es/main.js?v={{ git.shortSha }}" />
+
+    {% include "meta.njk" %}
+    <link rel="stylesheet" href="/css/main.css?v={{ git.shortSha }}" />
+    <script src="/es/main.js?v={{ git.shortSha }}" defer async></script>
+  </head>
+
+  <body class="touch-pan-x touch-pan-y touch-pinch-zoom break-words bg-background font-vazirmatn text-bodyMedium text-onBackground hide-scrollbar-in-mobile color-scheme-light p-safe">
+    {{ content | safe }}
+  </body>
+</html>
