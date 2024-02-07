@@ -67,7 +67,7 @@
     "alpinejs": "^3.13.5",
     "cssnano": "^6.0.3",
     "esbuild": "^0.20.0",
-    "postcss": "^8.4.33",
+    "postcss": "^8.4.34",
     "postcss-import": "^16.0.0",
     "postcss-preset-env": "^9.3.0",
     "postcss-variable-compress": "^3.0.0",
