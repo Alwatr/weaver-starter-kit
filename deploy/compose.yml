@@ -18,7 +18,7 @@ services:
       alwatr-public-network:
 
     environment:
-      - NGINX_FORCE_DOMAIN=${nginxForceDomain:-}
+      - NGINX_FORCE_DOMAIN=${appForceDomain:-}
       - NGINX_ACCESS_LOG=${appAccessLog:-off}
       - NGINX_DISALLOW_ROBOTS=${appNginxDisallowRobots:-}
 
