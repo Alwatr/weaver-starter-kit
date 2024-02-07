@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       siteUrl:
-        description: Website url for the container
+        description: Website URL
         type: string
 
   # push:
