@@ -342,7 +342,7 @@ __metadata:
     "@alwatr/pmpa-types": "workspace:^"
     "@alwatr/prettier-config": "npm:^1.0.4"
     "@alwatr/server-context": "npm:^1.2.6"
-    "@alwatr/style": "npm:^2.1.0"
+    "@alwatr/style": "npm:^2.2.0"
     "@alwatr/tsconfig-base": "npm:^1.1.2"
     "@alwatr/util": "npm:^1.4.1"
     "@swc/html": "npm:^0.0.28"
@@ -444,13 +444,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/style@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@alwatr/style@npm:2.1.0"
+"@alwatr/style@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@alwatr/style@npm:2.2.0"
   dependencies:
     tailwindcss: "npm:^3.4.1"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/7116b96922d54d541b86c34e10321b22db9f7f6e64706d49b807477cbaa51f5266a37d506b7c02073f8948eae44e0b508703a8b88cdaa3447dbcf478d599d5e1
+  checksum: 10c0/03f5cbb43e8137fdf083c652b02b789f51cfc03dad1d3a8bcf1ebed8a2924234211ad3ad89881a49fa61a887cea732498d84e47a1f75b7cda8cbde6f6cfb4f2c
   languageName: node
   linkType: hard
 
