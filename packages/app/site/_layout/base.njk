@@ -2,5 +2,7 @@
 layout: naked
 ---
 
-{{ content | safe }}
-{% include "prerender.njk" %}
+<body class="touch-pan-x touch-pan-y touch-pinch-zoom break-words bg-background font-vazirmatn text-bodyMedium text-onBackground hide-scrollbar-in-mobile color-scheme-light p-safe min-h-screen">
+  {{ content | safe }}
+  {% include "prerender.njk" %}
+</body>
