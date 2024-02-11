@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/Alwatr/pmpa/compare/v1.2.1...v1.2.2) (2024-02-11)
+
+### Bug Fixes
+
+* **app:** 404 page ([38aab53](https://github.com/Alwatr/pmpa/commit/38aab53ead4c4d37be7dc034482be3920f400fe3)) by @njfamirm
+
+### Code Refactoring
+
+* **app:** move body from naked to base ([7bb4f46](https://github.com/Alwatr/pmpa/commit/7bb4f4667edb782015d3d9fd8870d290d6e1bf21)) by @njfamirm
+
 ## [1.2.1](https://github.com/Alwatr/pmpa/compare/v1.2.0...v1.2.1) (2024-2-7)
 
 **Note:** Version bump only for package @alwatr/pmpa-app
