@@ -58,7 +58,7 @@
     "@alwatr/pmpa-types": "workspace:^",
     "@alwatr/prettier-config": "^1.0.4",
     "@alwatr/server-context": "^1.2.6",
-    "@alwatr/style": "^2.1.0",
+    "@alwatr/style": "^2.2.0",
     "@alwatr/tsconfig-base": "^1.1.2",
     "@alwatr/util": "^1.4.1",
     "@swc/html": "^0.0.28",
