@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.0](https://github.com/Alwatr/pmpa/compare/v1.2.2...v1.3.0) (2024-02-12)
+
+### Features
+
+* **app:** add content security policy meta ([60361bb](https://github.com/Alwatr/pmpa/commit/60361bb2a9eace244f21cdefc8405672b1a50357)) by @
+
 ## [1.2.2](https://github.com/Alwatr/pmpa/compare/v1.2.1...v1.2.2) (2024-02-11)
 
 ### Bug Fixes
