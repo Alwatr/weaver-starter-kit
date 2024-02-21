@@ -72,6 +72,7 @@
     "postcss-import": "^16.0.1",
     "postcss-preset-env": "^9.4.0",
     "postcss-variable-compress": "^3.0.0",
+    "postcss-viewport-unit-fallback": "^1.0.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   }

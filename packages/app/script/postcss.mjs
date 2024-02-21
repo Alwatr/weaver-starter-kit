@@ -9,8 +9,9 @@ import postcssPresetEnv from 'postcss-preset-env';
 import postcssVariableCompress from 'postcss-variable-compress';
 import tailwindcss from 'tailwindcss';
 import postcssNesting from 'tailwindcss/nesting/index.js';
+import postcssViewportUnitFallback from 'postcss-viewport-unit-fallback';
 
-const postCssPlugins = [postcssImport({root: 'site/_css'}), postcssNesting, tailwindcss, postcssPresetEnv];
+const postCssPlugins = [postcssImport({root: 'site/_css'}), postcssNesting, tailwindcss, postcssViewportUnitFallback, postcssPresetEnv];
 
 if (!devMode) {
   postCssPlugins.push(postcssVariableCompress, cssnano({preset: ['default', {discardComments: {removeAll: true}}]}));
