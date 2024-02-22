@@ -1,0 +1,21 @@
+---
+title: صفحه مورد نظر یافت نشد
+eleventyExcludeFromCollections: true
+---
+<header class='fixed left-{{ contentGapEnd }} right-{{ contentGapStart }} top-0 z-fixed pt-safe box-content flex h-{{ contentGapTop }} select-none items-center bg-surfaceContainer px-1 translucent'>
+  <span class='shrink grow text-ellipsis whitespace-nowrap px-1 text-start text-titleLarge text-onSurface'>
+    {{ site.title }}
+  </span>
+
+  <button class='block cursor-pointer rounded-full p-3 text-[1.5rem] state-onSurfaceVariant'>
+    {% alwatrIcon "refresh" %}
+  </button>
+</header>
+
+<main class=' mt-{{ contentGapTop }} ms-{{ contentGapStart }} me-{{ contentGapEnd }} mb-{{ contentGapBottom }}'>
+  <div class='flex flex-col items-center justify-center mt-4'>
+    <h1 class='text-primary text-titleLarge mt-4 font-extrabold' dir='ltr'>
+      {{ title }}
+    </h1>
+  </div>
+</main>
