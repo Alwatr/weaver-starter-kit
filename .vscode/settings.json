@@ -3,6 +3,9 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
+  "themeCheck.checkOnChange": false,
+  "themeCheck.checkOnOpen": false,
+  "themeCheck.checkOnSave": false,
   "js/ts.implicitProjectConfig.checkJs": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": false,
@@ -16,11 +19,16 @@
     "*.ts": "${capture}.js, ${capture}.js.map, ${capture}.d.ts, ${capture}.d.ts.map",
     "tsconfig.json": "tsconfig.*.json, *.tsbuildinfo"
   },
+  "emmet.includeLanguages": {
+    "liquid": "html",
+    "njk": "html",
+  },
   "files.associations": {
     "*.ajs": "json",
     "*.ajs.bk": "json",
     "*.conf.template": "nginx",
-    "*.njk": "html"
+    "*.njk": "html",
+    "*.liquid": "html"
   },
   "files.exclude": {
     // "**/*.map": true,
@@ -53,6 +61,7 @@
     "alwatr",
     "cssnano",
     "fract",
+    "liquidjs",
     "pmpa",
     "shortcode",
     "stringifyable",

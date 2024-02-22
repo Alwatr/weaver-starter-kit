@@ -11,6 +11,7 @@
     "stylelint.vscode-stylelint",
     "csstools.postcss",
     "bradlc.vscode-tailwindcss",
-    "arcanis.vscode-zipfs"
+    "arcanis.vscode-zipfs",
+    "shopify.theme-check-vscode"
   ]
 }
