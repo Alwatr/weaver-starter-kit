@@ -13,7 +13,6 @@
   "workspaces": [
     "packages/*"
   ],
-  "prettier": "@alwatr/prettier-config",
   "scripts": {
     "b": "yarn run build",
     "c": "yarn run clean",
@@ -45,6 +44,8 @@
     "@lerna-lite/publish": "^3.3.0",
     "@lerna-lite/run": "^3.3.0",
     "@lerna-lite/version": "^3.3.0",
+    "@shopify/prettier-plugin-liquid": "^1.4.3",
+    "@types/node": "^20.11.19",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "conventional-changelog-conventionalcommits": "^7.0.2",
@@ -55,5 +56,13 @@
     "prettier": "^3.2.5",
     "typescript": "^5.3.3"
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "yarn@4.1.0",
+  "dependenciesMeta": {
+    "@alwatr/prettier-config@1.0.4": {
+      "unplugged": true
+    },
+    "@shopify/prettier-plugin-liquid@1.4.3": {
+      "unplugged": true
+    }
+  }
 }
