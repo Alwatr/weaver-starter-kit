@@ -1,7 +1,7 @@
 .alwatr-icon {
-  @apply inline-block w-6 h-6 box-content align-middle self-center grow-0 shrink-0 [contain:strict];
+  @apply inline-block size-6 box-content align-middle self-center grow-0 shrink-0 [contain:strict];
 }
 
 .alwatr-icon > svg {
-  @apply block h-full w-full fill-current;
+  @apply block size-full fill-current;
 }
