@@ -23,16 +23,15 @@ permalink: /
   class=" mt-{{ contentGapTop }} ms-{{ contentGapStart }} me-{{ contentGapEnd }} mb-{{ contentGapBottom }}"
 >
   <div class="flex flex-col items-center justify-center mt-4">
-    <img src="/img/logo.png" class="w-32 h-32 select-none" alt="Alwatr PMPA" />
+    <img src="/img/logo.png" class="size-32 select-none" alt="Alwatr PMPA" />
     <h1 class="text-primary text-displayLarge mt-4 font-mono font-extrabold" dir="ltr">
       {{ pkg.displayName }}
     </h1>
     <h2 class="text-primary text-headlineSmall mt-4" dir="ltr">
-      {% alwatrIcon "sell:fill" %}&nbsp;<span>v{{ pkg.version }}-{{ pkg.baseVersion }}+{{ git.shortSha }}</span>
+      {% alwatrIcon "sell:fill" %}&nbsp;<span>v{{ pkg.version }}+{{ git.shortSha }}</span>
     </h2>
-  </h2>
-  <h3 class="text-primary text-bodyLarge mt-4 text-center font-mono">
-    Stars count: {{stargazers}}
-  </h3>
+    <h3 class="text-primary text-bodyLarge mt-4 text-center font-mono">
+      Stars count: {{stargazers}}
+    </h3>
   </div>
 </main>
