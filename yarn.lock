@@ -355,6 +355,7 @@ __metadata:
     postcss-import: "npm:^16.0.1"
     postcss-preset-env: "npm:^9.4.0"
     postcss-variable-compress: "npm:^3.0.0"
+    postcss-viewport-unit-fallback: "npm:^1.0.1"
     tailwindcss: "npm:^3.4.1"
     typescript: "npm:^5.3.3"
   languageName: unknown
@@ -9027,6 +9028,13 @@ __metadata:
   peerDependencies:
     postcss: ^8.2.8
   checksum: 10c0/2ccd734c86bc4a7478c476473ec17cd0f9d3e068a52c0c1a5a53865ba2e9d3af9236a8efc36aebd044a4a4851432cbbb3bb58c8925b6d3ca54942f57cbcc49fb
+  languageName: node
+  linkType: hard
+
+"postcss-viewport-unit-fallback@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "postcss-viewport-unit-fallback@npm:1.0.1"
+  checksum: 10c0/a444836e1abd62a5e33d769a59671aea691c7852cafa0da71359ccab1853e885e7ec2c5fb6e779f9bc8b4c672db7cb1789611bd0717d406665535f48e25bf538
   languageName: node
   linkType: hard
 
