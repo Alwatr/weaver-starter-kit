@@ -1,5 +1,6 @@
 {
   "name": "@alwatr/pmpa-app",
+  "displayName": "Alwatr PMPA",
   "version": "1.3.0",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",

@@ -1,8 +1,14 @@
 ---
 layout: naked
+contentGapTop: 16
+contentGapBottom: 0
+contentGapStart: 0
+contentGapEnd: 0
 ---
 
-<body class="touch-pan-x touch-pan-y touch-pinch-zoom break-words bg-background font-vazirmatn text-bodyMedium text-onBackground hide-scrollbar-in-mobile color-scheme-light p-safe min-h-screen">
+<body
+  class="flex flex-col touch-pan-x touch-pan-y touch-pinch-zoom break-words bg-background font-vazirmatn text-bodyMedium text-onBackground color-scheme-light p-safe min-h-dvh"
+>
   {{ content | safe }}
   {% include "prerender.njk" %}
 </body>
