@@ -2,6 +2,8 @@ const {readFile} = require('fs/promises');
 
 // const resolve = createRequire(import.meta.resolve).resolve;
 
+const cache = {};
+
 async function alwatrIcon(icon, customClass = '') {
   if (icon.indexOf('/') === -1) {
     icon = 'material/' + icon;
@@ -11,27 +13,32 @@ async function alwatrIcon(icon, customClass = '') {
     icon = icon + ':main';
   }
 
+  // @ts-expect-error es2020
+  if (Object.hasOwn(cache, icon)) return cache[icon];
+
   // icon = material/home:main
   const [iconPack, iconExtra] = icon.split('/');
   const [iconName, iconType] = iconExtra.replaceAll('_', '-').split(':');
 
-  const path = require.resolve(`@alwatr/icon-set-${iconPack}/svg/${iconType}/${iconName}.svg`);
+  let iconContext;
 
   try {
-    icon = await readFile(path, 'utf8');
+    const path = require.resolve(`@alwatr/icon-set-${iconPack}/svg/${iconType}/${iconName}.svg`);
+    iconContext = await readFile(path, 'utf8');
   } catch {
-    const err = new Error(`alwatrIcon: icon not found: ${(icon, path)}`);
+    const err = new Error(`alwatrIcon: icon ${icon} not found`);
 
     if (process.env.NODE_ENV === 'production') {
       throw err;
     }
 
     console.error(err);
-    icon = 'N!';
+    iconContext = 'N!';
   }
 
-  // eslint-disable-next-line max-len
-  return `<div class="h-[1em] w-[1em] box-content align-middle self-center grow-0 shrink-0 [contain:size_layout_paint_style] [&>svg]:block [&>svg]:h-full [&>svg]:w-full [&>svg]:fill-current ${customClass}">${icon}</div>`;
+  cache[icon] = `<span class="alwatr-icon ${customClass}">${iconContext}</span>`;
+
+  return cache[icon];
 }
 
 module.exports = {alwatrIcon};

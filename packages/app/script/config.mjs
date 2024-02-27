@@ -75,7 +75,7 @@ function _eleventyConfig(config) {
   config.addFilter('timeString', timeString);
   config.addFilter('trim', trim);
 
-  config.addShortcode('alwatrIcon', alwatrIcon);
+  config.addAsyncShortcode('alwatrIcon', alwatrIcon);
 
   config.addPlugin(pluginRss);
   config.addPlugin(directoryOutputPlugin, {
