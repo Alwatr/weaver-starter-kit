@@ -8,7 +8,6 @@ on:
       siteUrl:
         description: Website URL
         type: string
-        default: ${{ secrets.SITE_URL }}
 
   # push:
   #   branches:

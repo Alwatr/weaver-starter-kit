@@ -7,6 +7,7 @@ import {dateString, timeString, trim} from './util.mjs';
 import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import {alwatrIcon} from '../shortcode/alwatr-icon.cjs';
+import {Liquid} from 'liquidjs';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -32,6 +33,8 @@ function _eleventyConfig(config) {
      */
     domDiff: false,
   });
+
+  config.setLibrary('liquid', new Liquid({extname: '.liquid',}));
 
   config.additionalWatchTargets = ['./site/', './shortcode/'];
   config.watchIgnores = new Set(['site/_ts/']);
@@ -95,13 +98,13 @@ function _eleventyConfig(config) {
 
   return {
     templateFormats: [
-      // "liquid",
       // "ejs",
       // "hbs",
       // "mustache",
       // "haml",
       // "pug",
       // "html",
+      'liquid',
       'md',
       'njk',
       '11ty.js',
