@@ -1,27 +1,24 @@
 ---
-title: home
+title: صفحه‌ی اصلی
 permalink: /
 ---
 <header class='fixed left-{{ contentGapEnd }} right-{{ contentGapStart }} top-0 z-fixed pt-safe box-content flex h-{{ contentGapTop }} select-none items-center bg-surfaceContainer px-1 translucent'>
-  <span class='shrink grow text-ellipsis whitespace-nowrap px-1 text-start text-titleLarge text-onSurface'>
+  <span class='shrink grow text-ellipsis whitespace-nowrap px-1 text-center text-titleLarge text-onSurface'>
     {{ title }}
   </span>
-
-  <button class='block cursor-pointer rounded-full p-3 text-[1.5rem] state-onSurfaceVariant'>
-    {% alwatrIcon "refresh" %}
-  </button>
 </header>
 
-<main class=' mt-{{ contentGapTop }} ms-{{ contentGapStart }} me-{{ contentGapEnd }} mb-{{ contentGapBottom }}'>
+<main
+  class='mt-{{ contentGapTop }} ms-{{ contentGapStart }} me-{{ contentGapEnd }} mb-{{ contentGapBottom }}'
+>
   <div class='flex flex-col items-center justify-center mt-4'>
-    <img src='/img/logo.png' class='w-32 h-32 select-none' alt='Alwatr PMPA'>
-    <h1 class='text-primary text-displayLarge mt-4' dir='ltr'>
+    <img src='/img/logo.png' class='size-32 select-none' alt='Alwatr PMPA'>
+    <h1 class='text-primary text-displayLarge mt-4 font-mono font-extrabold' dir='ltr'>
       {{ pkg.displayName }}
     </h1>
     <h2 class='text-primary text-headlineSmall mt-4' dir='ltr'>
-      {% alwatrIcon "sell:fill" %}v{{ pkg.version }}-{{ pkg.baseVersion }}+{{ git.shortSha }}
+      {% alwatrIcon "sell:fill" %}&nbsp;<span>v{{ pkg.version }}-{{ pkg.baseVersion }}+{{ git.shortSha }}</span>
     </h2>
-
     <h3 class='text-primary text-bodyLarge mt-4 text-center font-mono'>Stars count: {{ stargazers }}</h3>
   </div>
 </main>
