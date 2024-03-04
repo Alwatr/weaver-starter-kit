@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/Alwatr/pmpa/compare/v1.3.0...v1.4.1) (2024-03-04)
+
+### Features
+
+* **app/postcss:** add postcss-viewport-unit-fallback ([16c3552](https://github.com/Alwatr/pmpa/commit/16c3552a5ab6576de7cdf3e78beaa6019082d4c6)) by @njfamirm
+* **app:** new layout ([1fb49b0](https://github.com/Alwatr/pmpa/commit/1fb49b0f7789ae3aa84dc176a43d28901f51bf20)) by @njfamirm
+
+### Bug Fixes
+
+* **app/assets:** support windows path for copy font ([f2e16ca](https://github.com/Alwatr/pmpa/commit/f2e16caf577f9051f60a9bb7d6f2e4fcd12b355d)) by @njfamirm
+* **app/scripts:** export in logger ([6bedb91](https://github.com/Alwatr/pmpa/commit/6bedb9134f0596fdb18698072ef6a12dae28a3a8)) by @njfamirm
+* **app/shortcode:** function name and logger ([be672be](https://github.com/Alwatr/pmpa/commit/be672be0c367b4e2b6bd4938c11b3b99ab5b87f5)) by @njfamirm
+* **app/shortcode:** use async shortcode for alwatr icon ([17e2cf5](https://github.com/Alwatr/pmpa/commit/17e2cf5ba2c183395c27a18cc5c7b51fc2509cb4)) by @njfamirm
+* **app:** install types node ([39d2a79](https://github.com/Alwatr/pmpa/commit/39d2a7974927b649917fbc35d00e6e15c7ef31b3)) by @njfamirm
+* **app:** issue ([89e4ee0](https://github.com/Alwatr/pmpa/commit/89e4ee0a79d53f94e0e31bb78f010b7fbe3657b3)) by @AliMD
+* change logger to cjs ([166864c](https://github.com/Alwatr/pmpa/commit/166864c50de2fe0d91ef1af719bdf9b89fe9c6c5)) by @njfamirm
+
+### Performance Improvements
+
+* **app/shortcode:** use cache for alwatr icon ([b131131](https://github.com/Alwatr/pmpa/commit/b13113106590827cb34f9e80778fb57ebe99be8a)) by @njfamirm
+
+### Code Refactoring
+
+* **alwatr-icon:** use size instead w/h ([e682726](https://github.com/Alwatr/pmpa/commit/e682726e5114e565246eeee34fa81ef26d452c97)) by @AliMD
+* **app/shortcode:** rewrite and fix class cache issue ([13876e7](https://github.com/Alwatr/pmpa/commit/13876e7f68a276558eaba63b5cf33b0251f8566a)) by @njfamirm
+* **app:** global alwatr icon style ([cac1550](https://github.com/Alwatr/pmpa/commit/cac15507247692199c857a0e5f71068e1808fda2)) by @njfamirm
+* **app:** move fa data to root of site ([1dc50fe](https://github.com/Alwatr/pmpa/commit/1dc50fe1fbf9b2f2503203a847ca9fb752190686)) by @njfamirm
+
+### Miscellaneous Chores
+
+* **app/dockerfile:** image base name ([dfe9042](https://github.com/Alwatr/pmpa/commit/dfe90422988fe6aaaa656fce1673eb2b2b204c89)) by @njfamirm
+* **app/meta:** disable Content-Security-Policy tmp ([06dc4e3](https://github.com/Alwatr/pmpa/commit/06dc4e30b74ae57663dac075fb14d8b95e3d3864)) by @njfamirm
+
 ## [1.4.0](https://github.com/Alwatr/pmpa/compare/v1.3.0...v1.4.0) (2024-03-04)
 
 ### Features
