@@ -10,8 +10,7 @@ const cache = {};
  * @param {string} customClass custom class added to svg span container
  * @returns {Promise<string>} svg content inside of a span
  */
-async function iconLoader(icon, customClass = '') {
-  logger.logMethodArgs?.('iconLoader', {icon, customClass});
+async function alwatrIcon(icon, customClass = '') {
   if (icon.indexOf('/') === -1) {
     icon = 'material/' + icon;
   }
@@ -41,4 +40,4 @@ async function iconLoader(icon, customClass = '') {
   return `<span class="alwatr-icon ${customClass}">${cache[icon]}</span>`;
 }
 
-module.exports = {iconLoader};
+module.exports = {alwatrIcon};
