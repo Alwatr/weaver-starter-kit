@@ -1,6 +1,6 @@
 import {join} from 'path';
 import eleventy from '@11ty/eleventy';
-import {logger} from './logger.mjs';
+import {logger} from './logger.cjs';
 import {eleventyConfig} from './config.mjs';
 import {argv} from 'process';
 import {copyFont} from './assets.cjs';
