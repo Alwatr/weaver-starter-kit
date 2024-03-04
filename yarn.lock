@@ -347,6 +347,7 @@ __metadata:
     "@alwatr/util": "npm:^1.4.1"
     "@swc/html": "npm:^0.0.28"
     "@types/alpinejs": "npm:^3.13.6"
+    "@types/node": "npm:^20.11.24"
     "@web/dev-server": "npm:^0.4.3"
     alpinejs: "npm:^3.13.5"
     cssnano: "npm:^6.0.5"

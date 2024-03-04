@@ -64,6 +64,7 @@
     "@alwatr/util": "^1.4.1",
     "@swc/html": "^0.0.28",
     "@types/alpinejs": "^3.13.6",
+    "@types/node": "^20.11.24",
     "@web/dev-server": "^0.4.3",
     "alpinejs": "^3.13.5",
     "cssnano": "^6.0.5",
