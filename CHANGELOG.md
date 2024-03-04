@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/Alwatr/pmpa/compare/v1.4.0...v1.4.1) (2024-03-04)
+
+### Bug Fixes
+
+* **app/scripts:** export in logger ([238ce67](https://github.com/Alwatr/pmpa/commit/238ce676b3518433831f64d9ce2982cc8de9ddf0)) by @njfamirm
+* **app/shortcode:** function name and logger ([ec4bb68](https://github.com/Alwatr/pmpa/commit/ec4bb683d35cbd764517d19c5342a809805b60e4)) by @njfamirm
+* **app:** install types node ([f00f972](https://github.com/Alwatr/pmpa/commit/f00f97215fabc77c0e7c00866f0fb734a7b035cf)) by @njfamirm
+* change logger to cjs ([fb9be57](https://github.com/Alwatr/pmpa/commit/fb9be576a0616e51122f1fab64fa26276c3be802)) by @njfamirm
+
+### Code Refactoring
+
+* **app/shortcode:** rewrite and fix class cache issue ([b713fdb](https://github.com/Alwatr/pmpa/commit/b713fdb5a84e0087115c9ef18604690b20c5a90f)) by @njfamirm
+
 ## [1.4.0](https://github.com/Alwatr/pmpa/compare/v1.3.0...v1.4.0) (2024-03-04)
 
 ### Features
