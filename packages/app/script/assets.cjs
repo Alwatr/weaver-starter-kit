@@ -1,6 +1,6 @@
 const {mkdir, cp} = require('fs/promises');
 const {dirname, join} = require('path');
-const {logger} = require('./logger.mjs');
+const {logger} = require('./logger.cjs');
 
 async function copyFont(fontName, outDir) {
   logger.logMethod?.('copyFont')
