@@ -7,6 +7,7 @@ import {dateString, timeString, trim} from './util.mjs';
 import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import {alwatrIcon} from '../shortcode/alwatr-icon.cjs';
+import {generateServiceWorker} from './workbox.mjs';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -90,6 +91,7 @@ function _eleventyConfig(config) {
   config.addTransform('trim', trim);
 
   config.on('eleventy.after', postcssBuild);
+  // config.on('eleventy.after', generateServiceWorker);
 
   config.addExtension('data.cjs', {key: '11ty.js'});
 
