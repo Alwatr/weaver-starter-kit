@@ -71,7 +71,7 @@
     "esbuild": "^0.20.2",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
-    "postcss-preset-env": "^9.5.3",
+    "postcss-preset-env": "^9.5.4",
     "postcss-variable-compress": "^3.0.0",
     "postcss-viewport-unit-fallback": "^1.0.1",
     "tailwindcss": "^3.4.3",
