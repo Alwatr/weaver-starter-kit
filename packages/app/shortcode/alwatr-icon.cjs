@@ -19,12 +19,14 @@ async function alwatrIcon(icon, customClass = '') {
     icon = icon + ':main';
   }
 
-  if (cache.hasOwnProperty(icon) === false) {
+  // @ts-expect-error es2020
+  if (Object.hasOwn(cache, icon) === false) {
+    // icon => `material/home:main`
     const [iconPack, iconExtra] = icon.split('/');
     const [iconName, iconType] = iconExtra.replace(/\_/, '-').split(':');
 
     try {
-      const iconPath = join(`@alwatr/icon-set-${iconPack}`, 'svg', `${iconType}`, `${iconName}.svg`);
+      const iconPath = join(`@alwatr/icon-set-${iconPack}`, 'svg', iconType, `${iconName}.svg`);
       const resolvedPath = require.resolve(iconPath);
       cache[icon] = await readFile(resolvedPath, 'utf8');
     } catch {
