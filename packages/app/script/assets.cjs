@@ -1,17 +1,15 @@
 const {mkdir, cp} = require('fs/promises');
-const {dirname, join} = require('path');
-const {logger} = require('./logger.cjs');
 
 async function copyFont(fontName, outDir) {
-  logger.logMethod?.('copyFont')
+  console.log('copyFont(%s)', fontName);
   await mkdir(outDir, {recursive: true});
 
-  let fontPath = require.resolve('@alwatr/font');
-  fontPath = dirname(fontPath);
-  fontPath = join(fontPath, fontName);
-  logger.logProperty?.('fontPath', fontPath)
+  let path = require.resolve('@alwatr/font');
+  path = path.slice(0, path.lastIndexOf('/'));
+  path += '/' + fontName;
+  console.log('fontPath: %s', path);
 
-  await cp(fontPath, outDir, {recursive: true, preserveTimestamps: true, force: true});
+  await cp(path, outDir, {recursive: true, preserveTimestamps: true, force: true});
 }
 
 module.exports = {copyFont};
