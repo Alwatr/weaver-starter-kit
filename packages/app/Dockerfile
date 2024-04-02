@@ -17,7 +17,7 @@ RUN set -eux; \
 # ---
 
 FROM ghcr.io/alwatr/nginx-ws:2.5.0
-LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-ws:2.4.2"
+LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/nginx-ws:2.5.0"
 
 COPY --from=builder /app/packages/app/dist/ .
 # RUN set -eux; ls -RlahF /data;
