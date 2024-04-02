@@ -1,7 +1,8 @@
 import {existsSync} from 'fs';
 import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
-import {devMode, logger} from './logger.cjs';
+import {devMode, logger} from './logger.mjs';
 
+import {join} from 'node:path';
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import postcssImport from 'postcss-import';
@@ -11,10 +12,21 @@ import tailwindcss from 'tailwindcss';
 import postcssNesting from 'tailwindcss/nesting/index.js';
 import postcssViewportUnitFallback from 'postcss-viewport-unit-fallback';
 
-const postCssPlugins = [postcssImport({root: 'site/_css'}), postcssNesting, tailwindcss, postcssViewportUnitFallback, postcssPresetEnv];
+const postCssPlugins = [
+  postcssImport({root: 'site/_css'}),
+  postcssNesting,
+  tailwindcss,
+  postcssViewportUnitFallback,
+  postcssPresetEnv,
+];
 
 if (!devMode) {
-  postCssPlugins.push(postcssVariableCompress, cssnano({preset: ['default', {discardComments: {removeAll: true}}]}));
+  postCssPlugins.push(
+    postcssVariableCompress,
+    cssnano({
+      preset: ['default', {discardComments: {removeAll: true}}]
+    }),
+  );
 }
 
 const postCss = postcss(postCssPlugins);
@@ -36,11 +48,36 @@ export async function postcssBuild() {
       continue;
     }
 
-    const inputFilePath = inputDir + fileName;
-    const outputFilePath = outputDir + fileName;
+    const inputFilePath = join(inputDir, fileName);
+    const outputFilePath = join(outputDir, fileName);
 
-    const fileContent = await readFile(inputFilePath, 'utf8');
-    const outputContent = (await postCss.process(fileContent, {from: inputFilePath, to: outputFilePath})).css;
+    let outputContent = '';
+
+    try {
+      const fileContent = await readFile(inputFilePath, 'utf8');
+      outputContent = (await postCss.process(fileContent, {from: inputFilePath, to: outputFilePath})).css;
+    }
+    catch (err) {
+      console.error(err);
+      outputContent = `
+        html {
+          background-color: #a11;
+        }
+
+        html:after {
+          content: 'Postcss error!';
+          display: block;
+          margin-top: 2rem;
+          font-size: 1.3rem;
+          text-align: center;
+        }
+
+        body {
+          display: none !important;
+        }
+      `;
+    }
+
     await writeFile(outputFilePath, outputContent, {encoding: 'utf8'});
 
     const size = (new Blob([outputContent]).size / 1024).toFixed(1);
