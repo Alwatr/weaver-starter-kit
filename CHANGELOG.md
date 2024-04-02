@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.0](https://github.com/Alwatr/pmpa/compare/v1.5.0...v1.6.0) (2024-04-02)
+
+### Features
+
+* **app/script:** Add import for generateServiceWorker and comment out generateServiceWorker call ([90d3dd6](https://github.com/Alwatr/pmpa/commit/90d3dd617dd7c874bda60320476ff9fbb3c6b7de)) by @AliMD
+* **app/script:** Add service worker generation code ([784dcb3](https://github.com/Alwatr/pmpa/commit/784dcb3eaecac3f2729f4b112ab38d2679c81849)) by @AliMD
+* **app/script:** convert logger.cjs to logger.mjs ([15d58f7](https://github.com/Alwatr/pmpa/commit/15d58f7feec1b2b33e7a01aeb8d728b479d9f12c)) by @AliMD
+* **app/script:** Fix cache check in alwatrIcon function ([cd93eb8](https://github.com/Alwatr/pmpa/commit/cd93eb8edcce9fbb045d77a31f47f8883577b641)) by @AliMD
+* **app/script:** Refactor fontPath in copyFont function ([1d22e9a](https://github.com/Alwatr/pmpa/commit/1d22e9ad0b08410008f53c6fe07de85462bad6cf)) by @AliMD
+* **app/script:** Refactor service worker registration and add event handlers ([064ff3b](https://github.com/Alwatr/pmpa/commit/064ff3ba5175b7bf6b8999cf3d2673f18080868c)) by @AliMD
+* **app/script:** Update logger import in build script ([4302d7d](https://github.com/Alwatr/pmpa/commit/4302d7ddfd75361352a1de45d04f0568158a573d)) by @AliMD
+* **app/script:** Update logger import in minify-html.mjs ([8057b99](https://github.com/Alwatr/pmpa/commit/8057b995d6b51401c6c2785a309905530ae1f3dc)) by @AliMD
+* **app/script:** Update postcss.mjs imports and file paths ([968573b](https://github.com/Alwatr/pmpa/commit/968573beb0c0f21b4b07880de564b18c45625146)) by @AliMD
+
 ## [1.5.0](https://github.com/Alwatr/pmpa/compare/v1.3.0...v1.5.0) (2024-04-02)
 
 ### Features
