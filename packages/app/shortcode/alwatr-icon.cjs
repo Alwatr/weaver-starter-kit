@@ -23,7 +23,8 @@ async function alwatrIcon(icon, customClass = '') {
   if (Object.hasOwn(cache, icon) === false) {
     // icon => `material/home:main`
     const [iconPack, iconExtra] = icon.split('/');
-    const [iconName, iconType] = iconExtra.replace(/\_/, '-').split(':');
+    // @ts-expect-error es2020
+    const [iconName, iconType] = iconExtra.replaceAll('_', '-').split(':');
 
     try {
       const iconPath = join(`@alwatr/icon-set-${iconPack}`, 'svg', iconType, `${iconName}.svg`);
