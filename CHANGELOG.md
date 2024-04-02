@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/Alwatr/pmpa/compare/v1.6.0...v1.6.1) (2024-04-02)
+
+### Performance Improvements
+
+* **app/scripts:** Fix icon name parsing in alwatrIcon function ([a1102ee](https://github.com/Alwatr/pmpa/commit/a1102ee112df802ad06678dafcb0602f074a1925)) by @AliMD
+
+### Code Refactoring
+
+* **app/scripts:** Refactor font path in copyFont function ([ff89a93](https://github.com/Alwatr/pmpa/commit/ff89a9397dc83a4dc1a7f5f8564473aa9ac0b121)) by @AliMD
+
 ## [1.6.0](https://github.com/Alwatr/pmpa/compare/v1.5.0...v1.6.0) (2024-04-02)
 
 ### Features
