@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.2](https://github.com/Alwatr/pmpa/compare/v1.6.1...v1.6.2) (2024-04-03)
+
+### Bug Fixes
+
+* add base version ([555639d](https://github.com/Alwatr/pmpa/commit/555639dc150461063fbe64e95b52108d2ea5ef0c)) by @
+
 ## [1.6.1](https://github.com/Alwatr/pmpa/compare/v1.6.0...v1.6.1) (2024-04-02)
 
 ### Performance Improvements
