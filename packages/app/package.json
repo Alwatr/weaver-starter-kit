@@ -65,9 +65,9 @@
     "@alwatr/util": "^1.4.1",
     "@swc/html": "^0.0.28",
     "@types/alpinejs": "^3.13.10",
-    "@types/node": "^20.12.2",
-    "@web/dev-server": "^0.4.3",
-    "alpinejs": "^3.13.7",
+    "@types/node": "^20.12.7",
+    "@web/dev-server": "^0.4.4",
+    "alpinejs": "^3.13.8",
     "cssnano": "^6.1.2",
     "esbuild": "^0.20.2",
     "postcss": "^8.4.38",
@@ -76,7 +76,7 @@
     "postcss-variable-compress": "^3.0.0",
     "postcss-viewport-unit-fallback": "^1.0.1",
     "tailwindcss": "^3.4.3",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.5",
     "workbox-build": "^7.0.0"
   }
 }
