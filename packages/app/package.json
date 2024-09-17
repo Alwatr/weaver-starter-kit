@@ -1,6 +1,6 @@
 {
-  "name": "@alwatr/pmpa-app",
-  "displayName": "Alwatr PMPA",
+  "name": "@alwatr/weaver-app",
+  "displayName": "Alwatr WEAVER",
   "version": "1.6.2",
   "baseVersion": "1.6.2",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alwatr/pmpa",
+    "url": "https://github.com/Alwatr/weaver",
     "directory": "packages/app"
   },
-  "homepage": "https://github.com/Alwatr/pmpa#readme",
+  "homepage": "https://github.com/Alwatr/weaver#readme",
   "bugs": {
-    "url": "https://github.com/Alwatr/pmpa/issues"
+    "url": "https://github.com/Alwatr/weaver/issues"
   },
   "prettier": "@alwatr/prettier-config",
   "nano-build-development": {
@@ -49,7 +49,6 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@alwatr/fetch": "^3.1.2",
     "@alwatr/font": "^1.2.0",
     "@alwatr/i18n": "^2.0.4",
     "@alwatr/icon-set-extra": "^0.4.0",
@@ -59,7 +58,7 @@
     "@alwatr/platform-info": "^1.1.6",
     "@alwatr/pmpa-types": "workspace:^",
     "@alwatr/prettier-config": "^1.0.4",
-    "@alwatr/server-context": "^1.2.6",
+    "@alwatr/remote-context": "^3.0.0",
     "@alwatr/style": "^2.2.0",
     "@alwatr/tsconfig-base": "^1.1.2",
     "@alwatr/util": "^1.4.1",
