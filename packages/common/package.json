@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/Alwatr/pmpa#readme",
   "bugs": {
-    "url": "https://github.com/Alwatr/pmpa/issues"
+    "url": "https://github.com/Alwatr/weaver/issues"
   },
   "prettier": "@alwatr/prettier-config",
   "scripts": {

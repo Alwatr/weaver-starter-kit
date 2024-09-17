@@ -2,7 +2,7 @@
   "name": "@alwatr/weaver-api",
   "version": "1.6.2",
   "baseVersion": "1.6.2",
-  "description": "Alwatr Progressive Multi Page (Web) Application.",
+  "description": "Weaver is a powerful and flexible framework designed to streamline the development of all websites and web applications within our organization.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "private": true,
   "type": "module",
