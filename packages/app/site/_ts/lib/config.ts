@@ -2,7 +2,7 @@ import {definePackage} from '@alwatr/logger';
 import {getLocalStorageItem} from '@alwatr/util';
 
 import type {} from '@alwatr/nano-build';
-import type {ServerRequestConfig} from '@alwatr/server-context';
+import type {FetchOptions} from '@alwatr/flux';
 
 export const logger = definePackage('@alwatr/weaver-app', __package_version__);
 
@@ -23,8 +23,8 @@ export const config = {
   } as const,
 
   fetchOptions: {
-    removeDuplicate: 'auto',
     retry: 2,
     retryDelay: 2_000,
-  } as Partial<ServerRequestConfig>,
+    removeDuplicate: 'auto',
+  } as Partial<FetchOptions>,
 } as const;
