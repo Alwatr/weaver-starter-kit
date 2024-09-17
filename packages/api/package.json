@@ -1,5 +1,5 @@
 {
-  "name": "@alwatr/pmpa-api",
+  "name": "@alwatr/weaver-api",
   "version": "1.6.2",
   "baseVersion": "1.6.2",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alwatr/pmpa",
+    "url": "https://github.com/Alwatr/weaver",
     "directory": "packages/api"
   },
-  "homepage": "https://github.com/Alwatr/pmpa#readme",
+  "homepage": "https://github.com/Alwatr/weaver#readme",
   "bugs": {
-    "url": "https://github.com/Alwatr/pmpa/issues"
+    "url": "https://github.com/Alwatr/weaver/issues"
   },
   "prettier": "@alwatr/prettier-config",
   "nano-build-development": {
@@ -44,10 +44,10 @@
     "@alwatr/crypto": "^3.0.4",
     "@alwatr/logger": "^3.2.6",
     "@alwatr/nano-build": "^1.3.4",
-    "@alwatr/nano-server": "^1.2.7",
+    "@alwatr/nanotron": "^4.1.0",
     "@alwatr/pmpa-types": "workspace:^",
     "@alwatr/prettier-config": "^1.0.4",
-    "@alwatr/storage-sdk": "^4.2.1",
+    "@alwatr/store": "^7.1.0",
     "@alwatr/tsconfig-base": "^1.1.2",
     "@alwatr/type": "^1.2.4",
     "@alwatr/util": "^1.4.1",
