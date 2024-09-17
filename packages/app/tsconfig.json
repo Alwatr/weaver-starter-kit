@@ -6,5 +6,5 @@
     "noEmit": true
   },
   "include": ["site/_ts/**/*.ts"],
-  "references": [{"path": "../types"}]
+  "references": [{"path": "../common"}]
 }
