@@ -5,5 +5,5 @@
   },
   "files": [],
   "exclude": [],
-  "references": [{"path": "./packages/api"}, {"path": "./packages/app"}, {"path": "./packages/types"}]
+  "references": [{"path": "./packages/api"}, {"path": "./packages/app"}, {"path": "./packages/common"}]
 }

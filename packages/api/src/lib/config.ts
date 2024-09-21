@@ -1,23 +1,31 @@
 import {definePackage} from '@alwatr/logger';
+import {Region, StoreFileType} from '@alwatr/store';
 
 import type {} from '@alwatr/nano-build';
 
-export const logger = definePackage('@alwatr/pmpa-api', __package_version__);
+export const logger = definePackage('@alwatr/weaver-api', __package_version__);
 
 if (process.env.NODE_ENV === 'production') {
-  if (process.env.STORAGE_TOKEN == null) {
-    throw new Error('STORAGE_TOKEN is required in production');
+  if (process.env.STORE_TOKEN == null) {
+    throw new Error('STORE_TOKEN is required in production');
   }
 }
 
 export const config = {
-  storageClient: {
-    host: process.env.STORAGE_HOST ?? '127.0.0.1',
-    port: process.env.STORAGE_PORT != null ? +process.env.STORAGE_PORT : 9000,
-    token: process.env.STORAGE_TOKEN ?? 'YOUR_SECRET_TOKEN',
+  storeFactory: {
+    rootPath: './db',
+    defaultChangeDebounce: 2_000, // for demo
   },
 
-  nanoServer: {
+  stores: {
+    usersCollection: {
+      name: 'user-info',
+      region: Region.PerUser,
+      type: StoreFileType.Collection,
+    }
+  },
+
+  nanotronApiServer: {
     host: process.env.HOST ?? '0.0.0.0',
     port: process.env.PORT != null ? +process.env.PORT : 8000,
     // allowAllOrigin: true,

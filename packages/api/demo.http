@@ -1,10 +1,9 @@
-@apiUrl = https://alwatr.ir/api/v0
+@apiUrl = http://localhost:8000
 
-# Alwatr Admin User
-@userId = user_id
-@userToken = user_token
+# @userId = user_id
+# @userToken = user_token
 
-@clientId = 2b6861f4-a8d7-4065-a5a5-3caa54b71a20
+# @clientId =
 
 ### api home
 GET {{apiUrl}}/

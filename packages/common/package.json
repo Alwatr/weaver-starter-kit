@@ -1,29 +1,29 @@
 {
-  "name": "@alwatr/pmpa-types",
+  "name": "@alwatr/weaver-common",
   "version": "1.5.0",
   "description": "Alwatr Progressive Multi Page (Web) Application.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "private": true,
   "type": "module",
+  "types": "./dist/main.d.ts",
   "main": "./dist/main.cjs",
   "module": "./dist/main.mjs",
-  "types": "./dist/main.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/main.d.ts",
       "import": "./dist/main.mjs",
-      "require": "./dist/main.cjs",
-      "types": "./dist/main.d.ts"
+      "require": "./dist/main.cjs"
     }
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alwatr/pmpa",
-    "directory": "packages/types"
+    "url": "https://github.com/Alwatr/weaver",
+    "directory": "packages/common"
   },
-  "homepage": "https://github.com/Alwatr/pmpa#readme",
+  "homepage": "https://github.com/Alwatr/weaver#readme",
   "bugs": {
-    "url": "https://github.com/Alwatr/pmpa/issues"
+    "url": "https://github.com/Alwatr/weaver/issues"
   },
   "prettier": "@alwatr/prettier-config",
   "scripts": {
@@ -41,12 +41,12 @@
     "clean": "rm -rfv dist *.tsbuildinfo"
   },
   "devDependencies": {
-    "@alwatr/dedupe": "^1.0.6",
-    "@alwatr/nano-build": "^1.3.4",
+    "@alwatr/dedupe": "^1.0.14",
+    "@alwatr/nano-build": "^1.3.10",
     "@alwatr/prettier-config": "^1.0.4",
-    "@alwatr/tsconfig-base": "^1.1.2",
-    "@alwatr/type-helper": "^1.2.2",
-    "@types/node": "^20.12.2",
-    "typescript": "^5.4.3"
+    "@alwatr/tsconfig-base": "^1.2.0",
+    "@alwatr/type-helper": "^1.2.6",
+    "@types/node": "^22.5.5",
+    "typescript": "^5.6.2"
   }
 }

@@ -1,5 +1,5 @@
-import {AlwatrNanoServer} from '@alwatr/nano-server';
+import {NanotronApiServer} from '@alwatr/nanotron';
 
 import {config} from './config.js';
 
-export const nanoServer = new AlwatrNanoServer(config.nanoServer);
+export const nanotronApiServer = new NanotronApiServer(config.nanotronApiServer);

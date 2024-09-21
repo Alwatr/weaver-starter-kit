@@ -50,14 +50,27 @@
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsdk": ".yarn/sdks/typescript/lib",
   "cSpell.words": [
+    "alpinejs",
     "alwatr",
+    "colspan",
     "cssnano",
     "fract",
-    "pmpa",
+    "nanotron",
+    "nowrap",
     "shortcode",
     "stringifyable",
     "tailwindcss",
+    "tbody",
+    "thead",
     "tsbuildinfo",
     "vazirmatn"
+  ],
+  "css.customData": [
+    ".vscode/tailwind.json"
+  ],
+  "github.copilot.chat.experimental.codeGeneration.instructions": [
+    {
+      "file": ".github/copilot-instruction.md"
+    }
   ]
 }

@@ -1,11 +1,15 @@
-import {nanoServer} from '../lib/server.js';
+import {nanotronApiServer} from '../lib/server.js';
 
-import type {StringifyableRecord} from '@alwatr/type';
-
-nanoServer.route<StringifyableRecord>('GET', '/', () => ({
-  ok: true,
-  data: {
-    app: '..:: Alwatr PMPA API ::..',
-    message: 'Hello ;)',
-  },
-}));
+nanotronApiServer.defineRoute({
+  method: 'GET',
+  url: '/',
+  handler () {
+    this.serverResponse.replyJson({
+      ok: true,
+      data: {
+        app: '..:: Alwatr Weaver API ::..',
+        message: 'Hello ;)',
+      },
+    });
+  }
+});
