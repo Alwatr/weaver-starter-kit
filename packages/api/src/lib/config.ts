@@ -6,8 +6,8 @@ import type {} from '@alwatr/nano-build';
 export const logger = definePackage('@alwatr/weaver-api', __package_version__);
 
 if (process.env.NODE_ENV === 'production') {
-  if (process.env.STORE_TOKEN == null) {
-    throw new Error('STORE_TOKEN is required in production');
+  if (process.env.tokenGeneratorSecret == null) {
+    throw new Error('tokenGeneratorSecret is required in production');
   }
 }
 
@@ -32,7 +32,7 @@ export const config = {
 
   nanotronApiServer: {
     host: process.env.host ?? '0.0.0.0',
-    port: process.env.port != null ? +process.env.PORT : 8000,
+    port: process.env.port !== undefined ? +process.env.port : 8000,
     prefix: '/api/v0/',
     // allowAllOrigin: true,
   },
