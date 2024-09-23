@@ -1,6 +1,6 @@
-FROM ghcr.io/alwatr/node:21.7.1 as builder
+FROM ghcr.io/alwatr/node:21.7.1 AS builder
 
-RUN apk add --no-cache git
+RUN set -ex; apk add --no-cache git
 RUN set -ex; corepack enable;
 
 COPY . .
@@ -20,8 +20,8 @@ COPY --from=builder /app/packages/api/dist/ .
 # RUN set -eux; ls -RlahF /app;
 
 # ENV NODE_OPTIONS --enable-source-maps
-ENV HOST="0.0.0.0" \
-    PORT="80"
+ENV host="0.0.0.0" \
+    port="80"
 
 EXPOSE 80
 
