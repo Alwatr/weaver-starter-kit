@@ -12,6 +12,11 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 export const config = {
+  token: {
+    secret: process.env.tokenGeneratorSecret ?? 'DEV_SECRET',
+    duration: '1y',
+  },
+
   storeFactory: {
     rootPath: './db',
     defaultChangeDebounce: 2_000, // for demo
@@ -22,12 +27,13 @@ export const config = {
       name: 'user-info',
       region: Region.PerUser,
       type: StoreFileType.Collection,
-    }
+    },
   },
 
   nanotronApiServer: {
-    host: process.env.HOST ?? '0.0.0.0',
-    port: process.env.PORT != null ? +process.env.PORT : 8000,
+    host: process.env.host ?? '0.0.0.0',
+    port: process.env.port != null ? +process.env.PORT : 8000,
+    prefix: '/api/v0/',
     // allowAllOrigin: true,
   },
 } as const;

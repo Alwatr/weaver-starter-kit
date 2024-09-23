@@ -153,7 +153,7 @@ services:
       traefik.frontend.redirect.entryPoint: https
 
   store-nginx:
-    image: ghcr.io/alwatr/store-nginx:6.0.4
+    image: ghcr.io/alwatr/store-nginx:7.1.0
 
     cpu_count: 1
     cpu_shares: 1024

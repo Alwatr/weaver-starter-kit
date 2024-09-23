@@ -25,7 +25,7 @@ As an advanced web developer, prioritize code maintainability, readability, and 
 
 ## Commenting
 
-1. Comments should not duplicate the code.
+1. Comments should not duplicate the code, if duplicate, don't write it.
 2. Rewrite unclear code instead of adding comments to explain it.
 3. If a comment is unclear, there may be an issue with the code itself.
 4. Comments should clarify, not confuse. Remove comments that cause confusion.
