@@ -11,5 +11,5 @@ nanotronApiServer.defineRoute({
         message: 'Hello ;)',
       },
     });
-  }
+  },
 });
