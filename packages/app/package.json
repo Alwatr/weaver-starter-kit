@@ -24,11 +24,6 @@
     "url": "https://github.com/Alwatr/weaver/issues"
   },
   "prettier": "@alwatr/prettier-config",
-  "nano-build": {
-    "entryPoints": [
-      "src/*.ts"
-    ]
-  },
   "nano-build-development": {
     "minify": false,
     "treeShaking": false,
