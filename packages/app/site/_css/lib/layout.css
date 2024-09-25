@@ -185,3 +185,32 @@
   }
 }
 
+/* Support Panel */
+@layer components {
+  .support-panel {
+    @apply shrink-0
+      rounded-2xl
+      select-none
+      border
+      border-outlineVariant
+      border-opacity-40
+      bg-surface
+      text-bodySmall
+      text-onSurfaceVariant
+      elevation-1
+      self-start
+    ;
+
+    @media (--expanded) {
+      & {
+        @apply sticky mt-[3.25rem];
+        width: var(--sys-navigation-drawer-width);
+        top: calc(
+          var(--safe-area-inset-top) +
+          var(--sys-header-hight) + 0.25rem +
+          0.25rem
+        );
+      }
+    }
+  }
+}
