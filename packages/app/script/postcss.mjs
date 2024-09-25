@@ -11,18 +11,24 @@ import postcssVariableCompress from 'postcss-variable-compress';
 import tailwindcss from 'tailwindcss';
 import postcssNesting from 'tailwindcss/nesting/index.js';
 import postcssViewportUnitFallback from 'postcss-viewport-unit-fallback';
+import postcssCustomMedia from 'postcss-custom-media';
 
 const postCssPlugins = [
   postcssImport({root: 'site/_css'}),
-  postcssNesting,
-  tailwindcss,
-  postcssViewportUnitFallback,
-  postcssPresetEnv,
+  postcssNesting(),
+  postcssCustomMedia(),
+  tailwindcss(),
+  postcssViewportUnitFallback(),
+  postcssPresetEnv({
+    logical: {
+      inlineDirection: 'right-to-left',
+    }
+  }),
 ];
 
 if (!devMode) {
   postCssPlugins.push(
-    postcssVariableCompress,
+    postcssVariableCompress(),
     cssnano({
       preset: ['default', {discardComments: {removeAll: true}}]
     }),
