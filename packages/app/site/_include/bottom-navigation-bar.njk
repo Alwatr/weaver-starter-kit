@@ -1,0 +1,92 @@
+<footer class="bottom-navigation-bar">
+  <nav x-data>
+    <button
+      class="group flex grow flex-col items-center justify-end py-3 hover:text-onSurface"
+      @click="$dispatch('request-drawer-open')"
+    >
+      <div
+        class="rounded-2xl px-5 py-1 text-[1.5rem] group-hover:stateHover-onSurfaceVariant group-active:stateActive-onSurfaceVariant group-aria-selected:bg-secondaryContainer group-aria-selected:text-onSecondaryContainer"
+      >
+        {% alwatrIcon "menu" %}
+      </div>
+      <div class="py-1 group-aria-selected:text-onSurface">منو</div>
+    </button>
+
+    <a
+      aria-selected="{{ navId === 'industries' }}"
+      href="/fa/industries.html"
+      class="group flex grow flex-col items-center justify-end py-3 hover:text-onSurface aria-selected:pointer-events-none"
+    >
+      <div
+        class="rounded-2xl px-5 py-1 text-[1.5rem] group-hover:stateHover-onSurfaceVariant group-active:stateActive-onSurfaceVariant group-aria-selected:bg-secondaryContainer group-aria-selected:text-onSecondaryContainer"
+      >
+        {% alwatrIcon "group_work" %}
+      </div>
+      <div class="py-1 group-aria-selected:text-onSurface">صنایع</div>
+    </a>
+
+
+
+    {#
+    <a aria-selected="{{ navId === 'home' }}" href="/" class="group self-center aria-selected:pointer-events-none">
+      <div
+        class="rounded-full bg-primaryContainer bg-opacity-30 p-2 text-[2.6rem] text-onSurfaceVariant group-hover:stateHover-onSurfaceVariant group-active:stateActive-onSurfaceVariant group-aria-selected:bg-primaryContainer group-aria-selected:text-onPrimaryContainer"
+      >
+        {% alwatrIcon "hexagon", "rotate-[30deg]" %}
+      </div>
+    </a>
+    #}
+
+    <a
+      aria-selected="{{ navId === 'home' }}"
+      href="/"
+      class="group flex grow flex-col items-center justify-end py-3 hover:text-onSurface aria-selected:pointer-events-none"
+    >
+      <div
+        class="rounded-2xl px-5 py-1 text-[1.5rem] group-hover:stateHover-onSurfaceVariant group-active:stateActive-onSurfaceVariant group-aria-selected:bg-secondaryContainer group-aria-selected:text-onSecondaryContainer"
+      >
+        {% alwatrIcon "hexagon", "rotate-[30deg]" %}
+      </div>
+      <div class="py-1 group-aria-selected:text-onSurface">خانه</div>
+    </a>
+
+    <a
+      aria-selected="{{ navId === 'products' }}"
+      href="/fa/products.html"
+      class="group flex grow flex-col items-center justify-end py-3 hover:text-onSurface aria-selected:pointer-events-none"
+    >
+      <div
+        class="rounded-2xl px-5 py-1 text-[1.5rem] group-hover:stateHover-onSurfaceVariant group-active:stateActive-onSurfaceVariant group-aria-selected:bg-secondaryContainer group-aria-selected:text-onSecondaryContainer"
+      >
+        {% alwatrIcon "store" %}
+      </div>
+      <div class="py-1 group-aria-selected:text-onSurface">محصولات</div>
+    </a>
+
+    {# <a
+      aria-selected="{{ navId === 'services' }}"
+      href="/fa/services.html"
+      class="group flex grow flex-col items-center justify-end py-3 hover:text-onSurface aria-selected:pointer-events-none"
+    >
+      <div
+        class="rounded-2xl px-5 py-1 text-[1.5rem] group-hover:stateHover-onSurfaceVariant group-active:stateActive-onSurfaceVariant group-aria-selected:bg-secondaryContainer group-aria-selected:text-onSecondaryContainer"
+      >
+        {% alwatrIcon "perm_data_setting" %}
+      </div>
+      <div class="py-1 group-aria-selected:text-onSurface">خدمات</div>
+    </a> #}
+
+    <a
+      aria-selected="{{ navId === 'contact' }}"
+      href="/fa/contact.html"
+      class="group flex grow flex-col items-center justify-end py-3 hover:text-onSurface aria-selected:pointer-events-none"
+    >
+      <div
+        class="rounded-2xl px-5 py-1 text-[1.5rem] group-hover:stateHover-onSurfaceVariant group-active:stateActive-onSurfaceVariant group-aria-selected:bg-secondaryContainer group-aria-selected:text-onSecondaryContainer"
+      >
+        {% alwatrIcon "headset_mic" %}
+      </div>
+      <div class="py-1 group-aria-selected:text-onSurface">پشتیبانی</div>
+    </a>
+  </nav>
+</footer>
