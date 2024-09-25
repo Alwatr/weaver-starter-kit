@@ -33,3 +33,43 @@
     }
   }
 }
+
+/* Body base layout */
+@layer base {
+  body {
+    @apply flex
+      flex-col
+      touch-pan-x
+      touch-pan-y
+      touch-pinch-zoom
+      break-words
+      bg-background
+      font-vazirmatn
+      text-bodyMedium
+      text-onBackground
+      pl-safe
+      pr-safe
+      min-h-dvh
+      max-w-screen-2xl
+    ;
+
+    padding-top: calc(
+      var(--safe-area-inset-top) +
+      var(--sys-header-hight) + 0.25rem +
+      0.5rem
+    );
+    padding-bottom: calc(
+      0.25rem +
+      var(--sys-bottom-navigation-bar-height) +
+      0.25rem +
+      var(--safe-area-inset-bottom)
+    );
+
+    @media (--expanded) {
+      & {
+        padding-right: var(--sys-navigation-drawer-width);
+      }
+    }
+  }
+}
+
