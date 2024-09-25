@@ -167,3 +167,21 @@
     }
   }
 }
+
+/* Main Container */
+@layer components {
+  .main-container {
+    @apply flex
+      flex-col
+      gap-1
+      extended:flex-row
+      grow
+      px-2
+    ;
+
+    article {
+      @apply p-2 grow;
+    }
+  }
+}
+
