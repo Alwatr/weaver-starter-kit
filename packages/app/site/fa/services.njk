@@ -1,0 +1,40 @@
+---
+title: خدمات
+navId: services
+---
+
+<header class="page-header" x-data>
+  <button class="icon-btn" @click="history.back();">
+    {% alwatrIcon "arrow-forward" %}
+  </button>
+  <h1>{{ title }}</h1>
+</header>
+
+<main class="main-container">
+  <article>
+    <section class="flex flex-col justify-center  rounded-xl border border-outlineVariant border-opacity-50 px-4 py-10 shadow-sm text-titleMedium items-center max-w-screen-medium mx-auto">
+      {% alwatrIcon "schedule", "animate-spin size-8" %}
+      <h2 class="mt-4">در دست ساخت...</h2>
+    </section>
+
+    {# <div class="flex flex-row flex-wrap content-start gap-4 p-4">
+      {% for service in collections.service %}
+      <a
+        class="block w-80 shrink grow overflow-clip rounded-2xl transition-shadow elevation-2 hover:elevation-3"
+        href="{{ service.url }}"
+      >
+        <figure
+          class="block bg-cover bg-center bg-no-repeat pt-[40%]"
+          style="background-image: url('{{ service.data.cover }}');"
+        ></figure>
+        <div class="bg-surface px-5 pb-5 pt-3 text-titleLarge text-onSurface">
+          <h2 class="mb-2 text-ellipsis text-titleMedium">
+            <span>{{ service.data.title }}</span>
+          </h2>
+          <p class="text-bodyMedium">{{ service.data.description }}</p>
+        </div>
+      </a>
+      {% endfor %}
+    </div> #}
+  </article>
+</main>
