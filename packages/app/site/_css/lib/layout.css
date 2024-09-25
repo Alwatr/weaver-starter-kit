@@ -1,0 +1,35 @@
+@layer base {
+  @custom-media --medium (min-width: 600px);
+  @custom-media --expanded (min-width: 840px);
+  @custom-media --large (min-width: 1200px);
+  @custom-media --xlarge (min-width: 1600px);
+
+  @custom-media --max-medium not all and (--medium);
+  @custom-media --max-expanded not all and (--expanded);
+  @custom-media --max-large not all and (--large);
+  @custom-media --max-xlarge not all and (--xlarge);
+
+  :root {
+    --sys-navigation-drawer-width: 20rem; /* w-80 */
+    --sys-header-hight: 4rem; /* h-16 */
+    --sys-bottom-navigation-bar-height: 5rem; /* h-20 */
+    --sys-scrollbar-size: 0; /* hide scrollbar temporary */
+    @apply color-scheme-light;
+  }
+
+  @media (--expanded) {
+    :root {
+      --sys-navigation-drawer-width: 16rem; /* w-64 */
+    }
+  }
+  @media (--large) {
+    :root {
+      --sys-navigation-drawer-width: 18rem; /* w-72 */
+    }
+  }
+  @media (--xlarge) {
+    :root {
+      --sys-navigation-drawer-width: 22rem; /* w-80 */
+    }
+  }
+}
