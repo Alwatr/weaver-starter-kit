@@ -7,6 +7,7 @@ import {dateString, timeString, trim} from './util.mjs';
 import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import {alwatrIcon} from '../shortcode/alwatr-icon.cjs';
+import EleventyRenderPlugin from '@11ty/eleventy/src/Plugins/RenderPlugin.js';
 import {generateServiceWorker} from './workbox.mjs';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
@@ -56,6 +57,11 @@ function _eleventyConfig(config) {
     console.log(input, ...messages);
   });
 
+  config.addFilter('pickRandom', function (array, count) {
+    let shuffled = array.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  });
+
   // config.addFilter("serverlessUrl", serverlessUrlFilter);
 
   // config.addFilter("getCollectionItemIndex", function (collection, pageOverride) {
@@ -78,6 +84,7 @@ function _eleventyConfig(config) {
 
   config.addAsyncShortcode('alwatrIcon', alwatrIcon);
 
+  config.addPlugin(EleventyRenderPlugin);
   config.addPlugin(pluginRss);
   config.addPlugin(directoryOutputPlugin, {
     columns: {
@@ -108,6 +115,7 @@ function _eleventyConfig(config) {
       'njk',
       '11ty.js',
     ],
+
     // if your site lives in a subdirectory, change this
     pathPrefix: '/',
     markdownTemplateEngine: 'njk',
