@@ -1,0 +1,87 @@
+<div
+  x-data="{open: false}"
+  @request-drawer-open.window="open=true;"
+  @request-drawer-close.window="open=false;"
+>
+  <aside
+    class="navigation-drawer"
+    :class="{opened: open}"
+  >
+    <nav x-data="{selected: window.location.toString()}">
+      <a
+        href="/"
+        aria-selected="{{ navId == 'home' }}"
+      >
+        {% alwatrIcon "humidity_indoor" %}
+        <div>صفحه اصلی</div>
+      </a>
+
+      <a
+        href="/fa/industries.html"
+        aria-selected="{{ navId == 'industries' }}"
+      >
+        {% alwatrIcon "store" %}
+        <div>حوزه‌های کاربرد</div>
+      </a>
+
+      <a
+        href="/fa/products.html"
+        aria-selected="{{ navId == 'products' }}"
+      >
+        {% alwatrIcon "group_work" %}
+        <div>لیست محصولات</div>
+      </a>
+
+      <a
+        href="/fa/services.html"
+        aria-selected="{{ navId == 'services' }}"
+      >
+        {% alwatrIcon "perm_data_setting" %}
+        <div>خدمات تخصصی</div>
+      </a>
+
+      <a
+        href="/fa/contact.html"
+        aria-selected="{{ navId == 'contact' }}"
+        class="parent"
+      >
+        {% alwatrIcon "headset_mic" %}
+        <div class="grow">ارتباط با ما</div>
+        {% alwatrIcon "arrow_drop_down", "icon-arrow" %}
+      </a>
+
+      <a
+        href="/fa/contact.html"
+        aria-selected="{{ subNavId == 'contact-list' }}"
+        class="child"
+      >
+        <div>راه‌های ارتباطی</div>
+      </a>
+
+      <a
+        href="/fa/chat.html"
+        aria-selected="{{ subNavId == 'chat' }}"
+        class="child"
+      >
+        <div>گفتگو آنلاین</div>
+      </a>
+
+      <a
+        href="{{ contact.phone.url }}"
+        class="child"
+      >
+        <div>تماس تلفنی</div>
+      </a>
+
+    </nav>
+    <div class="app-version">
+      {{ pkg.displayName }} v{{ pkg.version }}-{{ pkg.baseVersion }}+{{ git.shortSha }}
+    </div>
+  </aside>
+
+  <div
+    class="drawer-scrim"
+    :class="{opened: open}"
+    @click="$dispatch('request-drawer-close')"
+  ></div>
+</div>
