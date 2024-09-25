@@ -1,4 +1,4 @@
-import {AlwatrCryptoFactory} from '@alwatr/crypto';
+import {AlwatrCryptoFactory} from '@alwatr/nanotron';
 
 import {config} from './config.js';
 
