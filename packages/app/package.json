@@ -56,7 +56,7 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-directory-output": "^1.0.1",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@alwatr/flux": "^3.0.2",
+    "@alwatr/flux": "^3.0.3",
     "@alwatr/font": "^1.2.0",
     "@alwatr/icon-set-extra": "^0.4.0",
     "@alwatr/icon-set-material": "^2.0.1",
