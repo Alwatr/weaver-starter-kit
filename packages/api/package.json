@@ -51,7 +51,7 @@
     "@alwatr/tsconfig-base": "^1.2.0",
     "@alwatr/type-helper": "^1.2.6",
     "@alwatr/weaver-common": "workspace:^",
-    "@types/node": "^22.5.5",
+    "@types/node": "^22.7.2",
     "esbuild": "^0.24.0",
     "typescript": "^5.6.2"
   }
