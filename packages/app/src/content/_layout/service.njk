@@ -1,0 +1,33 @@
+---
+layout: base-body
+permalink: false
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header" x-data>
+  <button class="icon-btn" @click="history.back();">
+    {% alwatrIcon "arrow-forward" %}
+  </button>
+  <h1>{{ shortTitle }}</h1>
+</header>
+
+<main class="main-container">
+  <article>
+    <section class="mt-4">
+      <h1 class="text-titleLarge text-primary">
+        {% alwatrIcon "hexagon", "rotate-[30deg] text-[2rem]" %}
+        <span class="ms-1">{{ title }}</span>
+      </h1>
+
+      <figure class="mt-4 aspect-video rounded-3xl bg-surfaceVariant bg-cover bg-center bg-no-repeat">
+        <img src="/img/cover/{{ cover }}.jpeg" alt="کاور" class="object-cover object-center w-full h-full">
+      </figure>
+
+      <p class="px-2 pt-2 text-justify text-secondary indent-4">
+        {{ description }}
+      </p>
+    </section>
+
+    {{ content | safe }}
+  </article>
+</main>

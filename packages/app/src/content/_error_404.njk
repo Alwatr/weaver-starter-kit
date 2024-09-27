@@ -1,0 +1,39 @@
+---
+title: صفحه مورد نظر یافت نشد
+eleventyExcludeFromCollections: true
+---
+
+<header class="page-header" x-data>
+  <button class="icon-btn" @click="history.back();">
+    {% alwatrIcon "arrow-forward" %}
+  </button>
+  <h1>{{ site.title }}</h1>
+</header>
+
+<main class="main-container">
+  <article
+    class="max-w-screen-medium mx-auto rounded-xl border border-outlineVariant border-opacity-50 p-4 text-center shadow-sm"
+  >
+    <div>
+      <div class="text-[3rem]">{% alwatrIcon "frame_inspect" %}</div>
+      <div class="mt-4 text-titleMedium">متاسفانه صفحه مورد نظر یافت نشد!</div>
+      <p class="text-secondary mt-2">
+        صفحه‌ای که به دنبال آن بودید یافت نشد. لطفاً از منوی استفاده کنید.
+      </p>
+      <a
+        href="/"
+        class="mx-auto mt-6 flex h-10 cursor-pointer select-none items-center justify-center rounded-xl bg-primary px-2 transition-opacity elevation-0 state-onPrimary hover:elevation-1 active:elevation-0 aria-disabled:pointer-events-none aria-disabled:opacity-40"
+      >
+        {% alwatrIcon "home", "text-[1.125rem]" %}
+        <span class="px-2 text-labelLarge">بازگشت به صفحه اصلی</span>
+      </a>
+      <a
+        href="/fa/contact.html"
+        class="mx-auto mt-2 flex h-10 cursor-pointer select-none items-center justify-center rounded-xl bg-primaryContainer px-2 transition-opacity elevation-0 state-onPrimaryContainer hover:elevation-1 active:elevation-0 aria-disabled:pointer-events-none aria-disabled:opacity-40"
+      >
+        {% alwatrIcon "headset_mic", "text-[1.125rem]" %}
+        <span class="px-2 text-labelLarge">ارتباط با ما</span>
+      </a>
+    </div>
+  </article>
+</main>

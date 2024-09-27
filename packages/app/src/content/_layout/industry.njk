@@ -1,0 +1,61 @@
+---
+layout: base-body
+navId: industries
+eleventyComputed:
+  socialImage: /img/cover/{{ cover }}.jpeg
+---
+
+<header class="page-header" x-data>
+  <button class="icon-btn" @click="history.back();">
+    {% alwatrIcon "arrow-forward" %}
+  </button>
+  <h1>{{ shortTitle }}</h1>
+</header>
+
+<main class="main-container">
+  <section class="support-panel">
+    {% renderFile "./content/_include/tree.data.cjs", {
+      collection: collections.industry,
+      id: page.fileSlug
+    } %}
+  </section>
+  <article>
+    <section>
+      <h1 class="text-titleLarge text-primary">
+        {% alwatrIcon "hexagon", "rotate-[30deg] inline-block text-[2rem]" %}
+        <span class="ms-1">{{ title }}</span>
+      </h1>
+
+      <figure class="mt-4 aspect-video rounded-3xl bg-surfaceVariant bg-cover bg-center bg-no-repeat overflow-clip">
+        <img src="/img/cover/{{ cover }}.jpeg" alt="کاور" class="object-cover object-center w-full h-full">
+      </figure>
+
+      <p class="px-2 pt-2 text-justify text-secondary indent-4">{{ description }}</p>
+    </section>
+
+    {{ content | safe }}
+
+    <!-- related product -->
+    <section class="mt-6">
+      <h2 class="text-titleLarge text-primary">
+        {% alwatrIcon "total_dissolved_solids", "inline-block text-[1.75em]" %}
+        <span class="ms-1">محصولات مرتبط</span>
+      </h2>
+      {% set randomProducts = collections.product | pickRandom(4) %}
+      <div class="mt-4 flex flex-row flex-wrap content-start gap-4">
+        {% for product in randomProducts %}
+          <a
+            class="block w-32 shrink grow overflow-clip rounded-3xl bg-surfaceVariant state-onSurfaceVariant medium:w-56"
+            href="{{ product.url }}"
+          >
+            <figure
+              class="block rounded-b-2xl bg-surfaceVariant bg-cover bg-center bg-no-repeat pt-[80%]"
+              style="background-image: url('/img/cover/{{ product.data.cover }}.jpeg');"
+            ></figure>
+            <h2 class="px-5 pb-5 pt-4 text-center text-titleMedium">{{ product.data.title }}</h2>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  </article>
+</main>

@@ -1,0 +1,91 @@
+---
+title: چت با پشتیبانی
+navId: contact
+subNavId: chat
+---
+
+<header class="page-header" x-data>
+  <button class="icon-btn" @click="history.back();">
+    {% alwatrIcon "arrow-forward" %}
+  </button>
+  <h1>{{ title }}</h1>
+
+  {# <button
+    @click="$store.commentList.request()"
+    :aria-busy="$store.commentList.loadingState === 'loading' || $store.commentList.loadingState === 'reloading' || $store.commentList.sendingState === 'loading'"
+    class="block shrink-0 cursor-pointer rounded-full p-3 text-[1.5rem] state-onSurfaceVariant aria-busy:pointer-events-none [&_svg]:aria-busy:animate-spin"
+  >
+    {% alwatrIcon "sync" %}
+  </button> #}
+</header>
+
+<main x-data class="main-container bg-surfaceVariant text-onSurfaceVariant mb-0">
+  <article>
+    {# Chat list #}
+    <div class="flex flex-col gap-4 p-4">
+      <div class="flex items-end justify-start gap-2">
+        <figure class="h-12 w-12 shrink-0 overflow-clip rounded-full">
+          <img src="/img/other/avatar-support.jpeg" alt="Support profile picture" class="block h-full w-full rounded-full" />
+        </figure>
+        <div class="whitespace-pre-line rounded-2xl rounded-br-md bg-surface px-4 pb-3 pt-2 text-onSurface">
+          با سلام و احترام
+          <br />
+          در حال حاضر امکان گفتگو به صورت آنلاین وجود ندارد و به زودی این بخش فعال می‌شود.
+          <br />
+          در حال حاضر می‌توانید از طریق سایر روش‌های ارتباطی مانند تماس تلفنی یا ارسال ایمیل با ما در ارتباط باشید.
+        </div>
+      </div>
+      {# <template x-for="chatMessage in $store.commentList.data.list" :key="chatMessage.id">
+        <section :class="chatMessage.from === 'user' ? 'self-end ps-12' : 'self-start pe-12'">
+          <template x-if="chatMessage.from === 'user'">
+            <div
+              x-text="chatMessage.text"
+              class="whitespace-pre-line rounded-2xl rounded-bl-md bg-secondary px-4 pb-3 pt-2 text-onSecondary"
+            ></div>
+          </template>
+
+          <template x-if="chatMessage.from === 'support'">
+            <div class="flex items-end justify-start gap-2">
+              <figure class="h-12 w-12 shrink-0 overflow-clip rounded-full">
+                <img
+                  src="/img/other/avatar-support.jpeg"
+                  alt="Support profile picture"
+                  class="block h-full w-full rounded-full"
+                />
+              </figure>
+              <div
+                x-text="chatMessage.text"
+                class="whitespace-pre-line rounded-2xl rounded-br-md bg-surface px-4 pb-3 pt-2 text-onSurface"
+              ></div>
+            </div>
+          </template>
+        </section>
+      </template> #}
+    </div>
+
+  {# Chat footer #}
+  {# <div x-data class="shrink-0 grow-0 bg-surfaceVariant">
+      <section class="flex items-center gap-2 rounded-t-lg bg-surface p-2 text-onSurface elevation-2">
+        <div class="flex h-12 grow items-center rounded-full bg-surfaceVariant text-onSurfaceVariant">
+          <input
+            type="text"
+            x-model="$store.commentList.data.draftMessage"
+            class="m-2 block w-auto max-w-none grow border-none bg-transparent p-2 text-bodyLarge focus:outline-none"
+            placeholder="متن پیام..."
+            @keyup.enter="$store.commentList.sendMessage()"
+          />
+          <button
+            @click="$store.commentList.sendMessage()"
+            :disable="$store.commentList.sendingState === 'loading'"
+            class="m-1 block -scale-x-100 cursor-pointer select-none rounded-full p-2 text-[1.5rem] state-tertiary"
+          >
+            {% alwatrIcon "send" %}
+          </button>
+        </div>
+        <button class="block cursor-pointer select-none rounded-full p-2 text-[1.5rem] state-onSurface">
+          {% alwatrIcon "attach-file" %}
+        </button>
+      </section>
+    </div> #}
+  </article>
+</main>

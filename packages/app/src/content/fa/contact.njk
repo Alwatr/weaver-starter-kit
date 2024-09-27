@@ -1,0 +1,62 @@
+---
+title: ارتباط با ما
+navId: contact
+subNavId: contact-list
+---
+
+<header class="page-header" x-data>
+  <button class="icon-btn" @click="history.back();">
+    {% alwatrIcon "arrow-forward" %}
+  </button>
+  <h1>{{ title }}</h1>
+</header>
+
+<main class="main-container">
+  <!-- contact-us -->
+  <article class="text-bodyMedium">
+    <img
+      class="block w-full aspect-video extended:max-w-screen-extended rounded-3xl bg-surfaceVariant mx-auto"
+      alt="راه‌های تماس با {{ site.title }}"
+      src="/img/cover/contact.jpeg"
+      loading="lazy"
+    />
+    <div class="mt-8 flex flex-row flex-wrap justify-center gap-4">
+      <a href="{{ contact.phone.url }}" class="rounded-3xl text-center">
+        <div class="rounded-full bg-secondaryContainer p-8 text-[2.5rem] state-onSecondaryContainer">
+          {% alwatrIcon "call:fill", "inline-block" %}
+        </div>
+        <div class="text-ellipsis py-2 text-labelLarge text-onSurfaceVariant">تماس</div>
+      </a>
+      <a href="{{ contact.email.url }}" class="rounded-3xl text-center">
+        <div class="rounded-full bg-secondaryContainer p-8 text-[2.5rem] state-onSecondaryContainer">
+          {% alwatrIcon "mail:fill", "inline-block" %}
+        </div>
+        <div class="text-ellipsis py-2 text-labelLarge text-onSurfaceVariant">ایمیل</div>
+      </a>
+      <a href="{{ contact.aparat }}" class="rounded-3xl text-center">
+        <div class="rounded-full bg-secondaryContainer p-8 text-[2.5rem] state-onSecondaryContainer">
+          {% alwatrIcon "smart_display:fill", "inline-block" %}
+        </div>
+        <div class="text-ellipsis py-2 text-labelLarge text-onSurfaceVariant">آپارات</div>
+      </a>
+      <a href="{{ contact.instagram }}" class="rounded-3xl text-center">
+        <div class="rounded-full bg-secondaryContainer p-8 text-[2.5rem] state-onSecondaryContainer">
+          {% alwatrIcon "photo_camera:fill", "inline-block" %}
+        </div>
+        <div class="text-ellipsis py-2 text-labelLarge text-onSurfaceVariant">اینستاگرام</div>
+      </a>
+      <a href="{{ contact.telegram }}" class="rounded-3xl text-center">
+        <div class="rounded-full bg-secondaryContainer p-8 text-[2.5rem] state-onSecondaryContainer">
+          {% alwatrIcon "send:fill", "inline-block" %}
+        </div>
+        <div class="text-ellipsis py-2 text-labelLarge text-onSurfaceVariant">تلگرام</div>
+      </a>
+      <a href="/fa/chat.html" class="rounded-3xl text-center">
+        <div class="rounded-full bg-tertiaryContainer p-8 text-[2.5rem] state-onTertiaryContainer">
+          {% alwatrIcon "chat:fill", "inline-block" %}
+        </div>
+        <div class="text-ellipsis py-2 text-labelLarge text-onSurfaceVariant">گفتگوی آنلاین</div>
+      </a>
+    </div>
+  </article>
+</main>
