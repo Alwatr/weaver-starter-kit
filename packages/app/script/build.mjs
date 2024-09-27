@@ -3,7 +3,7 @@ import eleventy from '@11ty/eleventy';
 import {logger} from './logger.mjs';
 import {eleventyConfig} from './config.mjs';
 import {argv} from 'process';
-import {copyFont} from './assets.cjs';
+import {copyFont} from './font.cjs';
 
 const rootDir = 'site';
 const outDir = 'dist';
