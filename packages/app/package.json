@@ -24,6 +24,11 @@
     "url": "https://github.com/Alwatr/weaver/issues"
   },
   "prettier": "@alwatr/prettier-config",
+  "nano-build": {
+    "entryPoints": [
+      "src/ts/*.ts"
+    ]
+  },
   "nano-build-development": {
     "minify": false,
     "treeShaking": false,
@@ -41,7 +46,7 @@
     "serve": "wds",
     "build": "yarn run build:es && yarn run build:11ty",
     "build:es": "nano-build --preset=pmpa",
-    "build:11ty": "node script/build.mjs",
+    "build:11ty": "node builder/build.mjs",
     "watch": "yarn run watch:11ty & yarn run watch:es & yarn serve",
     "watch:es": "yarn run build:es --watch",
     "watch:11ty": "yarn run build:11ty --watch",

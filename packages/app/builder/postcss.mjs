@@ -14,7 +14,7 @@ import postcssViewportUnitFallback from 'postcss-viewport-unit-fallback';
 import postcssCustomMedia from 'postcss-custom-media';
 
 const postCssPlugins = [
-  postcssImport({root: 'site/_css'}),
+  postcssImport({root: 'src/css'}),
   postcssNesting(),
   postcssCustomMedia(),
   tailwindcss(),
@@ -39,7 +39,7 @@ const postCss = postcss(postCssPlugins);
 
 export async function postcssBuild() {
   logger.logMethod?.('postcssBuild');
-  const inputDir = 'site/_css/';
+  const inputDir = 'src/css/';
   const outputDir = 'dist/css/';
   const startTime = Date.now();
 

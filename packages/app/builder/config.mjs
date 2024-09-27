@@ -5,8 +5,7 @@ import {minifyHtml} from './minify-html.mjs';
 import {postcssBuild} from './postcss.mjs';
 import {dateString, timeString, trim} from './util.mjs';
 import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
-import pluginRss from '@11ty/eleventy-plugin-rss';
-import {alwatrIcon} from '../shortcode/alwatr-icon.cjs';
+import {alwatrIcon} from './alwatr-icon.cjs';
 import EleventyRenderPlugin from '@11ty/eleventy/src/Plugins/RenderPlugin.js';
 import {generateServiceWorker} from './workbox.mjs';
 
@@ -35,8 +34,10 @@ function _eleventyConfig(config) {
     domDiff: false,
   });
 
-  config.additionalWatchTargets = ['./site/', './shortcode/'];
-  config.watchIgnores = new Set(['site/_ts/']);
+  // FIXME: check content need to be watched or not?
+  config.additionalWatchTargets = ['./content', './ts', './css'];
+
+  // config.watchIgnores?.add('script');
 
   // config.addFilter("slug", slugFilter);
   config.addFilter('slugify', slugifyFilter);
@@ -55,11 +56,6 @@ function _eleventyConfig(config) {
 
   config.addFilter('log', (input, ...messages) => {
     console.log(input, ...messages);
-  });
-
-  config.addFilter('pickRandom', function (array, count) {
-    let shuffled = array.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
   });
 
   // config.addFilter("serverlessUrl", serverlessUrlFilter);
@@ -85,7 +81,6 @@ function _eleventyConfig(config) {
   config.addAsyncShortcode('alwatrIcon', alwatrIcon);
 
   config.addPlugin(EleventyRenderPlugin);
-  config.addPlugin(pluginRss);
   config.addPlugin(directoryOutputPlugin, {
     columns: {
       filesize: true,
@@ -98,7 +93,7 @@ function _eleventyConfig(config) {
   config.addTransform('trim', trim);
 
   config.on('eleventy.after', postcssBuild);
-  // config.on('eleventy.after', generateServiceWorker);
+  config.on('eleventy.after', generateServiceWorker);
 
   config.addExtension('data.cjs', {key: '11ty.js'});
 
