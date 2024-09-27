@@ -134,13 +134,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/context@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@alwatr/context@npm:3.0.3"
+"@alwatr/context@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@alwatr/context@npm:3.1.0"
   dependencies:
     "@alwatr/logger": "npm:^3.2.14"
-    "@alwatr/observable": "npm:^3.0.3"
-  checksum: 10c0/3d9c178e892974b9ff354eb03b93ae0d8b0feaea34251dd86b7972eea0b359283c57c5b517cc43b143c8000a67888caa27b878519ab78bf633a1d14117d9ad1b
+    "@alwatr/observable": "npm:^3.1.0"
+  checksum: 10c0/aba0f50c88188ef20e9dedcf4ed8c51a33a3a16e31f21659f18534cd04b1fb2b7e65fe59adea8483b31fec7b3d89b02f94ad601c203b85fadf059d75f2a5320c
   languageName: node
   linkType: hard
 
@@ -186,14 +186,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/fetch-state-machine@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@alwatr/fetch-state-machine@npm:3.0.3"
+"@alwatr/fetch-state-machine@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@alwatr/fetch-state-machine@npm:3.1.0"
   dependencies:
     "@alwatr/fetch": "npm:^4.0.1"
-    "@alwatr/fsm": "npm:^3.0.3"
+    "@alwatr/fsm": "npm:^3.1.0"
     "@alwatr/logger": "npm:^3.2.14"
-  checksum: 10c0/760825d5cc06669fde97163936941ec01074b7453b30f0288962e7e074d8e3c6065dbf96c3318af37ae75d356cda29727b78650eff1288ee249be9ba12bd5ea1
+  checksum: 10c0/9e5e58e20eac8fc8d540bd430ab09dd8f53cb48da06c58fa38c2f25540f52807593a0ab3033a796c5b7a66823fc6a95cf82d5c80b805b928058ecdb8d2c78460
   languageName: node
   linkType: hard
 
@@ -222,17 +222,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/flux@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@alwatr/flux@npm:3.0.3"
+"@alwatr/flux@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@alwatr/flux@npm:3.1.0"
   dependencies:
-    "@alwatr/context": "npm:^3.0.3"
-    "@alwatr/fetch-state-machine": "npm:^3.0.3"
-    "@alwatr/fsm": "npm:^3.0.3"
-    "@alwatr/observable": "npm:^3.0.3"
-    "@alwatr/remote-context": "npm:^3.0.3"
-    "@alwatr/signal": "npm:^3.0.3"
-  checksum: 10c0/9ab5b1090cfb89c269a9b6dcd643b26775b03f0da002c223aa0a52f6ae9005a98c97812a06203a7861858d4ff520faebc42093db399fd76d04871cd329dcc4e3
+    "@alwatr/context": "npm:^3.1.0"
+    "@alwatr/fetch-state-machine": "npm:^3.1.0"
+    "@alwatr/fsm": "npm:^3.1.0"
+    "@alwatr/observable": "npm:^3.1.0"
+    "@alwatr/remote-context": "npm:^3.1.0"
+    "@alwatr/signal": "npm:^3.1.0"
+  checksum: 10c0/947c1a1c316d70db40311c085d61961e928c8c97619646abc19c8e6486baaf459e4d5aa2633b6d2d9f412e6207e17917412fd6c612796aa2940aac23b269132d
   languageName: node
   linkType: hard
 
@@ -243,14 +243,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/fsm@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@alwatr/fsm@npm:3.0.3"
+"@alwatr/fsm@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@alwatr/fsm@npm:3.1.0"
   dependencies:
     "@alwatr/logger": "npm:^3.2.14"
-    "@alwatr/observable": "npm:^3.0.3"
+    "@alwatr/observable": "npm:^3.1.0"
     "@alwatr/polyfill-has-own": "npm:^1.0.10"
-  checksum: 10c0/9fc1b6e1089e7f82b789de1bfd2fd9f11adb0f119f0853d8957a8f9c10c7720ddf702f22f454e799043e73a07db614755be13147baf5391ad6aab9500d024b7e
+  checksum: 10c0/c2c21ec143cd456b91f1c0aa80466412899ab8e66acb89b061dd7fb6b362942ddf627f6fa4e3222419e6dd916c2ba7c0748348520c0f70ab3e8f7a80b703e6c9
   languageName: node
   linkType: hard
 
@@ -342,12 +342,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/observable@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@alwatr/observable@npm:3.0.3"
+"@alwatr/observable@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@alwatr/observable@npm:3.1.0"
   dependencies:
     "@alwatr/logger": "npm:^3.2.14"
-  checksum: 10c0/22d03e4408fd4e9c503fc3ad99a389965882c1e5974dee9062c9df50d31b319972fc31c467b6df0635fa1f93b8be0ace2e565d5f767cf2fc9ddd9eb204599045
+  checksum: 10c0/9c06fea28a6731f2806a99d1bccadcc4ee5971d4d15dc2fed4cc1911cd38cb742018355230f17d5388b2c4e3fa6da968571bd7cf32c3fbad783817a8e32de8a9
   languageName: node
   linkType: hard
 
@@ -381,23 +381,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/remote-context@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@alwatr/remote-context@npm:3.0.3"
+"@alwatr/remote-context@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@alwatr/remote-context@npm:3.1.0"
   dependencies:
-    "@alwatr/fetch-state-machine": "npm:^3.0.3"
+    "@alwatr/fetch-state-machine": "npm:^3.1.0"
     "@alwatr/logger": "npm:^3.2.14"
-  checksum: 10c0/ba3cc0eb3e304cac8b842bfa941aa908abd8136ae982bcc92498fbb9fcc22589c33b1df5f22fa6859679287859e9c0f287f7050581e19b6e4a2f05f8dbaf5131
+  checksum: 10c0/0d47c526b967f20cda49717429e95e005627ad0cf94cd5682277990f5c9b551ffa5a9a31d4ab28817ebe5df3ebfd60c5ecfd0a20f47fa8a0619ce3bd82eb027b
   languageName: node
   linkType: hard
 
-"@alwatr/signal@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@alwatr/signal@npm:3.0.3"
+"@alwatr/signal@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@alwatr/signal@npm:3.1.0"
   dependencies:
     "@alwatr/logger": "npm:^3.2.14"
-    "@alwatr/observable": "npm:^3.0.3"
-  checksum: 10c0/ef7dcde412aff06ba05001dfcdca85dda467f9f82b2724afe53f57ef2747440a85eac91ad1d943fd9ef1e602267f1b04a5770ae4e3da41dbd75b4a850595979f
+    "@alwatr/observable": "npm:^3.1.0"
+  checksum: 10c0/256b2e2ea7c8575a4a9f6a18d817ff8e90d5ab668d22e9dcc351378db7b6017f754c23fac79019f545fc6cf6783cc046c63ff3863d915a117e20be3d53ec65f8
   languageName: node
   linkType: hard
 
@@ -519,7 +519,7 @@ __metadata:
     "@11ty/eleventy": "npm:^2.0.1"
     "@11ty/eleventy-plugin-directory-output": "npm:^1.0.1"
     "@11ty/eleventy-plugin-rss": "npm:^1.2.0"
-    "@alwatr/flux": "npm:^3.0.3"
+    "@alwatr/flux": "npm:^3.1.0"
     "@alwatr/font": "npm:^1.2.0"
     "@alwatr/icon-set-extra": "npm:^0.4.0"
     "@alwatr/icon-set-material": "npm:^2.0.1"
