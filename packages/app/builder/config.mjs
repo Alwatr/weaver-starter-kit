@@ -137,11 +137,11 @@ function _eleventyConfig(config) {
     },
 
     dir: {
-      input: 'site',
+      input: 'src/content',
       output: 'dist',
-      includes: '_include',
-      data: '_data',
-      layouts: '_layout',
+      includes: 'include_',
+      data: 'data_',
+      layouts: 'layout_',
     },
   };
 }

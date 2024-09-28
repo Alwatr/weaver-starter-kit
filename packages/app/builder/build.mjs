@@ -5,7 +5,7 @@ import {eleventyConfig} from './config.mjs';
 import {argv} from 'process';
 import {copyFont} from './font.cjs';
 
-const rootDir = 'site';
+const rootDir = 'src/content';
 const outDir = 'dist';
 
 async function build({watchMode, debugMode}) {
