@@ -1,5 +1,3 @@
-import {definePackage} from '@alwatr/dedupe';
+import {packageTracer} from '@alwatr/package-tracer';
 
-export * from './types.js';
-
-definePackage('@alwatr/weaver-common', __package_version__);
+packageTracer.add(__package_name__, __package_version__);
