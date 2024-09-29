@@ -2,7 +2,6 @@ import {localJsonStorage} from '@alwatr/local-storage';
 import {definePackage} from '@alwatr/logger';
 
 import type {FetchOptions} from '@alwatr/flux';
-import type {} from '@alwatr/nano-build';
 
 export const logger = definePackage('@alwatr/weaver-app', __package_version__);
 logger.logModule?.('config');
