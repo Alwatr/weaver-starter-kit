@@ -169,7 +169,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/dedupe@npm:^1.0.14, @alwatr/dedupe@npm:^1.1.0":
+"@alwatr/dedupe@npm:^1.0.14":
   version: 1.1.0
   resolution: "@alwatr/dedupe@npm:1.1.0"
   dependencies:
@@ -610,7 +610,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@alwatr/weaver-common@workspace:packages/common"
   dependencies:
-    "@alwatr/dedupe": "npm:^1.1.0"
     "@alwatr/logger": "npm:^4.0.0"
     "@alwatr/nano-build": "npm:^1.4.0"
     "@alwatr/package-tracer": "npm:^1.0.0"
@@ -628,7 +627,6 @@ __metadata:
   resolution: "@alwatr/weaver-monorepo@workspace:."
   dependencies:
     "@alwatr/eslint-config": "npm:^1.2.8"
-    "@alwatr/package-tracer": "npm:^1.0.0"
     "@alwatr/prettier-config": "npm:^1.0.5"
     "@alwatr/tsconfig-base": "npm:^1.3.0"
     "@lerna-lite/changed": "npm:^3.9.2"

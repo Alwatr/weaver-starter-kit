@@ -5,7 +5,7 @@ import './lib/keep-scroll.js';
 import './lib/lock-scroll.js';
 // import './lib/service-worker.js';
 
-logger.logModule?.('main');
+logger.logFileModule?.('main');
 
 logger.banner('@alwatr/weaver');
 
