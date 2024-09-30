@@ -1,6 +1,6 @@
 import {createLogger} from '@alwatr/logger';
 import {packageTracer} from '@alwatr/package-tracer';
-import {Region, StoreFileType} from '@alwatr/store';
+import {Region, StoreFileType} from '@alwatr/nitrobase';
 
 export const logger = createLogger(__package_name__);
 
@@ -18,7 +18,7 @@ export const config = {
     duration: '1y',
   },
 
-  storeFactory: {
+  nitrobase: {
     rootPath: './db',
     defaultChangeDebounce: 2_000, // for demo
   },
