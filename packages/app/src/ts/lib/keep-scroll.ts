@@ -1,5 +1,5 @@
+import {delay} from '@alwatr/delay';
 import {platformInfo} from '@alwatr/platform-info';
-import {waitForAnimationFrame} from '@alwatr/wait';
 
 import {logger} from './config.js';
 
@@ -9,7 +9,7 @@ async function keepScroll() {
   const container = document.querySelector('main.overflow-y-scroll');
   if (!container) return;
 
-  await waitForAnimationFrame();
+  await delay.untilNextAnimationFrame();
 
   const scrollPosition = localStorage.getItem('scrollPosition');
   logger.logMethodArgs?.('restoreScrollPosition', scrollPosition);
