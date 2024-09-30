@@ -180,6 +180,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/delay@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@alwatr/delay@npm:1.0.0"
+  dependencies:
+    "@alwatr/global-scope": "npm:^1.1.22"
+    "@alwatr/package-tracer": "npm:^1.0.0"
+    "@alwatr/parse-duration": "npm:^1.1.0"
+  checksum: 10c0/9113a5a21dbbbd0200bd7cfa17d717e6aa6575747ece9271ac28d1d05bf08e743bea49c1ab50bada63d8e4182d5532038c15f52c9d2eb5eb59b6b0d07ca7f6a4
+  languageName: node
+  linkType: hard
+
 "@alwatr/eslint-config@npm:^1.2.8":
   version: 1.2.8
   resolution: "@alwatr/eslint-config@npm:1.2.8"
@@ -305,6 +316,15 @@ __metadata:
   version: 1.0.11
   resolution: "@alwatr/is-number@npm:1.0.11"
   checksum: 10c0/0a5d8a5177c2702865394a22338461c055280ff1514eaca9cae1bd43f944751c9a40956c191811d63246f0ad0f9be35ed4db3e8e118242de125b90160e561037
+  languageName: node
+  linkType: hard
+
+"@alwatr/is-number@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@alwatr/is-number@npm:1.1.0"
+  dependencies:
+    "@alwatr/package-tracer": "npm:^1.0.0"
+  checksum: 10c0/590bd19a10c93e26ddf5ab69cd3d2dfcc40039839dd022ea7657bdc16e0105cc77ff2e55b887af34437e99cb1896f26f1c65c725676b8f41d24a55a69735713f
   languageName: node
   linkType: hard
 
@@ -466,6 +486,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/parse-duration@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "@alwatr/parse-duration@npm:1.1.0"
+  dependencies:
+    "@alwatr/is-number": "npm:^1.1.0"
+    "@alwatr/package-tracer": "npm:^1.0.0"
+  checksum: 10c0/9c9ab9a809f2327d650e9127548b355d0579714b9489dc785c2ba3ae4024b03565afdfcba606c023387de14a9d14aac753cf297e4e46b8fdf603d3a799ec93c9
+  languageName: node
+  linkType: hard
+
 "@alwatr/platform-info@npm:^1.1.13, @alwatr/platform-info@npm:^1.2.0":
   version: 1.2.0
   resolution: "@alwatr/platform-info@npm:1.2.0"
@@ -571,6 +601,7 @@ __metadata:
     "@11ty/eleventy": "npm:^2.0.1"
     "@11ty/eleventy-plugin-directory-output": "npm:^1.0.1"
     "@11ty/eleventy-plugin-rss": "npm:^2.0.2"
+    "@alwatr/delay": "npm:^1.0.0"
     "@alwatr/flux": "npm:^3.1.1"
     "@alwatr/font": "npm:^1.2.0"
     "@alwatr/icon-set-extra": "npm:^0.4.0"
@@ -584,7 +615,6 @@ __metadata:
     "@alwatr/style": "npm:^2.2.0"
     "@alwatr/tsconfig-base": "npm:^1.3.0"
     "@alwatr/type-helper": "npm:^2.0.0"
-    "@alwatr/wait": "npm:^1.1.16"
     "@alwatr/weaver-common": "workspace:^"
     "@swc/html": "npm:^1.7.28"
     "@types/alpinejs": "npm:^3.13.10"
