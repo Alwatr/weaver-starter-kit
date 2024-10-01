@@ -1,6 +1,23 @@
-@import '@alwatr/style/main.css';
+@import 'tailwindcss/base';
+@import 'windstyle/base/custom-media';
+@import 'windstyle/base/normalize';
+@import 'windstyle/base/safe-area-inset';
+@import 'windstyle/base/font-vazirmatn';
+@import 'windstyle/base/scrollbar';
+@import 'windstyle/base/alpine';
+
+@import 'tailwindcss/components';
+@import 'windstyle/component/alwatr-icon';
+@import 'windstyle/component/bottom-navigation-bar';
+@import 'windstyle/component/icon-btn';
+@import 'windstyle/component/navigation-drawer';
+@import 'windstyle/component/page-header';
+
+@import 'tailwindcss/utilities';
+@import 'windstyle/utility/hide-spin';
+@import 'windstyle/utility/overflow-clip';
+@import 'windstyle/utility/text-ellipsis';
+
+@import 'windstyle/color-palette/hct-260';
+
 @import './lib/layout.css';
-@import './lib/color-palette.css';
-@import './lib/vazirmatn-font.css';
-@import './lib/alwatr-icon.css';
-@import './lib/navigation-drawer.css';
