@@ -1,0 +1,14 @@
+@layer components {
+  .icon-btn {
+    @apply flex
+      items-center
+      justify-center
+      shrink-0
+      grow-0
+      cursor-pointer
+      size-12
+      rounded-full
+      state-onSurfaceVariant
+    ;
+  }
+}
