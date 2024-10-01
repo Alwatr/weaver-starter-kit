@@ -1,0 +1,109 @@
+@layer components {
+  .navigation-drawer {
+    @apply fixed
+      top-0
+      bottom-0
+      right-0
+      p-safe
+      pl-0
+      flex
+      flex-col
+      bg-surface
+      text-onSurfaceVariant
+      overflow-y-auto
+      text-labelLarge
+      select-none
+      contain-strict
+    ;
+
+    width: var(--comp-navigation-drawer-width, 20rem); /* w-80 */
+
+    @media (--below-expanded) {
+      /* Hide mode in mobile */
+      & {
+        @apply !transform-gpu
+          translate-x-full
+          transition-transform
+          duration-200
+          ease-in
+          will-change-transform
+          elevation-1
+          rounded-e-2xl
+          z-modal
+        ;
+      }
+
+      &.opened {
+        @apply translate-x-0 ease-out duration-300;
+      }
+    }
+
+    nav {
+      @apply flex
+        flex-col
+        p-3
+        select-none
+        grow
+        gap-1
+      ;
+
+      a,
+      button {
+        @apply flex
+          text-start
+          h-14
+          flex-nowrap
+          items-center
+          rounded-full
+          px-6
+          gap-3
+          state-onSurfaceVariant
+        ;
+
+        & div {
+          @apply pb-px;
+        }
+
+        &.child {
+          @apply ms-9;
+        }
+
+        &[aria-selected='true'] {
+          @apply bg-secondaryContainer state-onSecondaryContainer;
+
+          &.parent {
+            @apply stateActive-onSurfaceVariant bg-transparent pointer-events-none;
+
+            .icon-arrow {
+              @apply rotate-180;
+            }
+          }
+        }
+      }
+    }
+
+    .app-version {
+      @apply m-4 text-center text-labelSmall opacity-50;
+    }
+  }
+
+  .drawer-scrim {
+    @apply pointer-events-none
+      fixed
+      top-0
+      left-0
+      right-0
+      h-screen
+      z-scrim
+      bg-scrim
+      opacity-0
+      transition-opacity
+      duration-200
+      will-change-[opacity]
+    ;
+
+    &.opened {
+      @apply pointer-events-auto opacity-50;
+    }
+  }
+}
