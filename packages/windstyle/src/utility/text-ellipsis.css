@@ -1,0 +1,5 @@
+@layer utilities {
+  .text-ellipsis {
+    @apply overflow-hidden overflow-ellipsis whitespace-nowrap;
+  }
+}
