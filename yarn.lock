@@ -298,15 +298,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/global-scope@npm:^1.1.22":
-  version: 1.1.22
-  resolution: "@alwatr/global-scope@npm:1.1.22"
-  dependencies:
-    "@alwatr/package-tracer": "npm:^1.0.0"
-  checksum: 10c0/9d8a162ae8892ae619b64b4abde86a4024e40c608889f321305b64138efe3671fec56064096e34d04d1b2de63331e483e93af431cf591eb1d3d93876c7972089
-  languageName: node
-  linkType: hard
-
 "@alwatr/icon-set-extra@npm:^0.4.0":
   version: 0.4.0
   resolution: "@alwatr/icon-set-extra@npm:0.4.0"
@@ -318,13 +309,6 @@ __metadata:
   version: 2.0.1
   resolution: "@alwatr/icon-set-material@npm:2.0.1"
   checksum: 10c0/6bf2462885a05ea28819fa2483108a49ec6d7d10e063dcc7e4c6f92d7625a47d216b284f158033673a4389edb718cfc9a459ccbf1e27a011aaba37309e58cd45
-  languageName: node
-  linkType: hard
-
-"@alwatr/is-number@npm:^1.0.11":
-  version: 1.0.11
-  resolution: "@alwatr/is-number@npm:1.0.11"
-  checksum: 10c0/0a5d8a5177c2702865394a22338461c055280ff1514eaca9cae1bd43f944751c9a40956c191811d63246f0ad0f9be35ed4db3e8e118242de125b90160e561037
   languageName: node
   linkType: hard
 
@@ -486,16 +470,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/parse-duration@npm:^1.0.11":
-  version: 1.0.11
-  resolution: "@alwatr/parse-duration@npm:1.0.11"
-  dependencies:
-    "@alwatr/is-number": "npm:^1.0.11"
-  checksum: 10c0/83fc3de1cec7c7b1c9e76fc60e8571afdcfe4692bc3f34e135bf01ddc949fe80e8abbaf1c619c55fd0a10aa27109069fa4484069042c8dd1ee8f854528b85e74
-  languageName: node
-  linkType: hard
-
-"@alwatr/parse-duration@npm:^1.1.0":
+"@alwatr/parse-duration@npm:^1.0.11, @alwatr/parse-duration@npm:^1.1.0":
   version: 1.1.0
   resolution: "@alwatr/parse-duration@npm:1.1.0"
   dependencies:
@@ -4204,15 +4179,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.7.3":
-  version: 22.7.3
-  resolution: "@types/node@npm:22.7.3"
-  dependencies:
-    undici-types: "npm:~6.19.2"
-  checksum: 10c0/0e579813528b0370454337a952f43b792cd12731e10fdca0fdb627158e980c1219bba99e9048c134b6a19325d817016059afe016ccd372326c838a1b85a51574
-  languageName: node
-  linkType: hard
-
 "@types/normalize-package-data@npm:^2.4.1, @types/normalize-package-data@npm:^2.4.3":
   version: 2.4.4
   resolution: "@types/normalize-package-data@npm:2.4.4"
@@ -6304,9 +6270,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.28":
-  version: 1.5.29
-  resolution: "electron-to-chromium@npm:1.5.29"
-  checksum: 10c0/ae4849f1fe8d756d30c6f5f992803d8550a98b38a30aecc7d9776858cf229ad05b12cb9f7675f0a89330a077d16e28388cfe394fdd9d0828ffe860c8568c95c2
+  version: 1.5.30
+  resolution: "electron-to-chromium@npm:1.5.30"
+  checksum: 10c0/f639a39ea3111e3661e4460575bd1392b54d45817617d8cf213e785a9ad9de897fee885d7b33718d9e628c982748a3da32a8813dad9b7bab1cf8673efb5689d6
   languageName: node
   linkType: hard
 
