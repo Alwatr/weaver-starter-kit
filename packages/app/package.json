@@ -8,7 +8,7 @@
   "private": true,
   "main": "main.js",
   "type": "module",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "browserslist": "> 1.5%, not dead",
   "engines": {
     "node": ">=18.16.0",

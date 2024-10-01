@@ -6,7 +6,7 @@
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "private": true,
   "type": "module",
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "engines": {
     "node": ">=18.16.0",
     "yarn": ">=4.0.0"

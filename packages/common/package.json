@@ -16,7 +16,7 @@
       "require": "./dist/main.cjs"
     }
   },
-  "license": "MIT",
+  "license": "AGPL-3.0-only",
   "engines": {
     "node": ">=18.16.0",
     "yarn": ">=4.0.0"
