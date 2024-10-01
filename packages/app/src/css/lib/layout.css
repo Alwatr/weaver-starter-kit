@@ -1,17 +1,7 @@
 @layer base {
-  @custom-media --medium (min-width: 600px);
-  @custom-media --expanded (min-width: 840px);
-  @custom-media --large (min-width: 1200px);
-  @custom-media --xlarge (min-width: 1600px);
-
-  @custom-media --max-medium not all and (--medium);
-  @custom-media --max-expanded not all and (--expanded);
-  @custom-media --max-large not all and (--large);
-  @custom-media --max-xlarge not all and (--xlarge);
-
   :root {
-    --sys-navigation-drawer-width: 20rem; /* w-80 */
-    --sys-header-hight: 4rem; /* h-16 */
+    --comp-navigation-drawer-width: 20rem; /* w-80 */
+    --comp-page-header-hight: 4rem; /* h-16 */
     --sys-bottom-navigation-bar-height: 5rem; /* h-20 */
     --sys-scrollbar-size: 0; /* hide scrollbar temporary */
     @apply color-scheme-light;
@@ -19,17 +9,17 @@
 
   @media (--expanded) {
     :root {
-      --sys-navigation-drawer-width: 16rem; /* w-64 */
+      --comp-navigation-drawer-width: 16rem; /* w-64 */
     }
   }
   @media (--large) {
     :root {
-      --sys-navigation-drawer-width: 18rem; /* w-72 */
+      --comp-navigation-drawer-width: 18rem; /* w-72 */
     }
   }
   @media (--xlarge) {
     :root {
-      --sys-navigation-drawer-width: 22rem; /* w-80 */
+      --comp-navigation-drawer-width: 22rem; /* w-80 */
     }
   }
 }
@@ -55,7 +45,7 @@
 
     padding-top: calc(
       var(--safe-area-inset-top) +
-      var(--sys-header-hight) + 0.25rem +
+      var(--comp-page-header-hight) + 0.25rem +
       0.5rem
     );
     padding-bottom: calc(
@@ -67,7 +57,7 @@
 
     @media (--expanded) {
       & {
-        padding-right: var(--sys-navigation-drawer-width);
+        padding-right: var(--comp-navigation-drawer-width);
       }
     }
   }
@@ -75,95 +65,22 @@
 
 /* Pages Header */
 @layer components {
-  .page-header {
-    @apply fixed
-      left-0
-      top-0
-      right-0
-      z-fixed
-      box-content
-      pt-safe
-      pb-1
-      flex
-      items-center
-      translucent
-      bg-surfaceContainer
-      text-onSurface
-      text-titleLarge
-      select-none
-    ;
-
-    padding-left: calc(0.25rem + var(--safe-area-inset-left));
-    padding-right: calc(0.25rem + var(--safe-area-inset-right));
-
-    h1 {
-      @apply shrink grow text-ellipsis px-1 pb-[2px];
+  @media (--expanded) {
+    .page-header {
+      right: var(--comp-navigation-drawer-width);
     }
-
-    height: var(--sys-header-hight);
-
-    @media (--expanded) {
-      & {
-        right: var(--sys-navigation-drawer-width);
-      }
-    }
-  }
-}
-
-/* Icon Button */
-@layer components {
-  .icon-btn {
-    @apply flex
-      items-center
-      justify-center
-      shrink-0
-      grow-0
-      cursor-pointer
-      size-12
-      rounded-full
-      state-onSurfaceVariant
-    ;
   }
 }
 
 /* Bottom Navigation Bar */
 @layer components {
-  .bottom-navigation-bar {
-    @apply fixed
-      z-fixed
-      bottom-1
-      pb-safe
-    ;
-
-    left: calc(0.75rem + var(--safe-area-inset-left));
-    right: calc(0.75rem + var(--safe-area-inset-right));
-    /* bottom: calc(0.25rem + var(--safe-area-inset-bottom)); */
-
-    @media (--expanded) {
-      & {
-        right: calc(
-          0.75rem +
-          var(--sys-navigation-drawer-width) +
-          var(--safe-area-inset-right)
-        );
-      }
-    }
-
-    nav {
-      @apply flex
-        h-20
-        rounded-3xl
-        items-stretch
-        bg-surfaceContainer
-        text-onSurfaceVariant
-        text-labelMedium
-        overflow-clip
-        elevation-1
-        max-w-screen-medium
-        mx-auto
-        cursor-pointer
-        select-none
-      ;
+  @media (--expanded) {
+    .bottom-navigation-bar {
+      right: calc(
+        0.75rem +
+        var(--comp-navigation-drawer-width) +
+        var(--safe-area-inset-right)
+      );
     }
   }
 }
@@ -174,7 +91,7 @@
     @apply flex
       flex-col
       gap-1
-      extended:flex-row
+      expanded:flex-row
       grow
       px-2
     ;
@@ -204,10 +121,10 @@
     @media (--expanded) {
       & {
         @apply sticky mt-[3.25rem];
-        width: var(--sys-navigation-drawer-width);
+        width: var(--comp-navigation-drawer-width);
         top: calc(
           var(--safe-area-inset-top) +
-          var(--sys-header-hight) + 0.25rem +
+          var(--comp-page-header-hight) + 0.25rem +
           0.25rem
         );
       }
