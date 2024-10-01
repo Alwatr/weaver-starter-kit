@@ -1,4 +1,4 @@
-import {AlwatrNitrobase} from '@alwatr/nitrobase';
+import {AlwatrNitrobase} from 'alwatr/nitrobase';
 
 import {config} from './config.js';
 

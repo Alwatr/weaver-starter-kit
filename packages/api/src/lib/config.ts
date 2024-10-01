@@ -1,6 +1,5 @@
-import {createLogger} from '@alwatr/logger';
-import {Region, StoreFileType} from '@alwatr/nitrobase';
-import {packageTracer} from '@alwatr/package-tracer';
+import {createLogger, packageTracer} from 'alwatr/nanolib';
+import {Region, StoreFileType} from 'alwatr/nitrobase';
 
 export const logger = createLogger(__package_name__);
 
