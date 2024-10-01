@@ -1,0 +1,6 @@
+@layer utilities {
+  .overflow-clip {
+    overflow: hidden;
+    overflow: clip;
+  }
+}

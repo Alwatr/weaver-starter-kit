@@ -2,7 +2,7 @@ import {existsSync} from 'fs';
 import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
 import {logger, devMode} from './logger.mjs';
 
-import {join} from 'node:path';
+import {join, resolve} from 'node:path';
 import cssnano from 'cssnano';
 import postcss from 'postcss';
 import postcssImport from 'postcss-import';
@@ -13,10 +13,26 @@ import postcssNesting from 'tailwindcss/nesting/index.js';
 import postcssViewportUnitFallback from 'postcss-viewport-unit-fallback';
 import postcssCustomMedia from 'postcss-custom-media';
 
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url); // ESM way to access require
+const windstylePath = require.resolve('@alwatr/windstyle').replace('/dist/main.cjs', '/');
+
 const basePath = 'src/css/'
 
 const postCssPlugins = [
-  postcssImport({root: basePath}),
+  postcssImport({
+    root: basePath,
+    resolve(id) {
+      logger.logStep?.('postcssImport', 'resolve', id);
+      if (id.startsWith('windstyle/')) {
+        if (id.endsWith('/')) id += 'index.css';
+        if (!id.endsWith('.css')) id += '.css';
+        return resolve(windstylePath, id.replace('windstyle/', 'src/'));
+      }
+      // else
+      return id;
+    },
+  }),
   postcssNesting(),
   postcssCustomMedia(),
   tailwindcss(),

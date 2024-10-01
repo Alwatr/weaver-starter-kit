@@ -1,10 +1,38 @@
-import {tailwindConfig} from '@alwatr/style';
+import {
+  animationTheme,
+  screenTheme,
+  typographyTheme,
+  zIndexTheme,
+  colorTheme,
+  // ---
+  colorPlugin,
+  safeAreaPlugin,
+  directionPlugin,
+  elevationPlugin,
+  stateLayerPlugin,
+  translucentPlugin,
+} from '@alwatr/windstyle';
 
-/**
- * @type {import('tailwindcss').Config}
- */
+/** @type {import('tailwindcss').Config} */
 export default {
-  ...tailwindConfig,
-  content: ['dist/**/*.html'],
-  safelist: ['overflow-hidden'],
+  content: ['dist/**/*.html', 'dist/es/**/*.js'],
+  theme: {
+    extend: {
+      animation: animationTheme.animation,
+      keyframes: animationTheme.keyframes,
+      screens: screenTheme.screens,
+      zIndex: zIndexTheme.zIndex,
+      fontFamily: typographyTheme.fontFamily,
+      fontSize: typographyTheme.fontSize,
+      colors: colorTheme.colors,
+    },
+  },
+  plugins: [
+    colorPlugin,
+    safeAreaPlugin,
+    directionPlugin,
+    elevationPlugin,
+    stateLayerPlugin,
+    translucentPlugin,
+  ],
 };

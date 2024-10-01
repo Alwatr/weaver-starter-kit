@@ -1,0 +1,30 @@
+@layer components {
+  .bottom-navigation-bar {
+    @apply fixed
+      z-fixed
+      bottom-1
+      pb-safe
+    ;
+
+    left: calc(0.75rem + var(--safe-area-inset-left));
+    right: calc(0.75rem + var(--safe-area-inset-right));
+    /* bottom: calc(0.25rem + var(--safe-area-inset-bottom)); */
+
+    nav {
+      @apply flex
+        h-20
+        rounded-3xl
+        items-stretch
+        bg-surfaceContainer
+        text-onSurfaceVariant
+        text-labelMedium
+        overflow-clip
+        elevation-1
+        max-w-screen-medium
+        mx-auto
+        cursor-pointer
+        select-none
+      ;
+    }
+  }
+}

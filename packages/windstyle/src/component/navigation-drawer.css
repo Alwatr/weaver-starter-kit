@@ -13,12 +13,12 @@
       overflow-y-auto
       text-labelLarge
       select-none
-      [contain:strict]
+      contain-strict
     ;
 
-    width: var(--sys-navigation-drawer-width);
+    width: var(--comp-navigation-drawer-width, 20rem); /* w-80 */
 
-    @media (--max-expanded) {
+    @media (--below-expanded) {
       /* Hide mode in mobile */
       & {
         @apply !transform-gpu

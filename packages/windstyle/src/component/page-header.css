@@ -1,0 +1,29 @@
+@layer components {
+  .page-header {
+    @apply fixed
+      left-0
+      top-0
+      right-0
+      z-fixed
+      box-content
+      pt-safe
+      pb-1
+      flex
+      items-center
+      translucent
+      bg-surfaceContainer
+      text-onSurface
+      text-titleLarge
+      select-none
+    ;
+
+    padding-left: calc(0.25rem + var(--safe-area-inset-left));
+    padding-right: calc(0.25rem + var(--safe-area-inset-right));
+
+    h1 {
+      @apply shrink grow text-ellipsis px-1 pb-[2px];
+    }
+
+    height: var(--comp-page-header-hight, 4rem); /* h-16 */
+  }
+}
