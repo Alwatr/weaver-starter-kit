@@ -1,9 +1,10 @@
-import {definePackage} from '@alwatr/logger';
-import {Region, StoreFileType} from '@alwatr/store';
+import {createLogger} from '@alwatr/logger';
+import {Region, StoreFileType} from '@alwatr/nitrobase';
+import {packageTracer} from '@alwatr/package-tracer';
 
-import type {} from '@alwatr/nano-build';
+export const logger = createLogger(__package_name__);
 
-export const logger = definePackage('@alwatr/weaver-api', __package_version__);
+packageTracer.add(__package_name__, __package_version__);
 
 if (process.env.NODE_ENV === 'production') {
   if (process.env.tokenGeneratorSecret == null) {
@@ -17,7 +18,7 @@ export const config = {
     duration: '1y',
   },
 
-  storeFactory: {
+  nitrobase: {
     rootPath: './db',
     defaultChangeDebounce: 2_000, // for demo
   },

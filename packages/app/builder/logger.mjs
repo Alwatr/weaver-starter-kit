@@ -1,6 +1,6 @@
-import {definePackage} from '@alwatr/logger';
+import {createLogger} from '@alwatr/logger';
 
-export const logger = definePackage('@alwatr/weaver-build', '5.x', true);
+export const logger = createLogger('@alwatr/weaver-build');
 
 export const devMode = process.env.NODE_ENV !== 'production';
 logger.logProperty?.('devMode', devMode);

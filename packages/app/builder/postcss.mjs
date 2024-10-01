@@ -1,6 +1,6 @@
 import {existsSync} from 'fs';
 import {readFile, writeFile, mkdir, readdir} from 'fs/promises';
-import {devMode, logger} from './logger.mjs';
+import {logger, devMode} from './logger.mjs';
 
 import {join} from 'node:path';
 import cssnano from 'cssnano';
@@ -13,8 +13,10 @@ import postcssNesting from 'tailwindcss/nesting/index.js';
 import postcssViewportUnitFallback from 'postcss-viewport-unit-fallback';
 import postcssCustomMedia from 'postcss-custom-media';
 
+const basePath = 'src/css/'
+
 const postCssPlugins = [
-  postcssImport({root: 'src/css'}),
+  postcssImport({root: basePath}),
   postcssNesting(),
   postcssCustomMedia(),
   tailwindcss(),
@@ -39,7 +41,7 @@ const postCss = postcss(postCssPlugins);
 
 export async function postcssBuild() {
   logger.logMethod?.('postcssBuild');
-  const inputDir = 'src/css/';
+  const inputDir = basePath;
   const outputDir = 'dist/css/';
   const startTime = Date.now();
 

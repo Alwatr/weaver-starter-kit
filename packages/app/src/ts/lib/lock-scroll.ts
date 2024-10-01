@@ -1,6 +1,6 @@
 import {logger} from './config.js';
 
-logger.logModule?.('lock-scroll');
+logger.logFileModule?.('lock-scroll');
 
 window.addEventListener('request-drawer-open', () => {
   logger.logMethod?.('scroll-locked');

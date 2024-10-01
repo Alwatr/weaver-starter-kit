@@ -3,7 +3,8 @@
   "compilerOptions": {
     "rootDir": "src/ts",
     // "outDir": "dist/es",
-    "noEmit": true
+    "noEmit": true,
+    "types": ["@alwatr/nano-build", "@alwatr/type-helper"]
   },
   "include": ["src/ts/**/*.ts"],
   "references": [{"path": "../common"}]

@@ -1,20 +1,22 @@
 import {localJsonStorage} from '@alwatr/local-storage';
-import {definePackage} from '@alwatr/logger';
+import {createLogger} from '@alwatr/logger';
+import {packageTracer} from '@alwatr/package-tracer';
 
 import type {FetchOptions} from '@alwatr/flux';
-import type {} from '@alwatr/nano-build';
 
-export const logger = definePackage('@alwatr/weaver-app', __package_version__);
-logger.logModule?.('config');
+export const logger = createLogger(__package_name__);
+packageTracer.add(__package_name__, __package_version__);
+
+logger.logFileModule?.('config');
 
 /**
  * Debug API.
  *
  * ```ts
- * localStorage.setItem('debugApi.v1', '"https://api.domain.com/"');
+ * localStorage.setItem('debugApi.v1', '{"url":"https://api.domain.com/"}');
  * ```
  */
-const srvBaseUrl = localJsonStorage.getItem('debugApi', '/', 1);
+const srvBaseUrl = localJsonStorage.getItem('debugApi', {url: '/'}, 1);
 const apiBaseUrl = srvBaseUrl + 'api/v0/';
 
 export const config = {

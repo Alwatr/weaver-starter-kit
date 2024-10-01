@@ -1,10 +1,6 @@
-import {createLogger} from '@alwatr/logger';
+import {logger} from './config.js';
 
-import {logger as logger_} from './config.js';
-
-logger_.logModule?.('register-service-worker');
-
-const logger = createLogger('service-worker');
+logger.logFileModule?.('register-service-worker');
 
 const serviceWorkerPath = '/service-worker.js';
 
