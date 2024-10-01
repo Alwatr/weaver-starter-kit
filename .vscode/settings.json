@@ -55,6 +55,7 @@
     "colspan",
     "cssnano",
     "fract",
+    "Mihandoost",
     "nanotron",
     "nitrobase",
     "nowrap",
@@ -64,7 +65,8 @@
     "tbody",
     "thead",
     "tsbuildinfo",
-    "vazirmatn"
+    "vazirmatn",
+    "windstyle"
   ],
   "css.customData": [
     ".vscode/tailwind.json"
