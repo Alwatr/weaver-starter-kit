@@ -1,0 +1,133 @@
+@layer base {
+  :root {
+    --comp-navigation-drawer-width: 20rem; /* w-80 */
+    --comp-page-header-height: 4rem; /* h-16 */
+    --sys-bottom-navigation-bar-height: 5rem; /* h-20 */
+    --sys-scrollbar-size: 0; /* hide scrollbar temporary */
+    @apply color-scheme-light;
+  }
+
+  @media (--expanded) {
+    :root {
+      --comp-navigation-drawer-width: 16rem; /* w-64 */
+    }
+  }
+  @media (--large) {
+    :root {
+      --comp-navigation-drawer-width: 18rem; /* w-72 */
+    }
+  }
+  @media (--xlarge) {
+    :root {
+      --comp-navigation-drawer-width: 22rem; /* w-80 */
+    }
+  }
+}
+
+/* Body base layout */
+@layer base {
+  body {
+    @apply flex
+      flex-col
+      touch-pan-x
+      touch-pan-y
+      touch-pinch-zoom
+      break-words
+      bg-background
+      font-vazirmatn
+      text-bodyMedium
+      text-onBackground
+      pl-safe
+      pr-safe
+      min-h-dvh
+      max-w-screen-2xl
+    ;
+
+    padding-top: calc(
+      var(--safe-area-inset-top) +
+      var(--comp-page-header-height) + 0.25rem +
+      0.5rem
+    );
+    padding-bottom: calc(
+      0.25rem +
+      var(--sys-bottom-navigation-bar-height) +
+      0.25rem +
+      var(--safe-area-inset-bottom)
+    );
+
+    @media (--expanded) {
+      & {
+        padding-right: var(--comp-navigation-drawer-width);
+      }
+    }
+  }
+}
+
+/* Pages Header */
+@layer components {
+  @media (--expanded) {
+    .page-header {
+      right: var(--comp-navigation-drawer-width);
+    }
+  }
+}
+
+/* Bottom Navigation Bar */
+@layer components {
+  @media (--expanded) {
+    .bottom-navigation-bar {
+      right: calc(
+        0.75rem +
+        var(--comp-navigation-drawer-width) +
+        var(--safe-area-inset-right)
+      );
+    }
+  }
+}
+
+/* Main Container */
+@layer components {
+  .main-container {
+    @apply flex
+      flex-col
+      gap-1
+      expanded:flex-row
+      grow
+      px-2
+    ;
+
+    article {
+      @apply p-2 grow;
+    }
+  }
+}
+
+/* Support Panel */
+@layer components {
+  .support-panel {
+    @apply shrink-0
+      rounded-2xl
+      select-none
+      border
+      border-outlineVariant
+      border-opacity-40
+      bg-surface
+      text-bodySmall
+      text-onSurfaceVariant
+      elevation-1
+      self-start
+    ;
+
+    @media (--expanded) {
+      & {
+        @apply sticky mt-[3.25rem];
+        width: var(--comp-navigation-drawer-width);
+        top: calc(
+          var(--safe-area-inset-top) +
+          var(--comp-page-header-height) + 0.25rem +
+          0.25rem
+        );
+      }
+    }
+  }
+}
