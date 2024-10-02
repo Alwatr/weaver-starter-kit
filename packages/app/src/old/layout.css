@@ -1,7 +1,7 @@
 @layer base {
   :root {
     --comp-navigation-drawer-width: 20rem; /* w-80 */
-    --comp-page-header-hight: 4rem; /* h-16 */
+    --comp-page-header-height: 4rem; /* h-16 */
     --sys-bottom-navigation-bar-height: 5rem; /* h-20 */
     --sys-scrollbar-size: 0; /* hide scrollbar temporary */
     @apply color-scheme-light;
@@ -45,7 +45,7 @@
 
     padding-top: calc(
       var(--safe-area-inset-top) +
-      var(--comp-page-header-hight) + 0.25rem +
+      var(--comp-page-header-height) + 0.25rem +
       0.5rem
     );
     padding-bottom: calc(
@@ -124,7 +124,7 @@
         width: var(--comp-navigation-drawer-width);
         top: calc(
           var(--safe-area-inset-top) +
-          var(--comp-page-header-hight) + 0.25rem +
+          var(--comp-page-header-height) + 0.25rem +
           0.25rem
         );
       }

@@ -1,0 +1,31 @@
+@layer base {
+  body {
+    @apply flex
+      flex-col
+      touch-pan-x
+      touch-pan-y
+      touch-pinch-zoom
+      break-words
+      bg-background
+      font-vazirmatn
+      text-bodyMedium
+      text-onBackground
+      p-safe
+      min-h-dvh
+      max-w-screen-large
+    ;
+
+    /* padding-bottom: calc(
+        0.25rem
+      + var(--sys-bottom-navigation-bar-height) +
+      + 0.25rem
+      + var(--safe-area-inset-bottom)
+    ); */
+
+    /* @media (--expanded) {
+      & {
+        padding-right: var(--comp-navigation-drawer-width);
+      }
+    } */
+  }
+}
