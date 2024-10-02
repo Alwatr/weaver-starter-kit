@@ -20,4 +20,6 @@
 
 @import 'windstyle/color-palette/hct-260';
 
-@import './lib/layout.css';
+@import './layout/config.css';
+@import './layout/body.css';
+@import './layout/main-container.css';
