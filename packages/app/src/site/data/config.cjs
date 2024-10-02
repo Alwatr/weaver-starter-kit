@@ -8,7 +8,7 @@ function getLastCommitHash() {
 module.exports = {
   siteUrl: env.siteUrl ?? '',
 
-  siteName: 'Sample Site Name',
+  siteName: 'Weaver WebSite',
 
   theme: {
     light: '#e2eaf8',
