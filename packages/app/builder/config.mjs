@@ -15,12 +15,12 @@ import {generateServiceWorker} from './workbox.mjs';
  * @param {import("@11ty/eleventy").UserConfig} config
  * @returns {ReturnType<import("@11ty/eleventy/src/defaultConfig")>}
  */
-function _eleventyConfig(config) {
+function eleventyConfig_(config) {
   let templateConfig = this;
 
   config.addPassthroughCopy({
-    assets: '/',
-    'assets/img/meta/favicon.ico': '/favicon.ico',
+    asset: '/', // copy all content/asset/* folder to root of dist.
+    'asset/img/meta/favicon.ico': '/favicon.ico',
   });
 
   config.setServerOptions({
@@ -34,8 +34,7 @@ function _eleventyConfig(config) {
     domDiff: false,
   });
 
-  // FIXME: check content need to be watched or not?
-  config.additionalWatchTargets = ['./content', './ts', './css'];
+  // config.additionalWatchTargets = ['./content', './ts', './css'];
 
   // config.watchIgnores?.add('script');
 
@@ -146,4 +145,4 @@ function _eleventyConfig(config) {
   };
 }
 
-export const eleventyConfig = new TemplateConfig(_eleventyConfig);
+export const eleventyConfig = new TemplateConfig(eleventyConfig_);
