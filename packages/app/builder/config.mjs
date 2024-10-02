@@ -8,7 +8,7 @@ import directoryOutputPlugin from '@11ty/eleventy-plugin-directory-output';
 import {alwatrIcon} from './alwatr-icon.cjs';
 import EleventyRenderPlugin from '@11ty/eleventy/src/Plugins/RenderPlugin.js';
 import {generateServiceWorker} from './workbox.mjs';
-import { logger } from './logger.mjs';
+import {logger} from './logger.mjs';
 
 // https://github.com/11ty/eleventy/blob/v2.x/src/defaultConfig.js
 /**
@@ -99,8 +99,8 @@ function eleventyConfig_(config) {
   config.on('eleventy.after', postcssBuild);
   config.on('eleventy.after', generateServiceWorker);
 
-  config.addExtension('data.cjs', {key: '11ty.js'});
-
+  config.addExtension('template.cjs', {key: '11ty.js'});
+  config.setDataFileSuffixes(['.data']);
   config.setDataFileBaseName('index');
 
   // return root config.
@@ -129,7 +129,7 @@ function eleventyConfig_(config) {
 
     // Renamed from `jsDataFileSuffix` in 2.0 (and swapped to an Array)
     // If you remove "" we won’t look for dir/dir.json or file.json
-    dataFileSuffixes: ['.11tydata', ''],
+    dataFileSuffixes: ['.data'],
 
     // "index" will look for `directory/index.*` directory data files instead of `directory/directory.*`
     dataFileDirBaseNameOverride: true,

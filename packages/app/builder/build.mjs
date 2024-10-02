@@ -5,7 +5,7 @@ import {argv} from 'process';
 import {rm, mkdir, cp} from 'node:fs/promises';
 
 const srcDir = './src';
-const siteDir = `${srcDir}/content`;
+const siteDir = `${srcDir}/site/content`;
 const staticDir = './static';
 const distDir = './dist';
 
