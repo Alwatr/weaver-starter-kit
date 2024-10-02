@@ -1,3 +1,9 @@
+@layer base {
+  :root {
+    --comp-page-header-height: 4rem; /* h-16 */
+  }
+}
+
 @layer components {
   .page-header {
     @apply fixed
@@ -17,13 +23,28 @@
       select-none
     ;
 
-    padding-left: calc(0.25rem + var(--safe-area-inset-left));
-    padding-right: calc(0.25rem + var(--safe-area-inset-right));
+    padding-left: calc(
+      var(--safe-area-inset-left) +
+      0.25rem /* w-1 */
+    );
+    padding-right: calc(
+      var(--safe-area-inset-right) +
+      0.25rem /* w-1 */
+    );
 
     h1 {
       @apply shrink grow text-ellipsis px-1 pb-[2px];
     }
 
-    height: var(--comp-page-header-hight, 4rem); /* h-16 */
+    height: var(--comp-page-header-height);
+  }
+
+  body {
+    padding-top: calc(
+        var(--safe-area-inset-top)
+      + var(--comp-page-header-height)
+      + 0.25rem /* h-1 */
+      + 0.5rem /* h-2 */
+    );
   }
 }
