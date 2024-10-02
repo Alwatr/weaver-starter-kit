@@ -1,6 +1,0 @@
-{
-  "layout": "base-body",
-  "permalink": "{{ page.filePathStem }}.html",
-  "locale": "fa-IR",
-  "dir": "rtl"
-}
