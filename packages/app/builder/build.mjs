@@ -1,29 +1,34 @@
-import {join} from 'path';
 import eleventy from '@11ty/eleventy';
 import {logger} from './logger.mjs';
 import {eleventyConfig} from './config.mjs';
 import {argv} from 'process';
-import {copyFont} from './font.cjs';
+import {rm, mkdir, cp} from 'node:fs/promises';
 
-const rootDir = 'src/content';
-const outDir = 'dist';
+const srcDir = './src';
+const siteDir = `${srcDir}/content`;
+const staticDir = './static';
+const distDir = './dist';
 
 async function build({watchMode, debugMode}) {
   logger.logMethodArgs?.('build', {watchMode, debugMode});
 
-  logger.logOther?.('📋 Copying assets...');
-  const fontName = 'vazirmatn';
-  await copyFont(fontName, join(outDir, 'font', fontName));
+  // logger.logStep?.('build', '🧹 Cleaning up...');
+  // await rm(distDir, { recursive: true });
+  // await mkdir(distDir);
 
-  const output = new eleventy(rootDir, outDir, {}, eleventyConfig);
+  logger.logStep?.('build', '📋 Copying assets...');
+  await cp(staticDir, distDir, {recursive: true, preserveTimestamps: true, force: true});
+
+  logger.logStep?.('build', '🔨 Building Eleventy...');
+  const output = new eleventy(siteDir, distDir, {}, eleventyConfig);
 
   if (watchMode) {
-    logger.logOther?.('👀 Watching...');
+    logger.logStep?.('build', '👀 Watching...');
     output.watch();
   } else {
-    logger.logOther?.('🚀 Building...');
+    logger.logStep?.('build', '🚀 Building...');
     await output.write();
-    logger.logOther?.('✅ Done.');
+    logger.logStep?.('build', '✅ Done.');
   }
 }
 
