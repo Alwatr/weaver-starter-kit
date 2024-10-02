@@ -1,9 +1,9 @@
 class Sitemap {
   data() {
     return {
-      permalink: '/sitemap.xml',
-      eleventyExcludeFromCollections: true,
       layout: false,
+      permalink:' /error-404.html',
+      eleventyExcludeFromCollections: true,
     };
   }
 
