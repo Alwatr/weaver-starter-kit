@@ -1,11 +1,11 @@
 @layer base {
-  @custom-media --medium (min-width: 600px); // width >= 600px
-  @custom-media --expanded (min-width: 840px); // width >= 840px
-  @custom-media --large (min-width: 1200px); // width >= 1200px
-  @custom-media --xlarge (min-width: 1600px); // width >= 1600px
+  @custom-media --medium (min-width: 600px); /* width >= 600px */
+  @custom-media --expanded (min-width: 840px); /* width >= 840px */
+  @custom-media --large (min-width: 1200px); /* width >= 1200px */
+  @custom-media --xlarge (min-width: 1600px); /* width >= 1600px */
 
-  @custom-media --compact not all and (--medium); // width < 600px
-  @custom-media --below-extended not all and (--expanded); // width < 840px
-  @custom-media --below-large not all and (--large); // width < 1200px
-  @custom-media --below-xlarge not all and (--xlarge); // width < 1600px
+  @custom-media --compact not all and (--medium); /* width < 600px */
+  @custom-media --below-expanded not all and (--expanded); /* width < 840px */
+  @custom-media --below-large not all and (--large); /* width < 1200px */
+  @custom-media --below-xlarge not all and (--xlarge); /* width < 1600px */
 }
