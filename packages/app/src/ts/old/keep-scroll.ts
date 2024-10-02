@@ -1,7 +1,6 @@
-import {delay} from '@alwatr/delay';
-import {platformInfo} from '@alwatr/platform-info';
+import {delay, platformInfo} from 'alwatr/nanolib';
 
-import {logger} from './config.js';
+import {logger} from '../lib/config.js';
 
 logger.logFileModule?.('keep-scroll');
 

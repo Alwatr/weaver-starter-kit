@@ -1,8 +1,4 @@
-import {localJsonStorage} from '@alwatr/local-storage';
-import {createLogger} from '@alwatr/logger';
-import {packageTracer} from '@alwatr/package-tracer';
-
-import type {FetchOptions} from '@alwatr/flux';
+import {localJsonStorage, createLogger, packageTracer, type FetchOptions} from 'alwatr/nanolib';
 
 export const logger = createLogger(__package_name__);
 packageTracer.add(__package_name__, __package_version__);

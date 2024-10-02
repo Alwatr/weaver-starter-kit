@@ -1,4 +1,4 @@
-import {logger} from './config.js';
+import {logger} from '../lib/config.js';
 
 logger.logFileModule?.('lock-scroll');
 
