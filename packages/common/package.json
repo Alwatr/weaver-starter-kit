@@ -1,7 +1,7 @@
 {
   "name": "@alwatr/weaver-common",
-  "version": "1.6.2",
-  "baseVersion": "1.6.2",
+  "version": "2.0.0-alpha.0",
+  "baseVersion": "2.0.0",
   "description": "Weaver is a powerful and flexible framework designed to streamline the development of all websites and web applications within our organization.",
   "author": "S. Ali Mihandoost <ali.mihandoost@gmail.com>",
   "private": true,
