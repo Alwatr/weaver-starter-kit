@@ -9,6 +9,9 @@ if (process.env.NODE_ENV === 'production') {
   if (process.env.tokenGeneratorSecret == null) {
     throw new Error('tokenGeneratorSecret is required in production');
   }
+  if (process.env.dbPath == null) {
+    throw new Error('dbPath is required in production');
+  }
 }
 
 export const config = {
@@ -18,7 +21,7 @@ export const config = {
   },
 
   nitrobase: {
-    rootPath: './db',
+    rootPath: process.env.dbPath ?? './db',
     defaultChangeDebounce: 2_000, // for demo
   },
 
@@ -33,7 +36,7 @@ export const config = {
   nanotronApiServer: {
     host: process.env.host ?? '0.0.0.0',
     port: process.env.port !== undefined ? +process.env.port : 8000,
-    prefix: '/api/v0/',
+    prefix: '/api/',
     // allowAllOrigin: true,
   },
 } as const;

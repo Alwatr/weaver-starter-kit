@@ -20,7 +20,7 @@ services:
     environment:
       - NGINX_FORCE_DOMAIN=${appForceDomain:-}
       - NGINX_ACCESS_LOG=${appAccessLog:-off}
-      - NGINX_DISALLOW_ROBOTS=${appNginxDisallowRobots:-}
+      - NGINX_DISALLOW_ROBOTS=${appDisallowRobots:-}
 
     logging:
       driver: json-file
@@ -31,36 +31,7 @@ services:
     labels:
       traefik.enable: true
       traefik.port: 80
-      traefik.frontend.rule: Host:${domain}; PathPrefix:/;
-      traefik.frontend.entryPoints: http, https
-      traefik.frontend.redirect.entryPoint: https
-
-  admin:
-    image: $adminImage
-
-    cpu_count: 1
-    cpu_shares: 1024
-    mem_limit: 256m
-
-    restart: unless-stopped
-
-    networks:
-      alwatr-public-network:
-
-    environment:
-      - NGINX_FORCE_DOMAIN=${adminForceDomain:-}
-      - NGINX_ACCESS_LOG=${adminAccessLog:-off}
-
-    logging:
-      driver: json-file
-      options:
-        max-size: '10m'
-        max-file: '2'
-
-    labels:
-      traefik.enable: true
-      traefik.port: 80
-      traefik.frontend.rule: Host:${adminDomain}; PathPrefix:/;
+      traefik.frontend.rule: Host:${appDomains}; PathPrefix:/;
       traefik.frontend.entryPoints: http, https
       traefik.frontend.redirect.entryPoint: https
 
@@ -79,26 +50,20 @@ services:
       alwatr-public-network:
 
     environment:
-      - storagePath=/data
-      - uploadPath=/upload
+      - dbPath=/data/db
+      - uploadPath=/cdn
       - tokenGeneratorSecret=${tokenGeneratorSecret}
-      - smsNotifierApiKey=${smsNotifierApiKey}
-      - adminPhoneNumberList=${adminPhoneNumberList}
-      - disableSmsNotification=${disableSmsNotification:-}
-      - allowAllOrigin=${allowAllOrigin:-}
       - DEBUG=${apiDebug:-}
-      - ALWATR_DEBUG=${apiDebug:-}
-      - initialMode=0
 
     volumes:
       - type: bind
-        source: ./_data/data
-        target: /data
+        source: ./_data/db
+        target: /db
         bind:
           create_host_path: true
       - type: bind
         source: ./_data/cdn/
-        target: /upload
+        target: /cdn
         bind:
           create_host_path: true
 
@@ -111,12 +76,12 @@ services:
     labels:
       traefik.enable: true
       traefik.port: 80
-      traefik.frontend.rule: Host:${domain},${adminDomain}; PathPrefix:/api/v2/;
+      traefik.frontend.rule: Host:${appDomains}; PathPrefix:/api/v1/;
       traefik.frontend.entryPoints: http, https
       traefik.frontend.redirect.entryPoint: https
 
-  cdn:
-    image: $cdnImage
+  db:
+    image: ghcr.io/alwatr/nitrobase-nginx:7.2
 
     cpu_count: 1
     cpu_shares: 1024
@@ -128,9 +93,43 @@ services:
       alwatr-public-network:
 
     environment:
-      - NGINX_FORCE_DOMAIN=${cdnForceDomain:-}
+      - NGINX_DOCUMENT_ROOT=/db
+      - NGINX_ACCESS_LOG=${dbAccessLog:-off}
+
+    volumes:
+      - type: bind
+        source: ./_data/db
+        target: /db
+        bind:
+          create_host_path: true
+
+    logging:
+      driver: json-file
+      options:
+        max-size: '10m'
+        max-file: '2'
+
+    labels:
+      traefik.enable: true
+      traefik.port: 80
+      traefik.frontend.rule: Host:${appDomains}; PathPrefix:/api/s7/;
+      traefik.frontend.entryPoints: http, https
+      traefik.frontend.redirect.entryPoint: https
+
+  cdn:
+    image: ghcr.io/alwatr/nginx-cdn:2.5.0
+
+    cpu_count: 1
+    cpu_shares: 1024
+    mem_limit: 256m
+
+    restart: unless-stopped
+
+    networks:
+      alwatr-public-network:
+
+    environment:
       - NGINX_ACCESS_LOG=${cdnAccessLog:-off}
-      - NGINX_DISALLOW_ROBOTS=${cdnNginxDisallowRobots:-}
 
     volumes:
       - type: bind
@@ -148,41 +147,6 @@ services:
     labels:
       traefik.enable: true
       traefik.port: 80
-      traefik.frontend.rule: Host:${domain},${adminDomain}; PathPrefix:/cdn/;
-      traefik.frontend.entryPoints: http, https
-      traefik.frontend.redirect.entryPoint: https
-
-  store-nginx:
-    image: ghcr.io/alwatr/store-nginx:7.1.0
-
-    cpu_count: 1
-    cpu_shares: 1024
-    mem_limit: 256m
-
-    restart: unless-stopped
-
-    networks:
-      alwatr-public-network:
-
-    environment:
-      - NGINX_ACCESS_LOG=${nginxStorageAccessLog:-off}
-
-    volumes:
-      - type: bind
-        source: ./_data/data
-        target: /data
-        bind:
-          create_host_path: true
-
-    logging:
-      driver: json-file
-      options:
-        max-size: '10m'
-        max-file: '2'
-
-    labels:
-      traefik.enable: true
-      traefik.port: 80
-      traefik.frontend.rule: Host:${domain},${adminDomain}; PathPrefix:/api/s6/;
+      traefik.frontend.rule: Host:${appDomains}; PathPrefix:/cdn/;
       traefik.frontend.entryPoints: http, https
       traefik.frontend.redirect.entryPoint: https

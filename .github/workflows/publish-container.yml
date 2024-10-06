@@ -40,9 +40,6 @@ jobs:
           - name: weaver-api
             path: ./packages/api
             context: .
-          - name: weaver-admin
-            path: ./packages/admin
-            context: .
 
     permissions:
       contents: read
