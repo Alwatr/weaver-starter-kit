@@ -71,19 +71,6 @@ updates:
       - maintenance
 
   - package-ecosystem: docker
-    directory: /packages/admin
-    reviewers:
-      - AliMD
-    schedule:
-      interval: weekly
-      time: '10:30'
-      day: thursday
-    labels:
-      - ci
-      - priority-low
-      - maintenance
-
-  - package-ecosystem: docker
     directory: /packages/api
     reviewers:
       - AliMD
