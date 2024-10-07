@@ -369,6 +369,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@alwatr/gemini-service@workspace:packages/gemini-service":
+  version: 0.0.0-use.local
+  resolution: "@alwatr/gemini-service@workspace:packages/gemini-service"
+  dependencies:
+    "@alwatr/nano-build": "npm:^1.4.0"
+    "@alwatr/prettier-config": "npm:^1.0.5"
+    "@alwatr/tsconfig-base": "npm:^1.3.0"
+    "@alwatr/type-helper": "npm:^2.0.0"
+    "@alwatr/weaver-common": "workspace:^"
+    "@google/generative-ai": "npm:^0.21.0"
+    "@types/node": "npm:^22.7.4"
+    alwatr: "workspace:^"
+    typescript: "npm:^5.6.2"
+  languageName: unknown
+  linkType: soft
+
 "@alwatr/global-scope@npm:^1.1.21, @alwatr/global-scope@npm:^1.1.22":
   version: 1.1.22
   resolution: "@alwatr/global-scope@npm:1.1.22"
@@ -2821,6 +2837,13 @@ __metadata:
   version: 8.57.1
   resolution: "@eslint/js@npm:8.57.1"
   checksum: 10c0/b489c474a3b5b54381c62e82b3f7f65f4b8a5eaaed126546520bf2fede5532a8ed53212919fed1e9048dcf7f37167c8561d58d0ba4492a4244004e7793805223
+  languageName: node
+  linkType: hard
+
+"@google/generative-ai@npm:^0.21.0":
+  version: 0.21.0
+  resolution: "@google/generative-ai@npm:0.21.0"
+  checksum: 10c0/cff5946c5964f2380e5097d82bd563d79be27a1a5ac604aaaad3f9ba3382992e4f0a371bd255baabfba4e5bdf296d8ce1410cbd65424afa98e64b2590fe49f3b
   languageName: node
   linkType: hard
 
