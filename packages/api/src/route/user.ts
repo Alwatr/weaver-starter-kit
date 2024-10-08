@@ -4,8 +4,6 @@ import {alwatrNitrobase} from '../lib/nitrobase.js';
 import {nanotronApiServer} from '../lib/server.js';
 import {parseBodyAsJson} from '../pre-handler/parse-request-body.js';
 
-import type {UserFormData} from '@alwatr/swiss-plus-support-common';
-
 nanotronApiServer.defineRoute<{body: UserFormData}>({
   method: 'PUT',
   url: '/save-user',

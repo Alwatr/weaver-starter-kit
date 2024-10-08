@@ -1,5 +1,5 @@
 {
-  "name": "@alwatr/weaver-common",
+  "name": "common",
   "version": "2.0.0-alpha.0",
   "baseVersion": "2.0.0",
   "description": "Weaver is a powerful and flexible framework designed to streamline the development of all websites and web applications within our organization.",
