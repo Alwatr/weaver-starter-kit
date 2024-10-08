@@ -1,7 +1,8 @@
-FROM ghcr.io/alwatr/node:21.7.1 AS builder
+FROM ghcr.io/alwatr/node:22.9.0 AS builder
 
-RUN set -ex; apk add --no-cache git
-RUN set -ex; corepack enable;
+RUN set -ex; \
+  apk add --no-cache git; \
+  corepack enable;
 
 COPY . .
 
@@ -13,10 +14,13 @@ RUN set -eux; \
 
 # ---
 
-FROM ghcr.io/alwatr/node:21.7.1
-LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/node:21.7.1"
+FROM ghcr.io/alwatr/node:22.9.0
+LABEL org.opencontainers.image.base.name="ghcr.io/alwatr/node:22.9.0"
 
 COPY --from=builder /app/packages/api/dist/ .
+# RUN set -ex; \
+#   corepack enable; \
+#   npm install sharp;
 # RUN set -eux; ls -RlahF /app;
 
 # ENV NODE_OPTIONS --enable-source-maps
@@ -26,4 +30,3 @@ ENV host="0.0.0.0" \
 EXPOSE 80
 
 CMD ["node", "main.mjs"]
-
