@@ -497,7 +497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/node-fs@npm:^1.0.13, @alwatr/node-fs@npm:^1.1.0":
+"@alwatr/node-fs@npm:^1.0.13":
   version: 1.1.0
   resolution: "@alwatr/node-fs@npm:1.1.0"
   dependencies:
@@ -612,74 +612,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/swiss-plus-support-api@workspace:packages/api":
-  version: 0.0.0-use.local
-  resolution: "@alwatr/swiss-plus-support-api@workspace:packages/api"
-  dependencies:
-    "@alwatr/nano-build": "npm:^1.4.0"
-    "@alwatr/node-fs": "npm:^1.1.0"
-    "@alwatr/prettier-config": "npm:^1.0.5"
-    "@alwatr/swiss-plus-support-common": "workspace:^"
-    "@alwatr/tsconfig-base": "npm:^1.3.0"
-    "@alwatr/type-helper": "npm:^2.0.0"
-    "@types/node": "npm:^22.7.4"
-    alwatr: "workspace:^"
-    sharp: "npm:^0.33.5"
-    typescript: "npm:^5.6.2"
-  languageName: unknown
-  linkType: soft
-
-"@alwatr/swiss-plus-support-app@workspace:packages/app":
-  version: 0.0.0-use.local
-  resolution: "@alwatr/swiss-plus-support-app@workspace:packages/app"
-  dependencies:
-    "@11ty/eleventy": "npm:^2.0.1"
-    "@11ty/eleventy-plugin-directory-output": "npm:^1.0.1"
-    "@11ty/eleventy-plugin-rss": "npm:^2.0.2"
-    "@alwatr/icon-set-extra": "npm:^0.4.0"
-    "@alwatr/icon-set-material": "npm:^2.0.1"
-    "@alwatr/nano-build": "npm:^1.4.0"
-    "@alwatr/prettier-config": "npm:^1.0.5"
-    "@alwatr/swiss-plus-support-common": "workspace:^"
-    "@alwatr/tsconfig-base": "npm:^1.3.0"
-    "@alwatr/type-helper": "npm:^2.0.0"
-    "@alwatr/windstyle": "workspace:^"
-    "@swc/html": "npm:^1.7.28"
-    "@types/cleave.js": "npm:^1.4.12"
-    "@types/node": "npm:^22.7.4"
-    "@web/dev-server": "npm:^0.4.6"
-    alwatr: "workspace:^"
-    cleave.js: "npm:^1.6.0"
-    cssnano: "npm:^7.0.6"
-    lit: "npm:^3.2.0"
-    postcss: "npm:^8.4.47"
-    postcss-custom-media: "npm:^11.0.2"
-    postcss-import: "npm:^16.1.0"
-    postcss-preset-env: "npm:^10.0.6"
-    postcss-variable-compress: "npm:^3.0.0"
-    postcss-viewport-unit-fallback: "npm:^1.0.1"
-    tailwindcss: "npm:^3.4.13"
-    typescript: "npm:^5.6.2"
-    workbox-build: "npm:^7.1.1"
-  languageName: unknown
-  linkType: soft
-
-"@alwatr/swiss-plus-support-common@workspace:^, @alwatr/swiss-plus-support-common@workspace:packages/common":
-  version: 0.0.0-use.local
-  resolution: "@alwatr/swiss-plus-support-common@workspace:packages/common"
-  dependencies:
-    "@alwatr/logger": "npm:^4.0.0"
-    "@alwatr/nano-build": "npm:^1.4.0"
-    "@alwatr/package-tracer": "npm:^1.0.0"
-    "@alwatr/prettier-config": "npm:^1.0.5"
-    "@alwatr/tsconfig-base": "npm:^1.3.0"
-    "@alwatr/type-helper": "npm:^2.0.0"
-    "@types/node": "npm:^22.7.4"
-    lit: "npm:^3.2.0"
-    typescript: "npm:^5.6.2"
-  languageName: unknown
-  linkType: soft
-
 "@alwatr/tsconfig-base@npm:^1.3.0":
   version: 1.3.0
   resolution: "@alwatr/tsconfig-base@npm:1.3.0"
@@ -720,32 +652,6 @@ __metadata:
   checksum: 10c0/3ac3af8b6c913a1f0414bc8893ac3ba0175a6e4e2732395a8f2ee263d3a2f65bb22bcfef78d57b611d00be0d75b9cf535ebf854c99db25b51cfd47e9d41e9b23
   languageName: node
   linkType: hard
-
-"@alwatr/weaver-monorepo@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@alwatr/weaver-monorepo@workspace:."
-  dependencies:
-    "@alwatr/eslint-config": "npm:^1.2.8"
-    "@alwatr/prettier-config": "npm:^1.0.5"
-    "@alwatr/tsconfig-base": "npm:^1.3.0"
-    "@lerna-lite/changed": "npm:^3.9.2"
-    "@lerna-lite/cli": "npm:^3.9.2"
-    "@lerna-lite/diff": "npm:^3.9.2"
-    "@lerna-lite/exec": "npm:^3.9.2"
-    "@lerna-lite/publish": "npm:^3.9.2"
-    "@lerna-lite/run": "npm:^3.9.2"
-    "@lerna-lite/version": "npm:^3.9.2"
-    "@typescript-eslint/eslint-plugin": "npm:^7.17.0"
-    "@typescript-eslint/parser": "npm:^7.17.0"
-    conventional-changelog-conventionalcommits: "npm:^7.0.2"
-    eslint: "npm:^8.57.0"
-    eslint-import-resolver-typescript: "npm:^3.6.3"
-    eslint-plugin-import: "npm:^2.31.0"
-    eslint-plugin-require-extensions: "npm:^0.1.3"
-    prettier: "npm:^3.3.3"
-    typescript: "npm:^5.6.2"
-  languageName: unknown
-  linkType: soft
 
 "@alwatr/windstyle@workspace:^, @alwatr/windstyle@workspace:packages/windstyle":
   version: 0.0.0-use.local
@@ -2582,15 +2488,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emnapi/runtime@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@emnapi/runtime@npm:1.2.0"
-  dependencies:
-    tslib: "npm:^2.4.0"
-  checksum: 10c0/7005ff8b67724c9e61b6cd79a3decbdb2ce25d24abd4d3d187472f200ee6e573329c30264335125fb136bd813aa9cf9f4f7c9391d04b07dd1e63ce0a3427be57
-  languageName: node
-  linkType: hard
-
 "@esbuild/aix-ppc64@npm:0.24.0":
   version: 0.24.0
   resolution: "@esbuild/aix-ppc64@npm:0.24.0"
@@ -2837,181 +2734,6 @@ __metadata:
   version: 2.2.5
   resolution: "@iarna/toml@npm:2.2.5"
   checksum: 10c0/d095381ad4554aca233b7cf5a91f243ef619e5e15efd3157bc640feac320545450d14b394aebbf6f02a2047437ced778ae598d5879a995441ab7b6c0b2c2f201
-  languageName: node
-  linkType: hard
-
-"@img/sharp-darwin-arm64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-darwin-arm64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-darwin-arm64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-darwin-arm64":
-      optional: true
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-darwin-x64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-darwin-x64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-darwin-x64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-darwin-x64":
-      optional: true
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-darwin-arm64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-darwin-arm64@npm:1.0.4"
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-darwin-x64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-darwin-x64@npm:1.0.4"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-arm64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linux-arm64@npm:1.0.4"
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-arm@npm:1.0.5":
-  version: 1.0.5
-  resolution: "@img/sharp-libvips-linux-arm@npm:1.0.5"
-  conditions: os=linux & cpu=arm & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-s390x@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linux-s390x@npm:1.0.4"
-  conditions: os=linux & cpu=s390x & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linux-x64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linux-x64@npm:1.0.4"
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linuxmusl-arm64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linuxmusl-arm64@npm:1.0.4"
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-libvips-linuxmusl-x64@npm:1.0.4":
-  version: 1.0.4
-  resolution: "@img/sharp-libvips-linuxmusl-x64@npm:1.0.4"
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-arm64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linux-arm64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linux-arm64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-arm64":
-      optional: true
-  conditions: os=linux & cpu=arm64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-arm@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linux-arm@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linux-arm": "npm:1.0.5"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-arm":
-      optional: true
-  conditions: os=linux & cpu=arm & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-s390x@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linux-s390x@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linux-s390x": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-s390x":
-      optional: true
-  conditions: os=linux & cpu=s390x & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linux-x64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linux-x64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linux-x64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-linux-x64":
-      optional: true
-  conditions: os=linux & cpu=x64 & libc=glibc
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linuxmusl-arm64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linuxmusl-arm64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linuxmusl-arm64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-linuxmusl-arm64":
-      optional: true
-  conditions: os=linux & cpu=arm64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-linuxmusl-x64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-linuxmusl-x64@npm:0.33.5"
-  dependencies:
-    "@img/sharp-libvips-linuxmusl-x64": "npm:1.0.4"
-  dependenciesMeta:
-    "@img/sharp-libvips-linuxmusl-x64":
-      optional: true
-  conditions: os=linux & cpu=x64 & libc=musl
-  languageName: node
-  linkType: hard
-
-"@img/sharp-wasm32@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-wasm32@npm:0.33.5"
-  dependencies:
-    "@emnapi/runtime": "npm:^1.2.0"
-  conditions: cpu=wasm32
-  languageName: node
-  linkType: hard
-
-"@img/sharp-win32-ia32@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-win32-ia32@npm:0.33.5"
-  conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
-"@img/sharp-win32-x64@npm:0.33.5":
-  version: 0.33.5
-  resolution: "@img/sharp-win32-x64@npm:0.33.5"
-  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -4278,15 +4000,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cleave.js@npm:^1.4.12":
-  version: 1.4.12
-  resolution: "@types/cleave.js@npm:1.4.12"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10c0/2ce13a6a17361bd66286ff27484f6a9972099321ab536b5f9cc96f83780e8d69e7054fd41b85218e68676d5a6cac2d1a9af0ac8b669e5627a09251ccd0c83683
-  languageName: node
-  linkType: hard
-
 "@types/command-line-args@npm:^5.0.0":
   version: 5.2.3
   resolution: "@types/command-line-args@npm:5.2.3"
@@ -4466,13 +4179,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*":
-  version: 15.7.13
-  resolution: "@types/prop-types@npm:15.7.13"
-  checksum: 10c0/1b20fc67281902c6743379960247bc161f3f0406ffc0df8e7058745a85ea1538612109db0406290512947f9632fe9e10e7337bf0ce6338a91d6c948df16a7c61
-  languageName: node
-  linkType: hard
-
 "@types/qs@npm:*":
   version: 6.9.10
   resolution: "@types/qs@npm:6.9.10"
@@ -4484,16 +4190,6 @@ __metadata:
   version: 1.2.7
   resolution: "@types/range-parser@npm:1.2.7"
   checksum: 10c0/361bb3e964ec5133fa40644a0b942279ed5df1949f21321d77de79f48b728d39253e5ce0408c9c17e4e0fd95ca7899da36841686393b9f7a1e209916e9381a3c
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:*":
-  version: 18.3.11
-  resolution: "@types/react@npm:18.3.11"
-  dependencies:
-    "@types/prop-types": "npm:*"
-    csstype: "npm:^3.0.2"
-  checksum: 10c0/ce80512246ca5bda69db85b9f4f1835189334acfb6b2c4f3eda8cabff1ff1a3ea9ce4f3b895bdbc18c94140aa45592331aa3fdeb557f525c1b048de7ce84fc0e
   languageName: node
   linkType: hard
 
@@ -4955,6 +4651,54 @@ __metadata:
   checksum: 10c0/57b06ae984bc32a0d22592c87384cd88fe4511b1dd7581497831c56d41939c8a001b28e7b853e1450f2bf61992dfcaa8ae2d0d161a0a90c4fb631ef07098fbac
   languageName: node
   linkType: hard
+
+"api@workspace:packages/api":
+  version: 0.0.0-use.local
+  resolution: "api@workspace:packages/api"
+  dependencies:
+    "@alwatr/nano-build": "npm:^1.4.0"
+    "@alwatr/prettier-config": "npm:^1.0.5"
+    "@alwatr/tsconfig-base": "npm:^1.3.0"
+    "@alwatr/type-helper": "npm:^2.0.0"
+    "@types/node": "npm:^22.7.4"
+    alwatr: "workspace:^"
+    common: "workspace:^"
+    typescript: "npm:^5.6.2"
+  languageName: unknown
+  linkType: soft
+
+"app@workspace:packages/app":
+  version: 0.0.0-use.local
+  resolution: "app@workspace:packages/app"
+  dependencies:
+    "@11ty/eleventy": "npm:^2.0.1"
+    "@11ty/eleventy-plugin-directory-output": "npm:^1.0.1"
+    "@11ty/eleventy-plugin-rss": "npm:^2.0.2"
+    "@alwatr/icon-set-extra": "npm:^0.4.0"
+    "@alwatr/icon-set-material": "npm:^2.0.1"
+    "@alwatr/nano-build": "npm:^1.4.0"
+    "@alwatr/prettier-config": "npm:^1.0.5"
+    "@alwatr/tsconfig-base": "npm:^1.3.0"
+    "@alwatr/type-helper": "npm:^2.0.0"
+    "@alwatr/windstyle": "workspace:^"
+    "@swc/html": "npm:^1.7.28"
+    "@types/node": "npm:^22.7.4"
+    "@web/dev-server": "npm:^0.4.6"
+    alwatr: "workspace:^"
+    common: "workspace:^"
+    cssnano: "npm:^7.0.6"
+    lit: "npm:^3.2.0"
+    postcss: "npm:^8.4.47"
+    postcss-custom-media: "npm:^11.0.2"
+    postcss-import: "npm:^16.1.0"
+    postcss-preset-env: "npm:^10.0.6"
+    postcss-variable-compress: "npm:^3.0.0"
+    postcss-viewport-unit-fallback: "npm:^1.0.1"
+    tailwindcss: "npm:^3.4.13"
+    typescript: "npm:^5.6.2"
+    workbox-build: "npm:^7.1.1"
+  languageName: unknown
+  linkType: soft
 
 "aproba@npm:^2.0.0":
   version: 2.0.0
@@ -5559,13 +5303,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cleave.js@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "cleave.js@npm:1.6.0"
-  checksum: 10c0/4fcaa838d75c3f8b4fcec737af2a6118e0bd227fe80eaaf6d639d62551be7046db062ee5b26b9327b666ab5ce96f2e2708249e9ae75bd6af7f6536887eb84b53
-  languageName: node
-  linkType: hard
-
 "cli-width@npm:^4.1.0":
   version: 4.1.0
   resolution: "cli-width@npm:4.1.0"
@@ -5648,20 +5385,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-name@npm:^1.0.0, color-name@npm:~1.1.4":
+"color-name@npm:~1.1.4":
   version: 1.1.4
   resolution: "color-name@npm:1.1.4"
   checksum: 10c0/a1a3f914156960902f46f7f56bc62effc6c94e84b2cae157a526b1c1f74b677a47ec602bf68a61abfa2b42d15b7c5651c6dbe72a43af720bc588dff885b10f95
-  languageName: node
-  linkType: hard
-
-"color-string@npm:^1.9.0":
-  version: 1.9.1
-  resolution: "color-string@npm:1.9.1"
-  dependencies:
-    color-name: "npm:^1.0.0"
-    simple-swizzle: "npm:^0.2.2"
-  checksum: 10c0/b0bfd74c03b1f837f543898b512f5ea353f71630ccdd0d66f83028d1f0924a7d4272deb278b9aef376cacf1289b522ac3fb175e99895283645a2dc3a33af2404
   languageName: node
   linkType: hard
 
@@ -5671,16 +5398,6 @@ __metadata:
   bin:
     color-support: bin.js
   checksum: 10c0/8ffeaa270a784dc382f62d9be0a98581db43e11eee301af14734a6d089bd456478b1a8b3e7db7ca7dc5b18a75f828f775c44074020b51c05fc00e6d0992b1cc6
-  languageName: node
-  linkType: hard
-
-"color@npm:^4.2.3":
-  version: 4.2.3
-  resolution: "color@npm:4.2.3"
-  dependencies:
-    color-convert: "npm:^2.0.1"
-    color-string: "npm:^1.9.0"
-  checksum: 10c0/7fbe7cfb811054c808349de19fb380252e5e34e61d7d168ec3353e9e9aacb1802674bddc657682e4e9730c2786592a4de6f8283e7e0d3870b829bb0b7b2f6118
   languageName: node
   linkType: hard
 
@@ -5773,6 +5490,22 @@ __metadata:
   checksum: 10c0/23efe47ff0a1a7c91489271b3a1e1d2a171c12ec7f9b35b29b2fce51270124aff0ec890087e2bc2182c1cb746e232ab7561aaafe05f1e7452aea733d2bfe3f63
   languageName: node
   linkType: hard
+
+"common@workspace:^, common@workspace:packages/common":
+  version: 0.0.0-use.local
+  resolution: "common@workspace:packages/common"
+  dependencies:
+    "@alwatr/logger": "npm:^4.0.0"
+    "@alwatr/nano-build": "npm:^1.4.0"
+    "@alwatr/package-tracer": "npm:^1.0.0"
+    "@alwatr/prettier-config": "npm:^1.0.5"
+    "@alwatr/tsconfig-base": "npm:^1.3.0"
+    "@alwatr/type-helper": "npm:^2.0.0"
+    "@types/node": "npm:^22.7.4"
+    lit: "npm:^3.2.0"
+    typescript: "npm:^5.6.2"
+  languageName: unknown
+  linkType: soft
 
 "compare-func@npm:^2.0.0":
   version: 2.0.0
@@ -6159,13 +5892,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2":
-  version: 3.1.3
-  resolution: "csstype@npm:3.1.3"
-  checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
-  languageName: node
-  linkType: hard
-
 "dargs@npm:^8.0.0":
   version: 8.1.0
   resolution: "dargs@npm:8.1.0"
@@ -6376,13 +6102,6 @@ __metadata:
   version: 7.0.1
   resolution: "detect-indent@npm:7.0.1"
   checksum: 10c0/47b6e3e3dda603c386e73b129f3e84844ae59bc2615f5072becf3cc02eab400bed5a4e6379c49d0b18cf630e80c2b07e87e0038b777addbc6ef793ad77dd05bc
-  languageName: node
-  linkType: hard
-
-"detect-libc@npm:^2.0.3":
-  version: 2.0.3
-  resolution: "detect-libc@npm:2.0.3"
-  checksum: 10c0/88095bda8f90220c95f162bf92cad70bd0e424913e655c20578600e35b91edc261af27531cf160a331e185c0ced93944bc7e09939143225f56312d7fd800fdb7
   languageName: node
   linkType: hard
 
@@ -8149,13 +7868,6 @@ __metadata:
   version: 0.2.1
   resolution: "is-arrayish@npm:0.2.1"
   checksum: 10c0/e7fb686a739068bb70f860b39b67afc62acc62e36bb61c5f965768abce1873b379c563e61dd2adad96ebb7edf6651111b385e490cf508378959b0ed4cac4e729
-  languageName: node
-  linkType: hard
-
-"is-arrayish@npm:^0.3.1":
-  version: 0.3.2
-  resolution: "is-arrayish@npm:0.3.2"
-  checksum: 10c0/f59b43dc1d129edb6f0e282595e56477f98c40278a2acdc8b0a5c57097c9eff8fe55470493df5775478cf32a4dc8eaf6d3a749f07ceee5bc263a78b2434f6a54
   languageName: node
   linkType: hard
 
@@ -11933,75 +11645,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sharp@npm:^0.33.5":
-  version: 0.33.5
-  resolution: "sharp@npm:0.33.5"
-  dependencies:
-    "@img/sharp-darwin-arm64": "npm:0.33.5"
-    "@img/sharp-darwin-x64": "npm:0.33.5"
-    "@img/sharp-libvips-darwin-arm64": "npm:1.0.4"
-    "@img/sharp-libvips-darwin-x64": "npm:1.0.4"
-    "@img/sharp-libvips-linux-arm": "npm:1.0.5"
-    "@img/sharp-libvips-linux-arm64": "npm:1.0.4"
-    "@img/sharp-libvips-linux-s390x": "npm:1.0.4"
-    "@img/sharp-libvips-linux-x64": "npm:1.0.4"
-    "@img/sharp-libvips-linuxmusl-arm64": "npm:1.0.4"
-    "@img/sharp-libvips-linuxmusl-x64": "npm:1.0.4"
-    "@img/sharp-linux-arm": "npm:0.33.5"
-    "@img/sharp-linux-arm64": "npm:0.33.5"
-    "@img/sharp-linux-s390x": "npm:0.33.5"
-    "@img/sharp-linux-x64": "npm:0.33.5"
-    "@img/sharp-linuxmusl-arm64": "npm:0.33.5"
-    "@img/sharp-linuxmusl-x64": "npm:0.33.5"
-    "@img/sharp-wasm32": "npm:0.33.5"
-    "@img/sharp-win32-ia32": "npm:0.33.5"
-    "@img/sharp-win32-x64": "npm:0.33.5"
-    color: "npm:^4.2.3"
-    detect-libc: "npm:^2.0.3"
-    semver: "npm:^7.6.3"
-  dependenciesMeta:
-    "@img/sharp-darwin-arm64":
-      optional: true
-    "@img/sharp-darwin-x64":
-      optional: true
-    "@img/sharp-libvips-darwin-arm64":
-      optional: true
-    "@img/sharp-libvips-darwin-x64":
-      optional: true
-    "@img/sharp-libvips-linux-arm":
-      optional: true
-    "@img/sharp-libvips-linux-arm64":
-      optional: true
-    "@img/sharp-libvips-linux-s390x":
-      optional: true
-    "@img/sharp-libvips-linux-x64":
-      optional: true
-    "@img/sharp-libvips-linuxmusl-arm64":
-      optional: true
-    "@img/sharp-libvips-linuxmusl-x64":
-      optional: true
-    "@img/sharp-linux-arm":
-      optional: true
-    "@img/sharp-linux-arm64":
-      optional: true
-    "@img/sharp-linux-s390x":
-      optional: true
-    "@img/sharp-linux-x64":
-      optional: true
-    "@img/sharp-linuxmusl-arm64":
-      optional: true
-    "@img/sharp-linuxmusl-x64":
-      optional: true
-    "@img/sharp-wasm32":
-      optional: true
-    "@img/sharp-win32-ia32":
-      optional: true
-    "@img/sharp-win32-x64":
-      optional: true
-  checksum: 10c0/6b81421ddfe6ee524d8d77e325c5e147fef22884e1c7b1656dfd89a88d7025894115da02d5f984261bf2e6daa16f98cadd1721c4ba408b4212b1d2a60f233484
-  languageName: node
-  linkType: hard
-
 "shebang-command@npm:^2.0.0":
   version: 2.0.0
   resolution: "shebang-command@npm:2.0.0"
@@ -12055,15 +11698,6 @@ __metadata:
     "@sigstore/tuf": "npm:^2.3.4"
     "@sigstore/verify": "npm:^1.2.1"
   checksum: 10c0/8906b1074130d430d707e46f15c66eb6996891dc0d068705f1884fb1251a4a367f437267d44102cdebcee34f1768b3f30131a2ec8fb7aac74ba250903a459aa7
-  languageName: node
-  linkType: hard
-
-"simple-swizzle@npm:^0.2.2":
-  version: 0.2.2
-  resolution: "simple-swizzle@npm:0.2.2"
-  dependencies:
-    is-arrayish: "npm:^0.3.1"
-  checksum: 10c0/df5e4662a8c750bdba69af4e8263c5d96fe4cd0f9fe4bdfa3cbdeb45d2e869dff640beaaeb1ef0e99db4d8d2ec92f85508c269f50c972174851bc1ae5bd64308
   languageName: node
   linkType: hard
 
@@ -12751,7 +12385,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.4.0, tslib@npm:^2.6.2":
+"tslib@npm:^2.6.2":
   version: 2.7.0
   resolution: "tslib@npm:2.7.0"
   checksum: 10c0/469e1d5bf1af585742128827000711efa61010b699cb040ab1800bcd3ccdd37f63ec30642c9e07c4439c1db6e46345582614275daca3e0f4abae29b0083f04a6
@@ -13143,6 +12777,32 @@ __metadata:
   checksum: 10c0/5b61ca583a95e2dd85d7078400190efd452e05751a64accb8c06ce4db65d7e0b0cde9917d705e826a2e05cc2548f61efde115ffa374c3e436d04be45c889e5b4
   languageName: node
   linkType: hard
+
+"weaver-kit-monorepo@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "weaver-kit-monorepo@workspace:."
+  dependencies:
+    "@alwatr/eslint-config": "npm:^1.2.8"
+    "@alwatr/prettier-config": "npm:^1.0.5"
+    "@alwatr/tsconfig-base": "npm:^1.3.0"
+    "@lerna-lite/changed": "npm:^3.9.2"
+    "@lerna-lite/cli": "npm:^3.9.2"
+    "@lerna-lite/diff": "npm:^3.9.2"
+    "@lerna-lite/exec": "npm:^3.9.2"
+    "@lerna-lite/publish": "npm:^3.9.2"
+    "@lerna-lite/run": "npm:^3.9.2"
+    "@lerna-lite/version": "npm:^3.9.2"
+    "@typescript-eslint/eslint-plugin": "npm:^7.17.0"
+    "@typescript-eslint/parser": "npm:^7.17.0"
+    conventional-changelog-conventionalcommits: "npm:^7.0.2"
+    eslint: "npm:^8.57.0"
+    eslint-import-resolver-typescript: "npm:^3.6.3"
+    eslint-plugin-import: "npm:^2.31.0"
+    eslint-plugin-require-extensions: "npm:^0.1.3"
+    prettier: "npm:^3.3.3"
+    typescript: "npm:^5.6.2"
+  languageName: unknown
+  linkType: soft
 
 "web-streams-polyfill@npm:^3.0.3":
   version: 3.3.3
