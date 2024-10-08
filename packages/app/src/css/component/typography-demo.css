@@ -1,0 +1,14 @@
+@layer components {
+  .typography-demo {
+    @apply flex mx-auto;
+
+    &>div {
+      @apply basis-1/2;
+    }
+
+    p {
+      @apply mt-4 border-y border-outline border-opacity-15;
+    }
+
+  }
+}
