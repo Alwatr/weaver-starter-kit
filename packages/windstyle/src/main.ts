@@ -1,5 +1,5 @@
 export * from './theme/animation.js';
-export * from './theme/color-scheme.js';
+export * from './plugin/material-color.js';
 export * from './theme/screen.js';
 export * from './theme/typography.js';
 export * from './theme/z-index.js';
