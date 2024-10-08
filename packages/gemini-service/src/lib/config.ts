@@ -27,7 +27,7 @@ export const config = {
   googleGenerativeAI: {
     // finalUrl: https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=YOUR_API_KEY
     baseUrl: 'https://generativelanguage.googleapis.com/v1beta/models/',
-    apiKey: process.env.AI_API_CODE,
+    apiKey: process.env.GEMINI_API_KEY,
     model: 'gemini-1.5-flash',
     prompt: 'Find data about {{entity}}',
   },
