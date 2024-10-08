@@ -1,8 +1,10 @@
-import { html, LitElement, type PropertyValues } from 'lit';
-import { customElement ,property } from 'lit/decorators.js';
+import { html, type PropertyValues } from 'lit';
+import { customElement, property } from 'lit/decorators.js';
+
+import {BaseElement} from './base-element.js';
 
 @customElement('app-greeting')
-export class AppGreeting extends LitElement {
+export class AppGreeting extends BaseElement {
   @property({ type: Number })
     count = 0;
 
