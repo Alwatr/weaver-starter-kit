@@ -33,7 +33,7 @@ async function googleGenerativeAI(entity: string, templateFile: Buffer) {
     }
   ]);
 
-  return result;
+  return result.response;
 }
 
 export async function generateDataByGeminiAPI() {
@@ -47,7 +47,7 @@ export async function generateDataByGeminiAPI() {
 
     for (const entity of config.entities) {
       const apiResult = await googleGenerativeAI(entity, templateFile);
-      const generatedData = apiResult.response.text();
+      const generatedData = apiResult.text();
       logger.logMethodArgs?.('generateDataByGeminiAPI', {entity, generatedData});
 
       alwatrNitrobase.newDocument({
