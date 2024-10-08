@@ -21,3 +21,5 @@
 @import './layout/config.css';
 @import './layout/body.css';
 @import './layout/main-container.css';
+
+@import './component/typography-demo.css';
