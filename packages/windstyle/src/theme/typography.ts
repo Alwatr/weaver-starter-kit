@@ -91,7 +91,7 @@ export const typographyTheme = {
       '16px',
       {
         lineHeight: '24px',
-        letterSpacing: '0.5px',
+        letterSpacing: '0px', // '0.5px'
         fontWeight: '400',
       },
     ],
@@ -99,7 +99,7 @@ export const typographyTheme = {
       '14px',
       {
         lineHeight: '20px',
-        letterSpacing: '0.25px',
+        letterSpacing: '0px', // '0.25px'
         fontWeight: '400',
       },
     ],
@@ -107,7 +107,7 @@ export const typographyTheme = {
       '12px',
       {
         lineHeight: '15px',
-        letterSpacing: '0.4px',
+        letterSpacing: '0px', // '0.4px'
         fontWeight: '400',
       },
     ],
@@ -115,7 +115,7 @@ export const typographyTheme = {
       '14px',
       {
         lineHeight: '20px',
-        letterSpacing: '0.1px',
+        letterSpacing: '0px', // '0.1px',
         fontWeight: '500',
       },
     ],
@@ -123,7 +123,7 @@ export const typographyTheme = {
       '12px',
       {
         lineHeight: '16px',
-        letterSpacing: '0.5px',
+        letterSpacing: '0px', // '0.5px',
         fontWeight: '500',
       },
     ],
@@ -131,7 +131,7 @@ export const typographyTheme = {
       '11px',
       {
         lineHeight: '16px',
-        letterSpacing: '0.5px',
+        letterSpacing: '0px', // '0.5px',
         fontWeight: '500',
       },
     ],
@@ -147,7 +147,7 @@ export const typographyTheme = {
       '16px',
       {
         lineHeight: '24px',
-        letterSpacing: '0.15px',
+        letterSpacing: '0px', // '0.15px',
         fontWeight: '500',
       },
     ],
@@ -155,7 +155,7 @@ export const typographyTheme = {
       '14px',
       {
         lineHeight: '20px',
-        letterSpacing: '0.1px',
+        letterSpacing: '0px', // '0.1px',
         fontWeight: '500',
       },
     ],
