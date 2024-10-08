@@ -1,6 +1,5 @@
 @layer base {
   :root {
-    @apply color-scheme-light;
     --sys-scrollbar-size: 0.2rem;
     /* --comp-page-header-height: 4rem; */
   }

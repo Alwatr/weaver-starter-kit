@@ -1,19 +1,20 @@
 import {localJsonStorage, createLogger, packageTracer, type FetchOptions} from 'alwatr/nanolib';
 
 export const logger = createLogger(__package_name__);
-packageTracer.add(__package_name__, __package_version__);
 
+packageTracer.add(__package_name__, __package_version__);
 logger.logFileModule?.('config');
 
 /**
  * Debug API.
  *
  * ```ts
- * localStorage.setItem('debugApi.v1', '{"url":"https://api.domain.com/"}');
+ * localStorage.setItem('debugApi.v1', JSON.stringify({url: "http://localhost:8000/"}))
  * ```
  */
-const srvBaseUrl = localJsonStorage.getItem('debugApi', {url: '/'}, 1);
-const apiBaseUrl = srvBaseUrl + 'api/v0/';
+
+const srvBaseUrl = localJsonStorage.getItem<{url: string}>('debugApi', {url: '/'}, 1).url;
+const apiBaseUrl = srvBaseUrl + 'api/v1/';
 
 export const config = {
   api: {

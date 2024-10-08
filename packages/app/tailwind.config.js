@@ -3,15 +3,29 @@ import {
   screenTheme,
   typographyTheme,
   zIndexTheme,
-  colorTheme,
   // ---
-  colorPlugin,
+  materialColorPlugin,
+  materialColorPalletteNames,
   safeAreaPlugin,
   directionPlugin,
   elevationPlugin,
   stateLayerPlugin,
   translucentPlugin,
 } from '@alwatr/windstyle';
+
+import materialTheme from './src/css/material-theme.json' assert { type: 'json' };
+
+// console.log('materialTheme', materialTheme);
+
+ /** @type {import('@alwatr/type-helper/types').DictionaryReq} */
+const materialColorTheme = {};
+for (const colorName of materialColorPalletteNames) {
+  materialColorTheme[colorName] = {
+    DEFAULT: `rgba(var(--sys-color-${colorName}), <alpha-value>)`,
+    light: materialTheme.schemes.light[colorName],
+    dark: materialTheme.schemes.dark[colorName],
+  }
+}
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -24,11 +38,11 @@ export default {
       zIndex: zIndexTheme.zIndex,
       fontFamily: typographyTheme.fontFamily,
       fontSize: typographyTheme.fontSize,
-      colors: colorTheme.colors,
+      colors: materialColorTheme
     },
   },
   plugins: [
-    colorPlugin,
+    materialColorPlugin,
     safeAreaPlugin,
     directionPlugin,
     elevationPlugin,

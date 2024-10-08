@@ -11,14 +11,12 @@
 @import 'windstyle/component/bottom-navigation-bar';
 @import 'windstyle/component/icon-btn';
 @import 'windstyle/component/navigation-drawer';
-@import 'windstyle/component/page-header';
+/* @import 'windstyle/component/page-header'; */
 
 @import 'tailwindcss/utilities';
 @import 'windstyle/utility/hide-spin';
 @import 'windstyle/utility/overflow-clip';
 @import 'windstyle/utility/text-ellipsis';
-
-@import 'windstyle/color-palette/hct-260';
 
 @import './layout/config.css';
 @import './layout/body.css';

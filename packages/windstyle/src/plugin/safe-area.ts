@@ -3,79 +3,77 @@ import plugin from 'tailwindcss/plugin.js';
 export const safeAreaPlugin = plugin(({addUtilities}) => {
   addUtilities({
     '.m-safe': {
-      marginTop: 'var(--safe-area-inset-top, 0)',
-      marginRight: 'var(--safe-area-inset-right, 0)',
-      marginBottom: 'var(--safe-area-inset-bottom, 0)',
-      marginLeft: 'var(--safe-area-inset-left, 0)',
+      marginTop: 'var(--safe-area-inset-top)',
+      marginRight: 'var(--safe-area-inset-right)',
+      marginBottom: 'var(--safe-area-inset-bottom)',
+      marginLeft: 'var(--safe-area-inset-left)',
     },
     '.mx-safe': {
-      marginRight: 'var(--safe-area-inset-right, 0)',
-      marginLeft: 'var(--safe-area-inset-left, 0)',
+      marginRight: 'var(--safe-area-inset-right)',
+      marginLeft: 'var(--safe-area-inset-left)',
     },
     '.my-safe': {
-      marginTop: 'var(--safe-area-inset-top, 0)',
-      marginBottom: 'var(--safe-area-inset-bottom, 0)',
+      marginTop: 'var(--safe-area-inset-top)',
+      marginBottom: 'var(--safe-area-inset-bottom)',
     },
     '.mt-safe': {
-      marginTop: 'var(--safe-area-inset-top, 0)',
+      marginTop: 'var(--safe-area-inset-top)',
     },
     '.mr-safe': {
-      marginRight: 'var(--safe-area-inset-right, 0)',
+      marginRight: 'var(--safe-area-inset-right)',
     },
     '.mb-safe': {
-      marginBottom: 'var(--safe-area-inset-bottom, 0)',
+      marginBottom: 'var(--safe-area-inset-bottom)',
     },
     '.ml-safe': {
-      marginLeft: 'var(--safe-area-inset-left, 0)',
+      marginLeft: 'var(--safe-area-inset-left)',
     },
     '.p-safe': {
-      paddingTop: 'var(--safe-area-inset-top, 0)',
-      paddingRight: 'var(--safe-area-inset-right, 0)',
-      paddingBottom: 'var(--safe-area-inset-bottom, 0)',
-      paddingLeft: 'var(--safe-area-inset-left, 0)',
+      paddingTop: 'var(--safe-area-inset-top)',
+      paddingRight: 'var(--safe-area-inset-right)',
+      paddingBottom: 'var(--safe-area-inset-bottom)',
+      paddingLeft: 'var(--safe-area-inset-left)',
     },
     '.px-safe': {
-      paddingRight: 'var(--safe-area-inset-right, 0)',
-      paddingLeft: 'var(--safe-area-inset-left, 0)',
+      paddingRight: 'var(--safe-area-inset-right)',
+      paddingLeft: 'var(--safe-area-inset-left)',
     },
     '.py-safe': {
-      paddingTop: 'var(--safe-area-inset-top, 0)',
-      paddingBottom: 'var(--safe-area-inset-bottom, 0)',
+      paddingTop: 'var(--safe-area-inset-top)',
+      paddingBottom: 'var(--safe-area-inset-bottom)',
     },
     '.pt-safe': {
-      paddingTop: 'var(--safe-area-inset-top, 0)',
+      paddingTop: 'var(--safe-area-inset-top)',
     },
     '.pr-safe': {
-      paddingRight: 'var(--safe-area-inset-right, 0)',
+      paddingRight: 'var(--safe-area-inset-right)',
     },
     '.pb-safe': {
-      paddingBottom: 'var(--safe-area-inset-bottom, 0)',
+      paddingBottom: 'var(--safe-area-inset-bottom)',
     },
     '.pl-safe': {
-      paddingLeft: 'var(--safe-area-inset-left, 0)',
+      paddingLeft: 'var(--safe-area-inset-left)',
     },
     '.top-safe': {
-      top: 'var(--safe-area-inset-top, 0)',
+      top: 'var(--safe-area-inset-top)',
     },
     '.right-safe': {
-      right: 'var(--safe-area-inset-right, 0)',
+      right: 'var(--safe-area-inset-right)',
     },
     '.bottom-safe': {
-      bottom: 'var(--safe-area-inset-bottom, 0)',
+      bottom: 'var(--safe-area-inset-bottom)',
     },
     '.left-safe': {
-      left: 'var(--safe-area-inset-left, 0)',
+      left: 'var(--safe-area-inset-left)',
     },
     '.min-h-screen-safe': {
       minHeight: [
-        'calc(100vh - (var(--safe-area-inset-top, 0) + var(--safe-area-inset-bottom, 0)))',
-        '-webkit-fill-available',
+        'calc(100dvh - (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)))',
       ],
     },
     '.h-screen-safe': {
       height: [
-        'calc(100vh - (var(--safe-area-inset-top, 0) + var(--safe-area-inset-bottom, 0)))',
-        '-webkit-fill-available',
+        'calc(100dvh - (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)))'
       ],
     },
   });
