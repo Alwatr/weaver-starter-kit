@@ -1,6 +1,6 @@
 import type {ThemeConfig} from 'tailwindcss/types/config.js';
 
-const systemFont = [
+export const systemFonts = [
   'system-ui',
   '-apple-system',
   'BlinkMacSystemFont',
@@ -23,19 +23,19 @@ const systemFont = [
 export const typographyTheme = {
   fontFamily: {
     vazirmatn: [
-      ['"vazirmatn-vf"', '"vazirmatn"', ...systemFont],
+      ['"vazirmatn-vf"', '"vazirmatn"', ...systemFonts],
       {
         fontFeatureSettings: '"calt" 1, "tnum" 0',
       },
     ],
     vazirmatnRd: [
-      ['"vazirmatn-roundot-vf"', '"vazirmatn-roundot"', ...systemFont],
+      ['"vazirmatn-roundot-vf"', '"vazirmatn-roundot"', ...systemFonts],
       {
         fontFeatureSettings: '"calt" 1, "tnum" 0',
       },
     ],
-    system: systemFont,
-    sans: systemFont,
+    system: systemFonts,
+    sans: systemFonts,
   } as ThemeConfig['fontFamily'],
 
   fontSize: {
