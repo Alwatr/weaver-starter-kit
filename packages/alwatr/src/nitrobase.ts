@@ -1,4 +1,4 @@
-import {logger} from './main.js';
+import {logger} from './logger.js';
 
 export * from '@alwatr/nitrobase';
 

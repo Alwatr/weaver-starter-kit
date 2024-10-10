@@ -4,7 +4,7 @@
     "rootDir": "src",
     // "outDir": "dist",
     "noEmit": true,
-    "types": ["node", "@alwatr/nano-build", "@alwatr/type-helper"]
+    "types": ["node", "@alwatr/nano-build", "@alwatr/type-helper", "common"]
   },
   "include": ["src/**/*.ts"],
   "references": [{"path": "../common"}, {"path": "../alwatr"}]
