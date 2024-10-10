@@ -61,6 +61,6 @@
     "@types/node": "^22.7.5",
     "alwatr": "workspace:^",
     "lit": "^3.2.1",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   }
 }
