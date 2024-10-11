@@ -46,8 +46,7 @@
     "clean": "rm -rfv dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@alwatr/logger": "^4.0.5",
-    "@alwatr/package-tracer": "^1.0.5"
+    "@alwatr/nanolib": "1.2.0"
   },
   "devDependencies": {
     "@alwatr/nano-build": "^2.0.1",
