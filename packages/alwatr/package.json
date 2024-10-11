@@ -37,11 +37,6 @@
       "types": "./dist/flux.d.ts",
       "import": "./dist/flux.mjs",
       "require": "./dist/flux.cjs"
-    },
-    "./fract": {
-      "types": "./dist/fract.d.ts",
-      "import": "./dist/fract.mjs",
-      "require": "./dist/fract.cjs"
     }
   },
   "license": "AGPL-3.0-only",
@@ -88,16 +83,15 @@
     "clean": "rm -rfv dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@alwatr/flux": "^3.1.1",
-    "@alwatr/fract": "^1.2.7",
-    "@alwatr/nanolib": "^1.0.2",
+    "@alwatr/flux": "^3.2.0",
+    "@alwatr/nanolib": "^1.2.0",
     "@alwatr/nanotron": "^4.2.2",
-    "@alwatr/nitrobase": "^7.2.1"
+    "@alwatr/nitrobase": "^7.3.0"
   },
   "devDependencies": {
-    "@alwatr/nano-build": "^1.6.0",
-    "@alwatr/prettier-config": "^1.0.5",
-    "@alwatr/tsconfig-base": "^1.3.1",
+    "@alwatr/nano-build": "^2.0.1",
+    "@alwatr/prettier-config": "^1.0.6",
+    "@alwatr/tsconfig-base": "^1.3.2",
     "typescript": "^5.6.3"
   }
 }
