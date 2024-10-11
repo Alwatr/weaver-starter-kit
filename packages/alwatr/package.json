@@ -61,11 +61,6 @@
     "url": "https://github.com/Alwatr/weaver/issues"
   },
   "prettier": "@alwatr/prettier-config",
-  "nano-build": {
-    "entryPoints": [
-      "src/*.ts"
-    ]
-  },
   "scripts": {
     "b": "yarn run build",
     "t": "yarn run test",
