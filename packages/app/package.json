@@ -24,10 +24,6 @@
     "url": "https://github.com/Alwatr/weaver/issues"
   },
   "prettier": "@alwatr/prettier-config",
-  "nano-build-development": {
-    "sourcemap": true,
-    "sourcesContent": true
-  },
   "scripts": {
     "s": "yarn run start",
     "b": "yarn run build",
