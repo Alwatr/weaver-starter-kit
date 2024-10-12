@@ -351,7 +351,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@alwatr/nanolib@npm:1.2.0, @alwatr/nanolib@npm:^1.2.0":
+"@alwatr/nanolib@npm:^1.2.0":
   version: 1.2.0
   resolution: "@alwatr/nanolib@npm:1.2.0"
   dependencies:
@@ -5150,7 +5150,6 @@ __metadata:
   resolution: "common@workspace:packages/common"
   dependencies:
     "@alwatr/nano-build": "npm:^2.0.1"
-    "@alwatr/nanolib": "npm:1.2.0"
     "@alwatr/prettier-config": "npm:^1.0.6"
     "@alwatr/tsconfig-base": "npm:^1.3.2"
     "@alwatr/type-helper": "npm:^2.0.2"
