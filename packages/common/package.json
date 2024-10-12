@@ -45,9 +45,6 @@
     "watch:ts": "yarn run build:ts --watch --preserveWatchOutput",
     "clean": "rm -rfv dist *.tsbuildinfo"
   },
-  "dependencies": {
-    "@alwatr/nanolib": "1.2.0"
-  },
   "devDependencies": {
     "@alwatr/nano-build": "^2.0.1",
     "@alwatr/prettier-config": "^1.0.6",
