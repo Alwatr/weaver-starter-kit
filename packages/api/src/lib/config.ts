@@ -31,7 +31,6 @@ export const config = {
 
   nitrobase: {
     rootPath: process.env.dbPath ?? './db',
-    defaultChangeDebounce: 2_000, // for demo
   },
 
   stores: {
