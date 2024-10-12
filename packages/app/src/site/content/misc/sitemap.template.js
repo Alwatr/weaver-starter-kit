@@ -1,13 +1,12 @@
 class Sitemap {
   data() {
     return {
-      layout: false,
       permalink:' /error-404.html',
-      eleventyExcludeFromCollections: true,
     };
   }
 
   render ({collections, config}) {
+    // return html``;
     let xml = '<?xml version="1.0" encoding="utf-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
     for (const page of collections.all) {
