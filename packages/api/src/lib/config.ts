@@ -50,4 +50,4 @@ export const config = {
   },
 } as const;
 
-logger.logProperty?.('config', config);
+__dev_mode__: logger.logProperty?.('config', config);

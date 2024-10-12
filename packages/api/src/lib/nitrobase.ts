@@ -2,7 +2,7 @@ import {AlwatrNitrobase} from 'alwatr/nitrobase';
 
 import {config} from './config.js';
 
-export const alwatrNitrobase = new AlwatrNitrobase(config.nitrobase);
+export const alwatrNitrobase = /* #__PURE__ */ new AlwatrNitrobase(config.nitrobase);
 
 export function initializeStore() {
   for (const store of Object.values(config.stores)) {
