@@ -1,9 +1,9 @@
 import {createLogger, packageTracer} from 'alwatr/nanolib';
 import {Region, StoreFileType} from 'alwatr/nitrobase';
 
-export const logger = createLogger(__package_name__);
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
-packageTracer.add(__package_name__, __package_version__);
+export const logger = /* #__PURE__ */ createLogger(__package_name__);
 
 if (process.env.NODE_ENV === 'production') {
   if (process.env.tokenGeneratorSecret == null) {
@@ -50,4 +50,4 @@ export const config = {
   },
 } as const;
 
-logger.logProperty?.('config', config);
+__dev_mode__: logger.logProperty?.('config', config);

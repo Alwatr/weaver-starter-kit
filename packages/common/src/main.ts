@@ -4,4 +4,4 @@ import './type.js';
 
 export * from './validate-national-code.js';
 
-packageTracer.add(__package_name__, __package_version__);
+__dev_mode__: packageTracer.add(__package_name__, __package_version__);
