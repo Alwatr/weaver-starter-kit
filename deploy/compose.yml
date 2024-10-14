@@ -63,7 +63,7 @@ services:
           create_host_path: true
       - type: bind
         source: ./_data/cdn/
-        target: /data/db
+        target: /data/cdn
         bind:
           create_host_path: true
 
