@@ -1,6 +1,15 @@
 import plugin from 'tailwindcss/plugin.js';
-// @ts-expect-error Could not find a declaration file for module
-import flattenColorPalette from 'tailwindcss/src/util/flattenColorPalette.js';
+const flattenColorPalette = (colors: DictionaryOpt): Record<string, string> =>
+  Object.assign(
+    {},
+    ...Object.entries(colors ?? {}).flatMap(([color, values]) =>
+      typeof values === 'object'
+        ? Object.entries(flattenColorPalette(values as DictionaryOpt)).map(([number, hex]) => ({
+          [color + (number === 'DEFAULT' ? '' : `-${number}`)]: hex,
+        }))
+        : [{ [color]: values }]
+    )
+  );
 
 const stateOpacity = {
   hover: 0.08,
