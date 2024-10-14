@@ -24,6 +24,7 @@ async function build({watchMode, debugMode}) {
 
   if (watchMode) {
     logger.logStep?.('build', '👀 Watching...');
+    process.env.WATCH_MODE = 'true';
     output.watch();
   } else {
     logger.logStep?.('build', '🚀 Building...');

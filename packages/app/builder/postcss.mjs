@@ -77,12 +77,17 @@ export async function postcssBuild() {
 
     let outputContent = '';
 
+    /**
+     * @type {Buffer}
+     */
+    let outputBuffer;
+
     try {
       const fileContent = await readFile(inputFilePath, 'utf8');
       outputContent = (await postCss.process(fileContent, {from: inputFilePath, to: outputFilePath})).css;
     }
     catch (err) {
-      console.error(err);
+      logger.error('postcssBuild', 'postcss_failed', err);
       outputContent = `
         html {
           background-color: #a11;
@@ -100,11 +105,16 @@ export async function postcssBuild() {
           display: none !important;
         }
       `;
+      if (process.env.WATCH_MODE !== 'true') {
+        throw err;
+      }
+    }
+    finally {
+      outputBuffer = Buffer.from(outputContent, 'utf8');
+      await writeFile(outputFilePath, outputBuffer);
     }
 
-    await writeFile(outputFilePath, outputContent, {encoding: 'utf8'});
-
-    const size = (new Blob([outputContent]).size / 1024).toFixed(1);
+    const size = (outputBuffer.byteLength / 1024).toFixed(1);
     logger.logOther?.(`📦 ${outputFilePath} ${size}kb`);
   }
 
