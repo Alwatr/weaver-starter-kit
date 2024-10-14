@@ -9,6 +9,7 @@
     "davidanson.vscode-markdownlint",
     "dbaeumer.vscode-eslint",
     "redhat.vscode-xml",
+    "redhat.vscode-yaml",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "foxundermoon.shell-format",
