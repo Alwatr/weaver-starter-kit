@@ -5,7 +5,7 @@ RUN set -ex; \
   corepack enable;
 
 COPY package.json yarn.lock ./
-COPY projects/*/package.json projects/*/
+COPY packages/*/package.json packages/*/
 RUN set -eux; \
   yarn install --immutable; \
   ls -RlahF .;
