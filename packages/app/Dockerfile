@@ -1,4 +1,4 @@
-FROM ghcr.io/alwatr/node:22.9.0 AS builder
+FROM ghcr.io/alwatr/node:20.18.0 AS builder
 
 RUN apk add --no-cache git;
 RUN set -ex; corepack enable;
