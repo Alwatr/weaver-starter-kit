@@ -7,8 +7,8 @@ RUN set -ex; \
 COPY package.json yarn.lock ./
 COPY packages/*/package.json packages/*/
 RUN set -eux; \
-  yarn install --immutable; \
-  ls -RlahF .;
+  ls -RlahF .; \
+  yarn install --immutable;
 
 COPY . .
 
