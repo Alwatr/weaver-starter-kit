@@ -5,10 +5,13 @@ RUN set -ex; \
   corepack enable;
 
 COPY package.json yarn.lock ./
-COPY packages/*/package.json packages/*/
-RUN set -eux; \
-  ls -RlahF .; \
-  yarn install --immutable;
+COPY packages/alwatr/package.json packages/alwatr/
+COPY packages/api/packag.json packages/api/
+COPY packages/app/packag.json packages/app/
+COPY packages/common/package.json packages/common/
+COPY packages/windstyle/packag.json packages/windstyle/
+
+RUN yarn install;
 
 COPY . .
 

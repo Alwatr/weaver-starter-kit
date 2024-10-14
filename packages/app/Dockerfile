@@ -3,10 +3,19 @@ FROM ghcr.io/alwatr/node:22.9.0 AS builder
 RUN apk add --no-cache git;
 RUN set -ex; corepack enable;
 
-ARG siteUrl=${siteUrl}
-ENV siteUrl=${siteUrl}
+COPY package.json yarn.lock ./
+COPY packages/alwatr/package.json packages/alwatr/
+COPY packages/api/packag.json packages/api/
+COPY packages/app/packag.json packages/app/
+COPY packages/common/package.json packages/common/
+COPY packages/windstyle/packag.json packages/windstyle/
+
+RUN yarn install;
 
 COPY . .
+
+ARG siteUrl=${siteUrl}
+ENV siteUrl=${siteUrl}
 
 RUN set -eux; \
   yarn install --immutable; \
