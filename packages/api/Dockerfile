@@ -4,6 +4,12 @@ RUN set -ex; \
   apk add --no-cache git; \
   corepack enable;
 
+COPY package.json yarn.lock ./
+COPY projects/*/package.json projects/*/
+RUN set -eux; \
+  yarn install --immutable; \
+  ls -RlahF .;
+
 COPY . .
 
 RUN set -eux; \
