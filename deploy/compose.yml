@@ -51,19 +51,19 @@ services:
 
     environment:
       - dbPath=/data/db
-      - uploadPath=/cdn
+      - uploadPath=/data/cdn
       - tokenGeneratorSecret=${tokenGeneratorSecret}
       - DEBUG=${apiDebug:-}
 
     volumes:
       - type: bind
         source: ./_data/db
-        target: /db
+        target: /data/db
         bind:
           create_host_path: true
       - type: bind
         source: ./_data/cdn/
-        target: /cdn
+        target: /data/db
         bind:
           create_host_path: true
 
@@ -81,7 +81,7 @@ services:
       traefik.frontend.redirect.entryPoint: https
 
   db:
-    image: ghcr.io/alwatr/nitrobase-nginx:7.2
+    image: ghcr.io/alwatr/nitrobase-nginx:7.3
 
     cpu_count: 1
     cpu_shares: 1024
@@ -93,13 +93,13 @@ services:
       alwatr-public-network:
 
     environment:
-      - NGINX_DOCUMENT_ROOT=/db
+      - NGINX_DOCUMENT_ROOT=/data/db
       - NGINX_ACCESS_LOG=${dbAccessLog:-off}
 
     volumes:
       - type: bind
         source: ./_data/db
-        target: /db
+        target: /data/db
         bind:
           create_host_path: true
 
@@ -117,7 +117,7 @@ services:
       traefik.frontend.redirect.entryPoint: https
 
   cdn:
-    image: ghcr.io/alwatr/nginx-cdn:2.5.0
+    image: ghcr.io/alwatr/nginx-cdn:2.5
 
     cpu_count: 1
     cpu_shares: 1024
@@ -129,6 +129,7 @@ services:
       alwatr-public-network:
 
     environment:
+      - NGINX_DOCUMENT_ROOT=/data
       - NGINX_ACCESS_LOG=${cdnAccessLog:-off}
 
     volumes:
