@@ -1,5 +1,5 @@
-import {createLogger, packageTracer} from 'alwatr/nanolib';
-import {Region, StoreFileType, type AlwatrNitrobaseConfig} from 'alwatr/nitrobase';
+import {createLogger, packageTracer, type FetchOptions} from 'alwatr/nanolib';
+import {Region, StoreFileType, type AlwatrNitrobaseConfig, type StoreFileStat} from 'alwatr/nitrobase';
 
 import type {CryptoFactoryConfig} from 'alwatr/nanotron';
 
@@ -32,24 +32,30 @@ export const config = {
     duration: '1y',
   } as CryptoFactoryConfig,
 
-  nitrobase: {
-    rootPath: env.dbPath,
-  } as AlwatrNitrobaseConfig,
-
-  stores: {
-    usersCollection: {
-      name: 'user-info',
-      region: Region.PerUser,
-      type: StoreFileType.Collection,
-    },
-  },
-
   nanotronApiServer: {
     host: process.env.host ?? '0.0.0.0',
     port: process.env.port !== undefined ? +process.env.port : 8000,
     prefix: '/api/',
     // allowAllOrigin: true,
   },
+
+  nitrobase: {
+    config: {
+      rootPath: env.dbPath!,
+    } as AlwatrNitrobaseConfig,
+
+    usersCollection: {
+      name: 'user-info',
+      region: Region.PerUser,
+      type: StoreFileType.Collection,
+    } as StoreFileStat,
+
+  } as const,
+
+  fetchOptions: {
+    retry: 2,
+    timeout: '6s',
+  } as Partial<FetchOptions>,
 } as const;
 
 __dev_mode__: logger.logProperty?.('config', config);
