@@ -5,32 +5,38 @@ __dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 export const logger = /* #__PURE__ */ createLogger(__package_name__);
 
-if (process.env.NODE_ENV === 'production') {
-  if (process.env.tokenGeneratorSecret == null) {
-    throw new Error('tokenGeneratorSecret is required in production');
+const env = /* #__PURE__ */ (() => {
+  const devConfig = {
+    dbPath: './db',
+    tokenSecret: 'DEV_SECRET',
+    uploadPath: './upload'
+  } as const;
+
+  const env_ = {
+    ...process.env,
+    ...(__dev_mode__ ? devConfig : {})
+  };
+
+  for (const key in devConfig) {
+    if (!Object.hasOwn(devConfig, key)) continue;
+    if (!Object.hasOwn(env_, key)) throw new Error(`${key} required in production.`);
   }
 
-  if (process.env.dbPath == null) {
-    throw new Error('dbPath is required in production');
-  }
-
-  if (process.env.uploadPath == null) {
-    throw new Error('uploadPath is required in production');
-  }
-}
+  return env_;
+})();
 
 export const config = {
   token: {
-    secret: process.env.tokenGeneratorSecret ?? 'DEV_SECRET',
+    secret: env.tokenSecret!,
     duration: '1y',
   },
 
   upload: {
-    basePath: process.env.uploadPath ?? './upload',
+    basePath: env.uploadPath,
   },
 
   nitrobase: {
-    rootPath: process.env.dbPath ?? './db',
+    rootPath: env.dbPath!,
   },
 
   stores: {
