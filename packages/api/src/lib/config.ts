@@ -1,5 +1,7 @@
 import {createLogger, packageTracer} from 'alwatr/nanolib';
-import {Region, StoreFileType} from 'alwatr/nitrobase';
+import {Region, StoreFileType, type AlwatrNitrobaseConfig} from 'alwatr/nitrobase';
+
+import type {CryptoFactoryConfig} from 'alwatr/nanotron';
 
 __dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
@@ -9,12 +11,11 @@ const env = /* #__PURE__ */ (() => {
   const devConfig = {
     dbPath: './db',
     tokenSecret: 'DEV_SECRET',
-    uploadPath: './upload'
   } as const;
 
   const env_ = {
     ...process.env,
-    ...(__dev_mode__ ? devConfig : {})
+    ...(__dev_mode__ ? devConfig : {}),
   };
 
   for (const key in devConfig) {
@@ -29,15 +30,11 @@ export const config = {
   token: {
     secret: env.tokenSecret!,
     duration: '1y',
-  },
-
-  upload: {
-    basePath: env.uploadPath,
-  },
+  } as CryptoFactoryConfig,
 
   nitrobase: {
-    rootPath: env.dbPath!,
-  },
+    rootPath: env.dbPath,
+  } as AlwatrNitrobaseConfig,
 
   stores: {
     usersCollection: {
