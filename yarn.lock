@@ -4252,15 +4252,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"alwatr@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "alwatr@npm:2.0.0"
+"alwatr@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "alwatr@npm:2.0.2"
   dependencies:
     "@alwatr/flux": "npm:^3.2.0"
     "@alwatr/nanolib": "npm:^1.3.0"
     "@alwatr/nanotron": "npm:^4.4.0"
     "@alwatr/nitrobase": "npm:^7.3.0"
-  checksum: 10c0/162ec739a7a6dad74c9b4572eb45db52eab44655d38da5dc7fc95d52b4ab688ff5508b351c93862a912fa0854a7f9f0eeb868e83c686b4cca918f77ea89f69d3
+  checksum: 10c0/928fdeb80320446b6890b9167417ee5336bb8626674971c915217812f68da1cf998122886bd8ab613c15ddac6d868f5ada5b34500f7c91b6799af7451b3a0421
   languageName: node
   linkType: hard
 
@@ -4345,7 +4345,7 @@ __metadata:
     "@alwatr/tsconfig-base": "npm:^1.3.2"
     "@alwatr/type-helper": "npm:^2.0.2"
     "@types/node": "npm:^22.7.5"
-    alwatr: "npm:^2.0.0"
+    alwatr: "npm:^2.0.2"
     common: "workspace:^"
     typescript: "npm:^5.6.3"
   languageName: unknown
@@ -4368,7 +4368,7 @@ __metadata:
     "@swc/html": "npm:^1.7.35"
     "@types/node": "npm:^22.7.5"
     "@web/dev-server": "npm:^0.4.6"
-    alwatr: "npm:^2.0.0"
+    alwatr: "npm:^2.0.2"
     common: "workspace:^"
     cssnano: "npm:^7.0.6"
     lit: "npm:^3.2.1"
@@ -5186,7 +5186,7 @@ __metadata:
     "@alwatr/tsconfig-base": "npm:^1.3.2"
     "@alwatr/type-helper": "npm:^2.0.2"
     "@types/node": "npm:^22.7.5"
-    alwatr: "npm:^2.0.0"
+    alwatr: "npm:^2.0.2"
     lit: "npm:^3.2.1"
     typescript: "npm:^5.6.3"
   languageName: unknown

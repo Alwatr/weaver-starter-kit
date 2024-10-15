@@ -1,45 +1,36 @@
-import {createLogger, packageTracer} from 'alwatr/nanolib';
-import {Region, StoreFileType} from 'alwatr/nitrobase';
+import {createLogger, packageTracer, type FetchOptions} from 'alwatr/nanolib';
+import {Region, StoreFileType, type AlwatrNitrobaseConfig, type StoreFileStat} from 'alwatr/nitrobase';
+
+import type {CryptoFactoryConfig} from 'alwatr/nanotron';
 
 __dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
 export const logger = /* #__PURE__ */ createLogger(__package_name__);
 
-if (process.env.NODE_ENV === 'production') {
-  if (process.env.tokenGeneratorSecret == null) {
-    throw new Error('tokenGeneratorSecret is required in production');
+const env = /* #__PURE__ */ (() => {
+  const devConfig = {
+    dbPath: './db',
+    tokenSecret: 'DEV_SECRET',
+  } as const;
+
+  const env_ = {
+    ...process.env,
+    ...(__dev_mode__ ? devConfig : {}),
+  };
+
+  for (const key in devConfig) {
+    if (!Object.hasOwn(devConfig, key)) continue;
+    if (!Object.hasOwn(env_, key)) throw new Error(`${key} required in production.`);
   }
 
-  if (process.env.dbPath == null) {
-    throw new Error('dbPath is required in production');
-  }
-
-  if (process.env.uploadPath == null) {
-    throw new Error('uploadPath is required in production');
-  }
-}
+  return env_;
+})();
 
 export const config = {
   token: {
-    secret: process.env.tokenGeneratorSecret ?? 'DEV_SECRET',
+    secret: env.tokenSecret!,
     duration: '1y',
-  },
-
-  upload: {
-    basePath: process.env.uploadPath ?? './upload',
-  },
-
-  nitrobase: {
-    rootPath: process.env.dbPath ?? './db',
-  },
-
-  stores: {
-    usersCollection: {
-      name: 'user-info',
-      region: Region.PerUser,
-      type: StoreFileType.Collection,
-    },
-  },
+  } as CryptoFactoryConfig,
 
   nanotronApiServer: {
     host: process.env.host ?? '0.0.0.0',
@@ -47,6 +38,24 @@ export const config = {
     prefix: '/api/',
     // allowAllOrigin: true,
   },
+
+  nitrobase: {
+    config: {
+      rootPath: env.dbPath!,
+    } as AlwatrNitrobaseConfig,
+
+    usersCollection: {
+      name: 'user-info',
+      region: Region.PerUser,
+      type: StoreFileType.Collection,
+    } as StoreFileStat,
+
+  } as const,
+
+  fetchOptions: {
+    retry: 2,
+    timeout: '6s',
+  } as Partial<FetchOptions>,
 } as const;
 
 __dev_mode__: logger.logProperty?.('config', config);
