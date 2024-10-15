@@ -4,7 +4,6 @@ RUN apk add --no-cache git;
 RUN set -ex; corepack enable;
 
 COPY package.json yarn.lock ./
-COPY packages/alwatr/package.json packages/alwatr/
 COPY packages/api/package.json packages/api/
 COPY packages/app/package.json packages/app/
 COPY packages/common/package.json packages/common/
