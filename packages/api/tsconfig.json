@@ -7,5 +7,5 @@
     "types": ["node", "@alwatr/nano-build", "@alwatr/type-helper", "common"]
   },
   "include": ["src/**/*.ts"],
-  "references": [{"path": "../common"}, {"path": "../alwatr"}]
+  "references": [{"path": "../common"}]
 }
