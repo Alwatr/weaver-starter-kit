@@ -1,7 +1,7 @@
 import {createLogger, packageTracer, type FetchOptions} from 'alwatr/nanolib';
 import {Region, StoreFileType, type AlwatrNitrobaseConfig, type StoreFileStat} from 'alwatr/nitrobase';
 
-import type {CryptoFactoryConfig} from 'alwatr/nanotron';
+import type {CryptoFactoryConfig, NanotronApiServerConfig} from 'alwatr/nanotron';
 
 __dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
@@ -37,7 +37,7 @@ export const config = {
     port: process.env.port !== undefined ? +process.env.port : 8000,
     prefix: '/api/',
     // allowAllOrigin: true,
-  },
+  } as NanotronApiServerConfig,
 
   nitrobase: {
     config: {
