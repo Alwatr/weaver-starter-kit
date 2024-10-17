@@ -11,6 +11,8 @@ const env = /* #__PURE__ */ (() => {
   const devConfig = {
     dbPath: './db',
     tokenSecret: 'DEV_SECRET',
+    host: '0.0.0.0',
+    port: 8000
   } as const;
 
   const env_ = {
@@ -33,8 +35,8 @@ export const config = {
   } as CryptoFactoryConfig,
 
   nanotronApiServer: {
-    host: process.env.host ?? '0.0.0.0',
-    port: process.env.port !== undefined ? +process.env.port : 8000,
+    host: env.host,
+    port: +env.port,
     prefix: '/api/',
     // allowAllOrigin: true,
   } as NanotronApiServerConfig,
