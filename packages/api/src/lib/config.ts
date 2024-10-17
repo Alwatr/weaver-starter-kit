@@ -36,7 +36,7 @@ export const config = {
 
   nanotronApiServer: {
     host: env.host,
-    port: +env.port,
+    port: +env.port!,
     prefix: '/api/',
     // allowAllOrigin: true,
   } as NanotronApiServerConfig,
