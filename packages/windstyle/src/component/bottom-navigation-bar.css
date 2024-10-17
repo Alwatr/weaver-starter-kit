@@ -3,8 +3,7 @@
     @apply fixed
       z-fixed
       bottom-1
-      pb-safe
-    ;
+      pb-safe;
 
     left: calc(0.75rem + var(--safe-area-inset-left));
     right: calc(0.75rem + var(--safe-area-inset-right));
@@ -23,8 +22,7 @@
         max-w-screen-medium
         mx-auto
         cursor-pointer
-        select-none
-      ;
+        select-none;
     }
   }
 }

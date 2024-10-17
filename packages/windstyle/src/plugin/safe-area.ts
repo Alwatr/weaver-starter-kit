@@ -67,14 +67,10 @@ export const safeAreaPlugin = plugin(({addUtilities}) => {
       left: 'var(--safe-area-inset-left)',
     },
     '.min-h-screen-safe': {
-      minHeight: [
-        'calc(100dvh - (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)))',
-      ],
+      minHeight: ['calc(100dvh - (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)))'],
     },
     '.h-screen-safe': {
-      height: [
-        'calc(100dvh - (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)))'
-      ],
+      height: ['calc(100dvh - (var(--safe-area-inset-top) + var(--safe-area-inset-bottom)))'],
     },
   });
 });

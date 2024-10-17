@@ -11,8 +11,7 @@
       text-bodyMedium
       text-onBackground
       p-safe
-      min-h-dvh
-    ;
+      min-h-dvh;
 
     /* padding-bottom: calc(
         0.25rem

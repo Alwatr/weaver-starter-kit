@@ -58,10 +58,8 @@ export const materialColorPlugin = plugin(({addUtilities, theme}) => {
   const utilityColors_ = {
     '.color-scheme-light': {} as DictionaryReq<string>,
     '.color-scheme-dark': {} as DictionaryReq<string>,
-    '.color-scheme-auto': {
-    } as DictionaryReq<string | DictionaryReq<string>>,
+    '.color-scheme-auto': {} as DictionaryReq<string | DictionaryReq<string>>,
   } as const;
-
 
   const mediaRuleColors = {} as DictionaryReq<string>;
   for (const colorName of materialColorPalletteNames) {

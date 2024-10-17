@@ -30,17 +30,9 @@
     // "**/*.tsbuildinfo": true
   },
   "git.autoStash": true,
-  "git.branchProtection": [
-    "main",
-    "next"
-  ],
-  "githubPullRequests.ignoredPullRequestBranches": [
-    "main",
-    "next"
-  ],
-  "markdownlint.ignore": [
-    "**/CHANGELOG.md"
-  ],
+  "git.branchProtection": ["main", "next"],
+  "githubPullRequests.ignoredPullRequestBranches": ["main", "next"],
+  "markdownlint.ignore": ["**/CHANGELOG.md"],
   "npm.packageManager": "yarn",
   "prettier.prettierPath": ".yarn/sdks/prettier/index.cjs",
   "prettier.useEditorConfig": true,
@@ -71,9 +63,7 @@
     "vazirmatn",
     "windstyle"
   ],
-  "css.customData": [
-    ".vscode/tailwind.json"
-  ],
+  "css.customData": [".vscode/tailwind.json"],
   "github.copilot.chat.experimental.codeGeneration.instructions": [
     {
       "file": ".github/copilot-instruction.md"

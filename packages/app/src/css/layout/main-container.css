@@ -4,8 +4,7 @@
       flex-col
       gap-1
       grow
-      px-2
-    ;
+      px-2;
 
     article {
       @apply p-2 grow;

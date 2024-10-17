@@ -8,7 +8,6 @@
       cursor-pointer
       size-12
       rounded-full
-      state-onSurfaceVariant
-    ;
+      state-onSurfaceVariant;
   }
 }

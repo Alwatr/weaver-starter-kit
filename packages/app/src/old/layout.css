@@ -40,8 +40,7 @@
       pl-safe
       pr-safe
       min-h-dvh
-      max-w-screen-2xl
-    ;
+      max-w-screen-2xl;
 
     padding-top: calc(
       var(--safe-area-inset-top) +
@@ -93,8 +92,7 @@
       gap-1
       expanded:flex-row
       grow
-      px-2
-    ;
+      px-2;
 
     article {
       @apply p-2 grow;
@@ -115,18 +113,13 @@
       text-bodySmall
       text-onSurfaceVariant
       elevation-1
-      self-start
-    ;
+      self-start;
 
     @media (--expanded) {
       & {
         @apply sticky mt-[3.25rem];
         width: var(--comp-navigation-drawer-width);
-        top: calc(
-          var(--safe-area-inset-top) +
-          var(--comp-page-header-height) + 0.25rem +
-          0.25rem
-        );
+        top: calc(var(--safe-area-inset-top) + var(--comp-page-header-height) + 0.25rem + 0.25rem);
       }
     }
   }

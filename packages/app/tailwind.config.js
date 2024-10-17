@@ -13,7 +13,7 @@ import {
   translucentPlugin,
 } from '@alwatr/windstyle';
 
-import materialTheme from './src/css/material-theme.json' assert { type: 'json' };
+import materialTheme from './src/css/material-theme.json' assert {type: 'json'};
 
 // console.log('materialTheme', materialTheme);
 
@@ -24,7 +24,7 @@ for (const colorName of materialColorPalletteNames) {
     DEFAULT: `rgba(var(--sys-color-${colorName}), <alpha-value>)`,
     light: materialTheme.schemes.light[colorName],
     dark: materialTheme.schemes.dark[colorName],
-  }
+  };
 }
 
 /** @type {import('tailwindcss').Config} */
@@ -38,7 +38,7 @@ export default {
       zIndex: zIndexTheme.zIndex,
       fontFamily: typographyTheme.fontFamily,
       fontSize: typographyTheme.fontSize,
-      colors: materialColorTheme
+      colors: materialColorTheme,
     },
   },
   plugins: [

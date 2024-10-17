@@ -2,7 +2,7 @@ import {localJsonStorage, createLogger, packageTracer, type FetchOptions} from '
 
 __dev_mode__: packageTracer.add(__package_name__, __package_version__);
 
-export const logger = createLogger(__package_name__)
+export const logger = createLogger(__package_name__);
 logger.logFileModule?.('config');
 
 /**

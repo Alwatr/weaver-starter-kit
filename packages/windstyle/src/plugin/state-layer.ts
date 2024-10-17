@@ -7,8 +7,8 @@ const flattenColorPalette = (colors: DictionaryOpt): Record<string, string> =>
         ? Object.entries(flattenColorPalette(values as DictionaryOpt)).map(([number, hex]) => ({
           [color + (number === 'DEFAULT' ? '' : `-${number}`)]: hex,
         }))
-        : [{ [color]: values }]
-    )
+        : [{[color]: values}],
+    ),
   );
 
 const stateOpacity = {

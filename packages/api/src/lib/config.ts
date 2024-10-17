@@ -49,7 +49,6 @@ export const config = {
       region: Region.PerUser,
       type: StoreFileType.Collection,
     } as StoreFileStat,
-
   } as const,
 
   fetchOptions: {

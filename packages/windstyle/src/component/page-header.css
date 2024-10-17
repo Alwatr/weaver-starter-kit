@@ -20,8 +20,7 @@
       bg-surfaceContainer
       text-onSurface
       text-titleLarge
-      select-none
-    ;
+      select-none;
 
     padding-left: calc(
       var(--safe-area-inset-left) +

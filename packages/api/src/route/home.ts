@@ -3,7 +3,7 @@ import {nanotronApiServer} from '../lib/server.js';
 nanotronApiServer.defineRoute({
   method: 'GET',
   url: '/',
-  handler () {
+  handler() {
     this.serverResponse.replyJson({
       ok: true,
       data: {

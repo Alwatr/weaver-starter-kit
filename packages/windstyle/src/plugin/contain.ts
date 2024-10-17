@@ -2,7 +2,7 @@ import plugin from 'tailwindcss/plugin.js';
 
 // Define the containPlugin using Tailwind CSS plugin
 export const containPlugin = plugin(
-  ({ matchUtilities, theme }) => {
+  ({matchUtilities, theme}) => {
     // Match utilities for the 'contain' property
     matchUtilities(
       {
@@ -10,7 +10,7 @@ export const containPlugin = plugin(
           contain: value,
         }),
       },
-      { values: theme('contain') }
+      {values: theme('contain')},
     );
   },
   {
@@ -26,5 +26,5 @@ export const containPlugin = plugin(
         content: 'content',
       },
     },
-  }
+  },
 );

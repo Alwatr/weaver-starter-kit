@@ -13,11 +13,11 @@ import postcssNesting from 'tailwindcss/nesting/index.js';
 import postcssViewportUnitFallback from 'postcss-viewport-unit-fallback';
 import postcssCustomMedia from 'postcss-custom-media';
 
-import { createRequire } from 'module';
+import {createRequire} from 'module';
 const require = createRequire(import.meta.url); // ESM way to access require
 const windstylePath = require.resolve('@alwatr/windstyle').replace('/dist/main.cjs', '/');
 
-const basePath = 'src/css/'
+const basePath = 'src/css/';
 
 const postCssPlugins = [
   postcssImport({
@@ -40,7 +40,7 @@ const postCssPlugins = [
   postcssPresetEnv({
     logical: {
       inlineDirection: 'right-to-left',
-    }
+    },
   }),
 ];
 
@@ -48,7 +48,7 @@ if (!devMode) {
   postCssPlugins.push(
     postcssVariableCompress(),
     cssnano({
-      preset: ['default', {discardComments: {removeAll: true}}]
+      preset: ['default', {discardComments: {removeAll: true}}],
     }),
   );
 }
@@ -85,8 +85,7 @@ export async function postcssBuild() {
     try {
       const fileContent = await readFile(inputFilePath, 'utf8');
       outputContent = (await postCss.process(fileContent, {from: inputFilePath, to: outputFilePath})).css;
-    }
-    catch (err) {
+    } catch (err) {
       logger.error('postcssBuild', 'postcss_failed', err);
       outputContent = `
         html {
@@ -108,8 +107,7 @@ export async function postcssBuild() {
       if (process.env.WATCH_MODE !== 'true') {
         throw err;
       }
-    }
-    finally {
+    } finally {
       outputBuffer = Buffer.from(outputContent, 'utf8');
       await writeFile(outputFilePath, outputBuffer);
     }

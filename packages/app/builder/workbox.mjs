@@ -29,9 +29,9 @@ export async function generateServiceWorker() {
           cacheName: 'images',
           expiration: {
             maxEntries: 200,
-            maxAgeSeconds: 2 * 30 * 24 * 60 * 60 // 2 Months
-          }
-        }
+            maxAgeSeconds: 2 * 30 * 24 * 60 * 60, // 2 Months
+          },
+        },
       },
       {
         urlPattern: /\.(?:html|js|css|json)$/,
@@ -40,10 +40,10 @@ export async function generateServiceWorker() {
           cacheName: 'resources',
           expiration: {
             maxEntries: 200,
-            maxAgeSeconds: 2 * 30 * 24 * 60 * 60 // 2 Months
-          }
-        }
-      }
+            maxAgeSeconds: 2 * 30 * 24 * 60 * 60, // 2 Months
+          },
+        },
+      },
     ],
   });
 }

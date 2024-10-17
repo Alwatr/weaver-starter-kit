@@ -1,11 +1,11 @@
 class Sitemap {
   data() {
     return {
-      permalink:' /error-404.html',
+      permalink: '/sitemap.xml',
     };
   }
 
-  render ({collections, config}) {
+  render({collections, config}) {
     // return html``;
     let xml = '<?xml version="1.0" encoding="utf-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
@@ -22,7 +22,7 @@ class Sitemap {
     xml += '</urlset>\n';
 
     return xml;
-  };
+  }
 }
 
 module.exports = Sitemap;

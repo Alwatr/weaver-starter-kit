@@ -6,10 +6,10 @@ Weaver is a powerful and flexible framework designed to streamline the developme
 
 ## Features
 
-* **11ty-Powered Static Site Generation:**  Leverage 11ty's simplicity and speed to generate static HTML files, ensuring optimal performance and SEO.
-* **Node.js API Development:** Build scalable and efficient APIs using Node.js, enabling seamless integration with frontend components and external services.
-* **Proposed Model:**  Provides a standardized and structured approach for building all web projects within the organization, ensuring consistency and maintainability.
-* **Flexibility and Customization:** Easily adapt and extend Weaver to meet the specific requirements of different projects, while adhering to the proposed model.
+- **11ty-Powered Static Site Generation:** Leverage 11ty's simplicity and speed to generate static HTML files, ensuring optimal performance and SEO.
+- **Node.js API Development:** Build scalable and efficient APIs using Node.js, enabling seamless integration with frontend components and external services.
+- **Proposed Model:** Provides a standardized and structured approach for building all web projects within the organization, ensuring consistency and maintainability.
+- **Flexibility and Customization:** Easily adapt and extend Weaver to meet the specific requirements of different projects, while adhering to the proposed model.
 
 ## Sponsors
 
